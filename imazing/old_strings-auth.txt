@@ -1,0 +1,370 @@
+authTextColor
+authTextColor
+T@"NSColor",N,&,VauthTextColor
+sarauthai
+This certificate is expired. OCSP responder may give "Request unauthorized" response.
+w/ PKCS11, the private key handle can only be acquired in a PIN authenticated session.
+authenticatedSafe.contentInfo[i].safeBag[j].subject
+authenticatedSafe.contentInfo[i].safeBag[j].serialNumber
+authenticatedSafe.contentInfo[i].safeBag[j].subjectKeyId
+authenticatedSafe.contentInfo[i].safeBag[j].authorityKeyId
+No authority key identifier extension found.
+authenticatedSafe.contentInfo[i].safeBag[j].attrs.friendlyName
+authenticatedSafe.contentInfo[i].safeBag[j].attrs.keyContainerName
+authenticatedSafe.contentInfo[i].safeBag[j].attrs.localKeyId
+authenticatedSafe.contentInfo[i].safeBag[j].attrs.msStorageProvider
+authRootSha256Hash
+authenticatedSafe.contentInfo[i].safeBag[j].attrs.authRootSha256Hash
+authenticatedSafe.contentInfo[i].safeBag[j].attrs.enhKeyUsage[k].oid
+authenticatedSafe.contentInfo[i].safeBag[j].attrs.enhKeyUsage[k].usage
+authenticatedSafe.contentInfo[i].safeBag[j].attrs.unparsedOid[k]
+authenticatedSafe.contentInfo[i].safeBag[j].type
+authenticatedSafe
+authenticatedSafe.contentInfo[i].type
+Failed to get authenticated safe.
+url_oauth
+Failed to parse unauthenticated attributes DER.
+unauthDer
+authAttrOrder345
+signerInfo[i].authAttr.
+processUnauthAttr
+signerInfo[i].unauthAttr.
+pkcs7.verify.signerInfo[i].unauthAttr."1.2.840.113549.1.9.16.2.14".verify.
+pkcs7.verify.signerInfo[i].unauthAttr."1.3.6.1.4.1.311.3.3.1".verify.
+authenticatedAttributes
+RSASSA-PSS signature of authenticated attributes is invalid.
+RSASSA-PSS signature of authenticated attributes is valid.
+Digest of authenticated attributes DER matches.
+unauthenticatedAttributes
+Failed to extract authenticated attributes.
+createUnauthenticatedAttributes
+failed to create one or more unauthenticated attributes.
+CAdES enabled -- adding SigningCertificate authenticated attribute...
+adding SigningCertificateV2 authenticated attribute...
+CAdES-EPES enabled -- adding Signature Policy Identifier authenticated attribute (new method)...
+CAdES-EPES enabled -- adding Signature Policy Identifier authenticated attribute (legacy method)...
+adding the RevocationInfoArchival authenticated attribute...
+Not including signingCertificateV2 authenticated attribute for code signing.
+GCM auth tag is missing.
+Existing (1st) SignerInfo has invalid authenticated attributes
+MessageDigest authenticated attribute contains no digest.
+MessageDigest authenticated attribute contains no content.
+Failed to sign digest of authenticated attributes using a cloud service.
+Failed to sign digest of authenticated attributes using the PKCS11 session.
+Failed to sign digest of authenticated attributes using the MacOS keychain services.
+Failed to RSA sign digest of authenticated attributes.
+Failed to ECC sign digest of authenticated attributes.
+Failed to DSA sign digest of authenticated attributes.
+Some or all of the unauthenticated attributes could not be created.
+authKeyIdXml
+PIN authentication succeeded for the role.
+Context specific PIN authentication failed.
+PIN authenticating after the signing operation has been initialized...
+Context specific user PIN authentication failed.
+oauth1_generate
+oauth_consumer_key
+oauth_nonce
+oauth_body_hash
+oauth_timestamp
+oauth_signature_method
+oauth_verifier
+oauth_token
+oauth_callback
+oauth_version
+oauth_signature
+oauth_
+oauth_signature="
+NS (authoritative name server)
+SOA (start of a zone of authority)
+Proxy authentication failed or not satisfied.
+Retrying the HTTP request with the indicated proxy authentication method..
+Cannot automatically choose non-secure Basic authentication for non-SSL/TLS connections...
+Set the BasicAuth property to explicitly request Basic authentication.
+Cannot automatically choose non-secure Basic authentication for non-SSL/TLS connections..
+Set the BasicAuth property to explicitly request Basic authentication
+oauth_realm
+oauth1_authorization_header
+oauth1
+Retrying the HTTP request with the indicated proxy authentication method.
+WZ AES authentication code mismatch.
+GCM decrypt authentication tag not equal to the expected value.
+authHeaderValue
+SOCKS5 server is allowing no authentication.
+SOCKS5 server selected username/password authentication.
+No private key set via SetAuthPrivateKey for the Amazon Pay authorization signature.
+authOnly
+Adding Content-Length header for auth-only POST or PUT.
+auth
+Unsupported qop for HTTP digest authentication.
+Found issuer using the authority key identifier.
+SSH GCM auth tag is not 16 bytes.
+choose_userauth_rsa_algorithm
+authBanner
+authbanner
+No proxy authentication method specified.
+Proxy authentication is required.
+The server supports the Basic proxy authentication method.
+The server supports the NTLM proxy authentication method.
+The server supports the Negotiate proxy authentication method.
+ISA Server requires authorization
+Re-trying with NTLM proxy authentication...
+csc_get_credentials_auth
+credentials/authorize
+credentials/authorize HTTP request failed.
+credentials_info.authMode
+No authMode is present.
+At this time, only the implicit authMode is supported.
+/oauth2/token
+Smartcard PIN authentication by PKCS11...
+Already PIN authenticated with the smartcard....
+unknown certificate authority
+certificate_authorities
+post_handshake_auth
+The acceptable client cert DN authorities is empty.  Client certs from any authority will be accepted.
+The chain of authentication is too long.  This is likely an infinite loop..
+This certificate is the root in the chain of authentication.
+This certificate is NOT the root in the chain of authority.
+Adding post_handshake_auth extension...
+GCM auth tag is not 16 bytes.
+AEAD auth tag is not 16 bytes.
+OCSP_status 6:  Unauthorized - Request unauthorized.
+If an NTLM authentication failure occurs, try setting the LoginDomain and Login properties as follows:
+oauth2_client_credentials
+authorization:
+Failed to add AWS authentication.
+oauth1_url
+oauth_token="
+oauth_nonce="
+oauth_consumer_key="
+oauth_signature_method="
+oauth_timestamp="
+, oauth_version="
+oauth_callback="
+oauth_verifier="
+Chilkat disallows using Basic authentication over a non-secure connection.
+Unable to add AWS authorization header.
+Unable to add Azure authorization.
+WriteMe;Write mail to author
+WrittenBy;;;Y YT;;;The author of the story or script.;;Entity
+ScreenplayBy;;;Y YT;;;The author of the screenplay or scenario (used for movies and TV shows).;;Entity
+old style authenticity information
+old style authenticity informatio
+DVB - default_authority_descriptor
+display_name_when_not_auth
+use_alt_name_if_not_auth
+author_len
+author
+).  Contact the program author for an update.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
+authorityKeyIdentifier
+authorityInfoAccess
+id-smime-ct-authData
+id-regCtrl-authenticator
+id-aca-authenticationInfo
+merchant initiated auth
+authorityRevocationList
+auth-rsa
+auth-ecdsa
+auth-psk
+auth-any
+                    auth_value,
+                    auth_reason,
+auth_value
+auth_reason
+Failed to initiate srp authentication.
+PhotoICloudManager::_authenticateWithToken Session is not defined
+Invalid authority
+application/auth-policy+xml
+not authorized
+authorizer malfunction
+not authorized to use function: %s
+invalid uri authority: %.*s
+authorization denied
+authTextColor
+authorizationStatus
+webView:authenticationChallenge:shouldAllowDeprecatedTLS:
+,org.aafassociation.advanced-authoring-format
+authTextColor
+authTextColor
+T@"NSColor",N,&,VauthTextColor
+sarauthai
+This certificate is expired. OCSP responder may give "Request unauthorized" response.
+w/ PKCS11, the private key handle can only be acquired in a PIN authenticated session.
+authenticatedSafe.contentInfo[i].safeBag[j].subject
+authenticatedSafe.contentInfo[i].safeBag[j].serialNumber
+authenticatedSafe.contentInfo[i].safeBag[j].subjectKeyId
+authenticatedSafe.contentInfo[i].safeBag[j].authorityKeyId
+No authority key identifier extension found.
+authenticatedSafe.contentInfo[i].safeBag[j].attrs.friendlyName
+authenticatedSafe.contentInfo[i].safeBag[j].attrs.keyContainerName
+authenticatedSafe.contentInfo[i].safeBag[j].attrs.localKeyId
+authenticatedSafe.contentInfo[i].safeBag[j].attrs.msStorageProvider
+authRootSha256Hash
+authenticatedSafe.contentInfo[i].safeBag[j].attrs.authRootSha256Hash
+authenticatedSafe.contentInfo[i].safeBag[j].attrs.enhKeyUsage[k].oid
+authenticatedSafe.contentInfo[i].safeBag[j].attrs.enhKeyUsage[k].usage
+authenticatedSafe.contentInfo[i].safeBag[j].attrs.unparsedOid[k]
+authenticatedSafe.contentInfo[i].safeBag[j].type
+authenticatedSafe
+authenticatedSafe.contentInfo[i].type
+Failed to get authenticated safe.
+url_oauth
+Failed to parse unauthenticated attributes DER.
+unauthDer
+authAttrOrder345
+signerInfo[i].authAttr.
+processUnauthAttr
+signerInfo[i].unauthAttr.
+pkcs7.verify.signerInfo[i].unauthAttr."1.2.840.113549.1.9.16.2.14".verify.
+pkcs7.verify.signerInfo[i].unauthAttr."1.3.6.1.4.1.311.3.3.1".verify.
+authenticatedAttributes
+RSASSA-PSS signature of authenticated attributes is invalid.
+RSASSA-PSS signature of authenticated attributes is valid.
+Digest of authenticated attributes DER matches.
+unauthenticatedAttributes
+Failed to extract authenticated attributes.
+createUnauthenticatedAttributes
+failed to create one or more unauthenticated attributes.
+CAdES enabled -- adding SigningCertificate authenticated attribute...
+adding SigningCertificateV2 authenticated attribute...
+CAdES-EPES enabled -- adding Signature Policy Identifier authenticated attribute (new method)...
+CAdES-EPES enabled -- adding Signature Policy Identifier authenticated attribute (legacy method)...
+adding the RevocationInfoArchival authenticated attribute...
+Not including signingCertificateV2 authenticated attribute for code signing.
+GCM auth tag is missing.
+Existing (1st) SignerInfo has invalid authenticated attributes
+MessageDigest authenticated attribute contains no digest.
+MessageDigest authenticated attribute contains no content.
+Failed to sign digest of authenticated attributes using a cloud service.
+Failed to sign digest of authenticated attributes using the PKCS11 session.
+Failed to sign digest of authenticated attributes using the MacOS keychain services.
+Failed to RSA sign digest of authenticated attributes.
+Failed to ECC sign digest of authenticated attributes.
+Failed to DSA sign digest of authenticated attributes.
+Some or all of the unauthenticated attributes could not be created.
+authKeyIdXml
+PIN authentication succeeded for the role.
+Context specific PIN authentication failed.
+PIN authenticating after the signing operation has been initialized...
+Context specific user PIN authentication failed.
+oauth1_generate
+oauth_consumer_key
+oauth_nonce
+oauth_body_hash
+oauth_timestamp
+oauth_signature_method
+oauth_verifier
+oauth_token
+oauth_callback
+oauth_version
+oauth_signature
+oauth_
+oauth_signature="
+NS (authoritative name server)
+SOA (start of a zone of authority)
+Proxy authentication failed or not satisfied.
+Retrying the HTTP request with the indicated proxy authentication method..
+Cannot automatically choose non-secure Basic authentication for non-SSL/TLS connections...
+Set the BasicAuth property to explicitly request Basic authentication.
+Cannot automatically choose non-secure Basic authentication for non-SSL/TLS connections..
+Set the BasicAuth property to explicitly request Basic authentication
+oauth_realm
+oauth1_authorization_header
+oauth1
+Retrying the HTTP request with the indicated proxy authentication method.
+WZ AES authentication code mismatch.
+GCM decrypt authentication tag not equal to the expected value.
+authHeaderValue
+SOCKS5 server is allowing no authentication.
+SOCKS5 server selected username/password authentication.
+No private key set via SetAuthPrivateKey for the Amazon Pay authorization signature.
+authOnly
+Adding Content-Length header for auth-only POST or PUT.
+auth
+Unsupported qop for HTTP digest authentication.
+Found issuer using the authority key identifier.
+SSH GCM auth tag is not 16 bytes.
+choose_userauth_rsa_algorithm
+authBanner
+authbanner
+No proxy authentication method specified.
+Proxy authentication is required.
+The server supports the Basic proxy authentication method.
+The server supports the NTLM proxy authentication method.
+The server supports the Negotiate proxy authentication method.
+ISA Server requires authorization
+Re-trying with NTLM proxy authentication...
+csc_get_credentials_auth
+credentials/authorize
+credentials/authorize HTTP request failed.
+credentials_info.authMode
+No authMode is present.
+At this time, only the implicit authMode is supported.
+/oauth2/token
+Smartcard PIN authentication by PKCS11...
+Already PIN authenticated with the smartcard....
+unknown certificate authority
+certificate_authorities
+post_handshake_auth
+The acceptable client cert DN authorities is empty.  Client certs from any authority will be accepted.
+The chain of authentication is too long.  This is likely an infinite loop..
+This certificate is the root in the chain of authentication.
+This certificate is NOT the root in the chain of authority.
+Adding post_handshake_auth extension...
+GCM auth tag is not 16 bytes.
+AEAD auth tag is not 16 bytes.
+OCSP_status 6:  Unauthorized - Request unauthorized.
+If an NTLM authentication failure occurs, try setting the LoginDomain and Login properties as follows:
+oauth2_client_credentials
+authorization:
+Failed to add AWS authentication.
+oauth1_url
+oauth_token="
+oauth_nonce="
+oauth_consumer_key="
+oauth_signature_method="
+oauth_timestamp="
+, oauth_version="
+oauth_callback="
+oauth_verifier="
+Chilkat disallows using Basic authentication over a non-secure connection.
+Unable to add AWS authorization header.
+Unable to add Azure authorization.
+WriteMe;Write mail to author
+WrittenBy;;;Y YT;;;The author of the story or script.;;Entity
+ScreenplayBy;;;Y YT;;;The author of the screenplay or scenario (used for movies and TV shows).;;Entity
+old style authenticity information
+old style authenticity informatio
+DVB - default_authority_descriptor
+display_name_when_not_auth
+use_alt_name_if_not_auth
+author_len
+author
+).  Contact the program author for an update.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
+authorityKeyIdentifier
+authorityInfoAccess
+id-smime-ct-authData
+id-regCtrl-authenticator
+id-aca-authenticationInfo
+merchant initiated auth
+authorityRevocationList
+auth-rsa
+auth-ecdsa
+auth-psk
+auth-any
+                    auth_value,
+                    auth_reason,
+auth_value
+auth_reason
+Failed to initiate srp authentication.
+PhotoICloudManager::_authenticateWithToken Session is not defined
+Invalid authority
+application/auth-policy+xml
+not authorized
+authorizer malfunction
+not authorized to use function: %s
+invalid uri authority: %.*s
+authorization denied
+authTextColor
+authorizationStatus
+webView:authenticationChallenge:shouldAllowDeprecatedTLS:
+,org.aafassociation.advanced-authoring-format
