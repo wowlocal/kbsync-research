@@ -1,0 +1,3 @@
+[submodule "gsalogin"]
+	path = gsalogin
+	url = https://github.com/mwpcheung/gsalogin.git
