@@ -12,3 +12,7 @@ ZN4DDNA9iOSDevice29_getMinimalInfoWithoutSessionEvE3$_0
 
 N4DDNA20iCloudSessionServiceE
 N4DDNA22GSAAppleAccountManagerE
+
+N4DDNA19AppleAccountManagerE -> N4DDNA25iCloudAppleAccountManagerE
+
+N4DDNA17GSASessionServiceE
