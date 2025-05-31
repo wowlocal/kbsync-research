@@ -1,0 +1,5563 @@
+protocol Preference {
+    //flags 0x43, numRequirements 1
+}
+
+protocol PairingScreenHandler {
+    //flags 0x10043, numRequirements 2
+}
+
+protocol DeviceItemWrapper {
+    //flags 0x43, numRequirements 2
+}
+
+protocol ItemSelector {
+    //flags 0x10043, numRequirements 8
+    associatedtype ItemType
+}
+
+protocol EmbeddedModalController {
+    //flags 0x10043, numRequirements 12
+}
+
+protocol UISearchable {
+    //flags 0x10043, numRequirements 1
+}
+
+protocol DeviceSetting {
+    //flags 0x43, numRequirements 1
+}
+
+protocol CommandRouter {
+    //flags 0x10043, numRequirements 1
+}
+
+enum Either {
+    // <0xd2, enum, isGeneric, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x3f10 
+    case left(x)
+    case right(q_)
+}
+
+class Event {
+    // <0x800000d0, class, isGeneric, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x4ba4 
+    let observers: SDySo100x02a6a159CG;
+}
+
+class EventObserverInfo {
+    // <0x800000d0, class, isGeneric, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x4ea4 
+    let uuid: 0x0269a159;
+    let event: Event;
+}
+
+enum PaperOrientation {
+    // <0x60012, enum, NotUnique, version 0, kindSpecificFlags 0x6>
+    // Access Function at 0xcc88 
+}
+
+struct StateValue {
+    // <0x60011, struct, NotUnique, version 0, kindSpecificFlags 0x6>
+    // Access Function at 0xcc9c 
+    let rawValue: Int;
+}
+
+struct Level {
+    // <0x60011, struct, NotUnique, version 0, kindSpecificFlags 0x6>
+    // Access Function at 0xccb0 
+    let rawValue: Int;
+}
+
+struct PreferenceMediaCopyiTunesImportOptions {
+    // <0x20011, struct, NotUnique, version 0, kindSpecificFlags 0x2>
+    // Access Function at 0xccc4 
+    let rawValue: UInt;
+}
+
+struct CGSize {
+    // <0x20011, struct, NotUnique, version 0, kindSpecificFlags 0x2>
+    // Access Function at 0xcd30 
+    let width: 0x0235a159;
+    let height: 0x0235a159;
+}
+
+enum WizardWindowDelegateBehavior {
+    // <0x20012, enum, NotUnique, version 0, kindSpecificFlags 0x2>
+    // Access Function at 0xcd44 
+}
+
+enum iOSSystemAppFilter {
+    // <0x20012, enum, NotUnique, version 0, kindSpecificFlags 0x2>
+    // Access Function at 0xcd58 
+}
+
+struct URLResourceKey {
+    // <0x60011, struct, NotUnique, version 0, kindSpecificFlags 0x6>
+    // Access Function at 0xcd6c 
+    let _rawValue: NSString;
+}
+
+struct CGRect {
+    // <0x20011, struct, NotUnique, version 0, kindSpecificFlags 0x2>
+    // Access Function at 0xce08 
+    let origin: CGPoint;
+    let size: CGSize;
+}
+
+struct ModalResponse {
+    // <0x60011, struct, NotUnique, version 0, kindSpecificFlags 0x6>
+    // Access Function at 0xce1c 
+    let rawValue: Int;
+}
+
+struct CGPoint {
+    // <0x20011, struct, NotUnique, version 0, kindSpecificFlags 0x2>
+    // Access Function at 0xce30 
+    let x: 0x0235a159;
+    let y: 0x0235a159;
+}
+
+struct PasteboardType {
+    // <0x60011, struct, NotUnique, version 0, kindSpecificFlags 0x6>
+    // Access Function at 0xce44 
+    let _rawValue: NSString;
+}
+
+struct NSKeyValueChangeKey {
+    // <0x60011, struct, NotUnique, version 0, kindSpecificFlags 0x6>
+    // Access Function at 0xce58 
+    let _rawValue: NSString;
+}
+
+struct HintKey {
+    // <0x60011, struct, NotUnique, version 0, kindSpecificFlags 0x6>
+    // Access Function at 0xce6c 
+    let _rawValue: NSString;
+}
+
+struct LaunchConfigurationKey {
+    // <0x60011, struct, NotUnique, version 0, kindSpecificFlags 0x6>
+    // Access Function at 0xd724 
+    let _rawValue: NSString;
+}
+
+enum ComparisonResult {
+    // <0x60012, enum, NotUnique, version 0, kindSpecificFlags 0x6>
+    // Access Function at 0xd738 
+}
+
+class SecCertificate {
+    // <0x60010, class, NotUnique, version 0, kindSpecificFlags 0x6>
+    // Access Function at 0xd74c 
+}
+
+struct Key {
+    // <0x60011, struct, NotUnique, version 0, kindSpecificFlags 0x6>
+    // Access Function at 0xd760 
+    let _rawValue: NSString;
+}
+
+struct PropertyKey {
+    // <0x60011, struct, NotUnique, version 0, kindSpecificFlags 0x6>
+    // Access Function at 0xd774 
+    let _rawValue: NSString;
+}
+
+enum Status {
+    // <0x60012, enum, NotUnique, version 0, kindSpecificFlags 0x6>
+    // Access Function at 0xd788 
+}
+
+struct NSBindingOption {
+    // <0x60011, struct, NotUnique, version 0, kindSpecificFlags 0x6>
+    // Access Function at 0xd79c 
+    let _rawValue: NSString;
+}
+
+class ChooseAppsFromLibraryWindowController : NSWindowController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x11cc8 
+    let cacheSelectedItems: Bool;
+    let _awake: Bool;
+    let chooseAppsHandler: ([iOSApp]?) -> ();
+    let multipleSelection: Bool;
+    let isLoading: Bool;
+    let selectedAppsLabel: String;
+    let showSignInLabel: Bool;
+    let includeSystemApps: iOSSystemAppFilter;
+    let manager: iOSAppDownloadManager?;
+    let device: iOSDevice?;
+    let appsArrayController: NSArrayController?;
+    let tableView: NSTableView?;
+    let title: String;
+    let canChoose: Bool;
+    let bundleIDsToSelect: Array<String>;
+    let searchText: String?;
+}
+
+class DeviceToolCollectionViewLayout : CollectionViewFixedItemsPerRowsVerticalFlowLayout {
+    // <0x40000050, class, isUnique, version 0, kindSpecificFlags 0x4000>
+    // Access Function at 0x11f84 
+}
+
+class PhotoImageCaptureManager : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x12978 
+    let device: weak Device?;
+    let iOSDevice: weak iOSDevice?;
+    let window: weak NSWindow?;
+    let manager: weak PhotoManager?;
+    let deviceBrowser: ICDeviceBrowser;
+    let connectedDevice: ICCameraDevice?;
+    let viewsDeviceUdidNoDashes: String;
+    let catalogLoaded: Bool;
+    let loadedCameraFiles: [Swift.String : [ICCameraFile]];
+    let loadedBurstsIDs: [Swift.String : [ICCameraFile]];
+    let loadedFileNames: [Swift.String : ICCameraFile];
+}
+
+class HomeDiscoverAppsViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x16cdc 
+    let stackView: NSStackView?;
+    let apps: [HomeDiscoverAppViewController];
+}
+
+class ConnectScreenWiFiViewController : ConnectScreenViewController {
+    // <0x40000050, class, isUnique, version 0, kindSpecificFlags 0x4000>
+    // Access Function at 0x1d808 
+}
+
+class MediaNoHighlightButton : So8NSButtonC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1e770 
+    let tooltipLabel: String?;
+    let isAwake: Bool;
+}
+
+class HomeDiscoverTourViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1f2d0 
+    let container: NSView?;
+    let dotsContainer: NSStackView?;
+    let hide: Bool;
+    let showLicenseButton: Bool;
+    let navigationEnabled: Bool;
+    let canGoLeft: Bool;
+    let canGoRight: Bool;
+    let index: Int;
+    let rightButtonTitle: String;
+    let rightButtonImage: So7NSImageCSg;
+    let controllers: [HomeDiscoverTourBaseViewController];
+    let indexObserver: 0x02d79059;
+    let appRegisteredObserver: 0x02d79059;
+    let appRegistered: Bool;
+}
+
+class SelectDevicesViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x22318 
+    let selectionChanged:  empty-list [DeviceItem];
+    let selecting: Bool;
+    let observation: 0x02d79059;
+    let selected: Swift.Set empty-list SelectableDeviceItem;
+    let arrayController: NSArrayController;
+    let excludedUDIDs: Array<String>;
+    let searchString: String?;
+}
+
+class WhatsAppTextField : NSTextField {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x23a08 
+    let textColorName: String;
+}
+
+class BlueprintSectionAppConfigViewController : BlueprintSectionViewControllerBase {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x26bfc 
+    let appsArrayController: NSArrayController?;
+    let appsMenu: NSMenu?;
+    let appsTableView: NSTableView?;
+    let chooseFilesWC: ChooseAppFilesWindowController;
+    let chooseAppWC: ChooseAppFromITunesWindowController;
+    let ddHelper: TableViewDragDropHelper;
+    let appItems: [iOSAppDisplayItem];
+    let hasSelection: Bool;
+    let isLoading: Bool;
+    let configButtonText: String;
+}
+
+class Predicate {
+    // <0x800000d0, class, isGeneric, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x27770 
+}
+
+class PromoData : So8NSObjectC {
+    // <0x80010050, class, isUnique, version 0, kindSpecificFlags 0x8001>
+    // Access Function at 0x2991c 
+    let id: UInt;
+    let url: 0x02f98f59;
+    let title: String?;
+    let force: Bool;
+}
+
+class MediaListViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2c4f4 
+    let tracksTableView: MediaTracksTableView;
+    let purchasedOrAppleMusicColumn: MediaTracksTableColumn;
+    let alreadyIniTunesColumn: MediaTracksTableColumn;
+    let owner: MediaBaseListViewController;
+    let alreadyIniTunesToolTip: String?;
+    let cannotPlayProtectedMediaToolTip: String?;
+    let exportLabel: String?;
+    let showAlbumLabel: String?;
+    let deleteOrRemoveLabel: String?;
+}
+
+class HomeTableCellView : NSTableCellView {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x2dbc8 
+}
+
+class HintView : So6NSViewC {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x2e0c8 
+}
+
+class RegistrationDiscoverItem : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x3042c 
+    let kind: Kind;
+    let identifier: String;
+    let title: String;
+    let icon: So7NSImageCSg;
+    let limitText: String?;
+    let limitTextLong: String?;
+    let badgeLabel: String;
+    let remaining: Int;
+    let discoverVisibility: TrialDiscoverVisibility;
+    let limit: ((key: String, default: Int))?;
+}
+
+enum TrialDiscoverVisibility {
+    // <0x52, enum, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x3044c 
+    case 0xc05c01d0(Kind)
+    case So16NSViewControllerC(æþÿ¼ÿÿ)
+    case 0xeb2bb96de923016dfa6702a9f85f03a9f65704a9f44f05a9fd7b06a9fd830191886f01d0189d43f9886a78f82801(P)
+    case 0xfd7bbfa9fd03(SuperviseWizardViewController)
+    case 0xc6e5feffb0e5feff07(ý{¿©ý)
+    case So22WizardWindowControllerC(Ìåþÿ¬åþÿ)
+    case 0x02099659(Èåþÿ¾åþÿ)
+    case 0xfd7bbfa9fd03(ChoosePopupButton)
+    case P(öW½©ôOSo120x01a9fd7b02C©ý)
+    case So12AVPlayerViewC(¸åþÿ¢åþÿ)
+    case 0x14(ÿÿ4¬ßÿ¼ã¡ý0gSo40x02C)
+    case 0xfd7bbfa9fd03(ConfiguratorBlueprintsViewController)
+}
+
+enum Kind {
+    // <0x52, enum, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x3045c 
+}
+
+class QuickTransferAnimationViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x30bf8 
+    let animationView: NSView?;
+    let imageView1: NSImageView?;
+    let imageView2: NSImageView?;
+    let infoLabel: String;
+    let animation: CABasicAnimation?;
+    let positionAdjusted: Bool;
+}
+
+class SuperviseWizardViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x32c74 
+    let wizard: weak WizardWindowController?;
+    let behavior: WizardWindowDelegateBehavior;
+    let _isAwake: Bool;
+    let _didInsertConfirmStep: Bool;
+    let organizationUUIDObserver: 0x02d79059;
+    let blueprint: So9BlueprintC;
+    let contentSupervisionView: NSView?;
+    let contentSetupView: NSView?;
+    let contentSupervisionViewHeightConstraint: NSLayoutConstraint?;
+    let contentSetupViewHeightConstraint: NSLayoutConstraint?;
+    let chooseWifiPopup: ChoosePopupButton;
+    let superviseVC: BlueprintSectionSupervisionViewController;
+    let setupVC: BlueprintSectionSetupViewController;
+    let chooseProfilesSheet: ChooseItemsWindowController;
+}
+
+class RoundImageView : NSImageView {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x33394 
+    let radius: Int;
+}
+
+class SuperviseWizardWindowController : WizardWindowController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x336c4 
+}
+
+class DeviceDataCollectionViewLayout : CollectionViewFixedItemSizeVerticalFlowLayout {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x3399c 
+}
+
+class ChoosePopupButton : VKPopUpButton {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x34388 
+    let chooseHandler: ((ChoosePopupButton, Swift.Bool) -> ())?;
+    let chooseItemTitle: String;
+    let noSelectionLabel: String;
+    let removeLabel: String;
+}
+
+class ScrollingDisabledAVPlayerView : AVPlayerView {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x34624 
+}
+
+class ConfiguratorBlueprintsViewController : WizardWindowController {
+    // <0x10050, class, isUnique, version 0, kindSpecificFlags 0x1>
+    // Access Function at 0x3492c 
+    let indexPath: 0x027f8e59;
+}
+
+class DiscreetSplitView : NSSplitView {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x34c90 
+}
+
+class PhotoCarouselCollectionViewFlowLayout : NSCollectionViewFlowLayout {
+    // <0x80010050, class, isUnique, version 0, kindSpecificFlags 0x8001>
+    // Access Function at 0x364b8 
+    let collectionViewItemWidthFactor: 0x0235a159;
+    let collectionViewSelectedItemLandscapeWidthFactor: 0x0235a159;
+    let collectionViewSelectedItemPortraitWidthFactor: 0x0235a159;
+    let collectionViewSelectedItemInsertWidth: 0x0235a159;
+    let isScrolling: Bool;
+    let selectedIndex: 0x023b8e59;
+    let cachedItemsAttributes: SDySo100x02308e59CG;
+    let desiredContentSize: CGSize;
+}
+
+class DatasetToolbarButtonCell : NSButtonCell {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x367d8 
+    let mouseOver: Bool;
+    let windowObservation: 0x02d79059;
+    let trackingArea: NSTrackingArea?;
+}
+
+class MediaCopyOptions {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x37cf0 
+    let copyType: CopyType;
+    let importOptions: PreferenceMediaCopyiTunesImportOptions;
+    let createPlaylists: Bool;
+    let tracksToCopy: [MediaTrack];
+    let processedTracks: [MediaTrack];
+    let selectedPlaylist: MediaPlaylist?;
+    let iTunesMediaFolder: String;
+    let scriptPath: String;
+    let iTunesLibraryPath: String;
+}
+
+class OperationData {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x37d7c 
+    let mediaCopyOperation: MediaCopyOperation?;
+    let importData: MediaOperationImportIniTunesData?;
+    let mediaCopyOptions: MediaCopyOptions?;
+    let playlistIndex: Int;
+}
+
+class MediaCopyiTunesProgressHandler : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x3d124 
+    let window: weak NSWindow?;
+    let manager: weak MediaManager?;
+    let isReady: Bool;
+    let copyInProgress: Bool;
+    let subscribedToNotifications: Bool;
+    let pendingScripts: SaySDySo100x029b9659CG;
+    let serverTask: NSTask?;
+    let alert: So7NSAlertCSg;
+    let duplicatedPlaylistsDialogBox: MediaCopyDuplicatedPlaylistsDialogBox;
+    let pendingOperations: [Swift.UnsafeMutableRawPointer : MediaCopyOptions];
+    let currentOperationData: OperationData;
+}
+
+enum CopyType {
+    // <0x52, enum, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x3d144 
+}
+
+class PhotoDetailView : So6NSViewC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x3dee4 
+    let backgroundColor: So7NSColorCSg;
+    let onKeyDown: ((NSEvent) -> Swift.Bool)?;
+    let onKeyUp: ((NSEvent) -> Swift.Bool)?;
+    let didReceiveKeyDown: Bool;
+}
+
+class PreferencesInternationalViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x3ee24 
+    let languagePopup: NSPopUpButton?;
+}
+
+class BatteryItem : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x3f650 
+    let value: UInt;
+    let title: String;
+}
+
+class ConfiguratorProfilesContentViewController : LibraryWizardViewController {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x3f760 
+}
+
+class BackupSummaryItem : 0x021f8f59 {
+    // <0x40010050, class, isUnique, version 0, kindSpecificFlags 0x4001>
+    // Access Function at 0x3fc4c 
+    let encrypted: Bool;
+    let numSnapshots: NSNumber?;
+    let totalSize: NSNumber?;
+    let udid: String;
+    let serial: String;
+    let location: String;
+    let osName: String;
+    let firstBackupDate: NSDate?;
+    let firstBackupDateString: String;
+    let lastBackupDate: NSDate?;
+    let lastBackupDateString: String;
+}
+
+class BackupSelectionViewController : 0x02019259 {
+    // <0xc0010050, class, isUnique, version 0, kindSpecificFlags 0xc001>
+    // Access Function at 0x4173c 
+    let _allowsMultipleSelection: Bool;
+    let showControls: Bool;
+    let _autoLoadMainBackups: Bool;
+    let contentView: NSView?;
+}
+
+class BlueprintSectionSetupViewController : BlueprintSectionViewControllerBase {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x46504 
+    let placeholderImage: So7NSImageCSg;
+    let lockScreenSet: Bool;
+    let homeScreenSet: Bool;
+    let lockScreenImageView: AspectFillImage;
+    let homeScreenImageView: AspectFillImage;
+    let lockScreenDropView: DropSuperview;
+    let homeScreenDropView: DropSuperview;
+    let contentStackView: NSStackView?;
+    let shouldSetLanguage: Bool;
+    let shouldSetRegion: Bool;
+    let shouldSetTimezone: Bool;
+    let stepsEnabled: Bool;
+    let selectedLanguage: ISOLanguage;
+    let selectedRegion: ISOCountry;
+    let selectedTimezone: String;
+    let wallpapersLabel: String;
+    let countriesController: NSArrayController?;
+    let languagesController: NSArrayController?;
+    let timezonesController: NSArrayController?;
+    let stepsPopup: NSPopUpButton?;
+    let firstViewToHide: NSView?;
+    let allowedImageTypes: Array<String>;
+    let hideExtraOptions: Bool;
+}
+
+class PhotoTreeNodeCellView : NSTableCellView {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x46914 
+}
+
+class LibraryWizardViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x49fdc 
+    let wizard: weak WizardWindowController?;
+    let behavior: WizardWindowDelegateBehavior;
+    let contentView: NSView?;
+    let currentController: NSViewController?;
+    let _profilesController: ProfileLibraryViewController;
+    let _organizationsController: OrganizationsViewController;
+    let _serversController: MDMServersViewController;
+    let _blueprintsController: ConfigureBlueprintsViewController;
+    let _devicesController: OperationDispatcherViewController;
+    let _didApply: Bool;
+    let observations: SaySo100x029c8959CG;
+    let labelsAndIcons: Array<(id: String, label: String, image: String, help: String)>;
+    let selectedSegment: Int;
+}
+
+class ConfiguratorOrganizationsViewController : WizardWindowController {
+    // <0x10050, class, isUnique, version 0, kindSpecificFlags 0x1>
+    // Access Function at 0x4a53c 
+    let indexPath: 0x027f8e59;
+}
+
+class HomeDevicesViewController : HomeDevicesBaseViewController {
+    // <0xc0010050, class, isUnique, version 0, kindSpecificFlags 0xc001>
+    // Access Function at 0x4a8b0 
+    let connectScreenContainer: NSView?;
+    let infoViewContainer: NSView?;
+    let switchViewControl: NSSegmentedControl?;
+    let isLoading: Bool;
+    let infoViewController: 0x026d8a59;
+    let connectScreen: ConnectScreenUSBViewController;
+}
+
+class PreferencesGeneralViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x4c8e0 
+    let stackView: NSStackView?;
+    let clearCacheStackView: NSStackView?;
+    let clearCacheButton: 0x02ef8a59;
+    let canSetAppearance: Bool;
+    let hasConfigurator: Bool;
+    let canShowConfigurator: Bool;
+    let allowTracking: Bool;
+    let analyticsInfo: String;
+    let registeredObserver: 0x02d79059;
+}
+
+class WizardWindowProgressViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x4e41c 
+    let lottieContainer: NSView?;
+    let messageLabel: 0x02c58a59;
+    let wizard: WizardWindowController?;
+    let behavior: WizardWindowDelegateBehavior;
+    let operation: AnyObject?;
+    let item: iMazing.OperationItem?;
+    let wizardImageObserver: 0x02d79059;
+    let runningObserver: 0x02d79059;
+    let pausedObserver: 0x02d79059;
+    let messageObserver: 0x02d79059;
+    let resumeButton: 0x026d8a59;
+    let pauseButton: 0x026d8a59;
+    let stopButton: 0x026d8a59;
+    let quickLookButton: 0x026d8a59;
+    let revealButton: 0x026d8a59;
+    let aborted: Bool;
+    let lottieController: LottieViewController;
+    let message: String;
+}
+
+class DeviceSettingsAdditionalOptionsViewController : NSViewController {
+    // <0x80010050, class, isUnique, version 0, kindSpecificFlags 0x8001>
+    // Access Function at 0x511dc 
+    let minimumLowBatteryNotification: Int;
+    let maximumLowBatteryNotification: Int;
+    let defaultLowBatteryNotification: Int;
+    let item: DeviceItem;
+    let indexPath: 0x027f8e59;
+    let enableSaveAndDiscard: Bool;
+    let lowBatteryItems: [BatteryItem];
+    let lowBatteryItem: BatteryItem;
+    let launchWhenConnectedViaUSB: Bool;
+    let enableLowBatteryNotification: Bool;
+    let openAutomaticallyAtLaunch: Bool;
+    let infoViewController: 0x026d8a59;
+    let previousTextfieldValue: String;
+    let LowBatteryNotificationValue: Int;
+    let infoViewContainer: NSView?;
+    let lowBatteryTextField: NSTextField?;
+}
+
+class BackupsListItem : ListItem {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x52c3c 
+    let observer: 0x02d79059;
+}
+
+class ChooseAppFilesWindowController : NSWindowController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x5443c 
+    let _awake: Bool;
+    let chooseFilesHandler: (Optional<Array<String>>) -> ();
+    let filesArrayController: NSArrayController?;
+    let tableView: NSTableView?;
+    let files: [FileItem];
+    let appItem: iOSAppDisplayItem?;
+    let _dragDropHelper: TableViewDragDropHelper;
+}
+
+class FileItem : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x5445c 
+    let title: String;
+    let subtitle: String;
+    let path: String;
+    let icon: So7NSImageCSg;
+}
+
+class SuperviseWizardActionsViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x56930 
+    let wizard: weak WizardWindowController?;
+    let behavior: WizardWindowDelegateBehavior;
+    let _awake: Bool;
+    let _device: iOSDevice?;
+    let _observations: SaySo100x029c8959CG;
+    let settingsVC: DeviceOptionsViewController;
+}
+
+class PhotoAssetsDescriptionView : PhotoOpacityView {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x56d78 
+    let cachedAssetDescriptionTextField: NSTextField?;
+    let cachedAssetDescriptionIconOnlyView: NSView?;
+}
+
+class RestoreWizardProgressViewController : WizardWindowProgressViewController {
+    // <0x40000050, class, isUnique, version 0, kindSpecificFlags 0x4000>
+    // Access Function at 0x56dd0 
+}
+
+class PhotoDisplayOperation {
+    // <0x80010050, class, isUnique, version 0, kindSpecificFlags 0x8001>
+    // Access Function at 0x5802c 
+    let photoViewController: weak PhotoViewController?;
+    let operation: CoreOperation?;
+    let onStartUUID: 0x02b59e59;
+    let onProgressUUID: 0x02b59e59;
+    let onCancelUUID: 0x02b59e59;
+    let onFinishUUID: 0x02b59e59;
+}
+
+class DeviceDataViewController : NSViewController {
+    // <0x80010050, class, isUnique, version 0, kindSpecificFlags 0x8001>
+    // Access Function at 0x59e48 
+    let item: DeviceItem;
+    let indexPath: 0x027f8e59;
+    let contentController: NSViewController?;
+    let datasets: [Dataset];
+    let arrayController: NSArrayController?;
+    let toolbarContainer: NSView?;
+    let contentContainer: NSView?;
+    let stackView: NSStackView?;
+    let collectionView: NSCollectionView?;
+    let screenContainer: NSView?;
+    let hintContainer: NSView?;
+    let toolbarViews: NSView?;
+    let toolbar: DeviceToolbarController;
+    let diskSpaceObserver: 0x02d79059;
+    let archiveObserver: 0x02d79059;
+    let datasetObserver: 0x02d79059;
+    let initialDataset: Dataset;
+    let diskSpaceViewController: 0x02498859;
+    let screenController: NSViewController?;
+    let hintController: HintViewController;
+    let datasetNavigation: DatasetNavigationViewController;
+}
+
+class HomeDevicesActionsViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x5e050 
+    let onClose: ((HomeDevicesActionsViewController) -> ())?;
+    let arrayController: NSArrayController?;
+    let tableView: NSTableView?;
+    let hasActions: Bool;
+    let items: NSArray;
+    let devices: [DeviceItem];
+    let selectionObserver: 0x02d79059;
+}
+
+class MediaTrackTableRowView : NSTableRowView {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x5f4a0 
+    let mouseOverBackgroundColor: String;
+    let trackingArea: NSTrackingArea?;
+    let mouseOver: Bool;
+}
+
+class PhotoImageSizedView : So6NSViewC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x6a534 
+    let borderWidth: 0x0235a159;
+    let imageView: NSImageView?;
+    let widthConstraint: NSLayoutConstraint?;
+    let heightConstraint: NSLayoutConstraint?;
+    let isAwake: Bool;
+}
+
+enum ScreenshotType {
+    // <0x52, enum, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x6d4a8 
+}
+
+class DatasetNavigationViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x6eb88 
+    let device: DeviceItem;
+    let showDownArrow: Bool;
+    let currentItemIsShortcut: Bool;
+    let currentItem: Dataset;
+    let controllers: [DatasetNavigationMenuItemViewController];
+    let datasetObserver: 0x02d79059;
+    let onSelect: ySo7DatasetC;
+    let backgroundView: BreadcrumbItemBackgroundView;
+    let itemsMenu: NSMenu?;
+}
+
+class SchedulingOptionsFrequencyItem : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x6f220 
+    let frequency: Int;
+}
+
+class PhotoCollectionSectionHeaderView : So6NSViewC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x6fdc0 
+    let title: NSTextField?;
+    let dateRange: NSTextField?;
+    let section: Int?;
+    let mouseMouveLocalEvent: Any?;
+    let isDragging: Bool;
+}
+
+class PodcastsAlbumViewController : MediaAlbumViewController {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x70458 
+}
+
+class PhotoClipView : NSClipView {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x70818 
+    let currentScrollPosition: 0x0235a159;
+}
+
+class BlueprintSectionAppRestrictionsViewController : BlueprintSectionViewControllerBase {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x71f98 
+    let appsArrayController: NSArrayController?;
+    let restrictionModeButton: NSPopUpButton?;
+    let chooseAppWC: ChooseAppFromITunesWindowController;
+    let isLoading: Bool;
+}
+
+class TrackingView : So6NSViewC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x72964 
+    let onMouseEnter: (() -> ())?;
+    let onMouseExit: (() -> ())?;
+    let trackingArea: NSTrackingArea?;
+}
+
+class SimultaneousOperationsItem : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x72da0 
+    let value: Int;
+    let title: String;
+}
+
+class InteractionAlertNewPasswordController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x7340c 
+    let data: UserInteractionDialogBoxData;
+    let checkboxTitle: String;
+    let checkboxValue: Int;
+    let passwordField1: NSTextField?;
+    let passwordField2: NSTextField?;
+    let checkbox: NSButton?;
+}
+
+class PhotoMediaHandler : So8NSObjectC {
+    // <0x80010050, class, isUnique, version 0, kindSpecificFlags 0x8001>
+    // Access Function at 0x74c3c 
+    let manager: weak PhotoManager?;
+    let mediaOperation: CoreOperation?;
+    let onStartUUID: 0x02b59e59;
+    let onCancelUUID: 0x02b59e59;
+    let onProgressUUID: 0x02b59e59;
+    let onFinishUUID: 0x02b59e59;
+}
+
+class DeviceSettingsWiFiViewController : NSViewController {
+    // <0x80010050, class, isUnique, version 0, kindSpecificFlags 0x8001>
+    // Access Function at 0x75f68 
+    let infoViewContainer: NSView?;
+    let wifiStatusButton: 0x028d8659;
+    let item: DeviceItem;
+    let indexPath: 0x027f8e59;
+    let isUpdatingWifi: Bool;
+    let wifiIsEnabled: Bool;
+    let infoViewController: 0x026d8a59;
+    let statusChangedCallback: () -> ();
+}
+
+class RegistrationLightBackgroundView : So6NSViewC {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x7638c 
+}
+
+class PhotoCollectionViewFlowLayout : NSCollectionViewFlowLayout {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x7942c 
+    let floatingSectionHeaders: Bool;
+    let cachedItemsAttributes: SDySo100x02308e59CG;
+    let cachedHeadersAttributes: SDySo100x02308e59CG;
+    let cachedFootersAttributes: SDySo100x02308e59CG;
+    let desiredContentSize: CGSize;
+    let sectionHeaderHeights: SDySiSo100x02268559CG;
+}
+
+class ManageAppsVersionsWindowController : NSWindowController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x7aed4 
+    let app: iOSAppDisplayItem;
+    let loading: Bool;
+    let versions: [iOSAppDisplayItem];
+    let error: String?;
+    let infoText: String?;
+    let manager: iOSAppDownloadManager;
+    let arrayController: NSArrayController?;
+    let tableView: NSTableView?;
+}
+
+class GenericItemPickerViewController : GenericListViewControllerBase {
+    // <0x800000d0, class, isGeneric, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x7d740 
+    let selectionHandler: ySayxGcSg;
+    let didLoadHandler: (() -> ())?;
+    let initialCaseInsensitiveSortKey: String?;
+    let items: Array<AnyObject>;
+    let filterPredicate: NSPredicate?;
+    let loadingVC: LoadingViewController;
+    let isAwake: Bool;
+}
+
+class BoundArrayController : NSArrayController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x7dd08 
+    let source: NSArrayController;
+}
+
+class DeviceSettingsDeviceOptionsViewController : NSViewController {
+    // <0x80010050, class, isUnique, version 0, kindSpecificFlags 0x8001>
+    // Access Function at 0x7e484 
+    let enableSaveAndDiscard: Bool;
+    let isLoadingObserver: 0x02d79059;
+    let item: DeviceItem;
+    let indexPath: 0x027f8e59;
+    let deviceOptionsViewController: DeviceOptionsViewController;
+    let container: NSView?;
+}
+
+class RegistrationWelcomeViewController : RegistrationContentViewController {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x84b4c 
+    let actionViewContainer: NSView?;
+    let actionView: NSView?;
+    let licenseCodeView: NSView?;
+    let messageLabel: NSTextField?;
+    let buyButtonContainer: NSView?;
+    let licenseCodeBackground: RegistrationLicenseCodeBackgroundView;
+    let nameBackground: RegistrationLicenseCodeBackgroundView;
+    let emailBackground: RegistrationLicenseCodeBackgroundView;
+    let licenseTextField: 0x02a78559;
+    let nameTextField: 0x02a78559;
+    let emailTextField: 0x02a78559;
+    let swissMadeLogo: NSView?;
+    let message: String;
+    let hideProceedButton: Bool;
+    let checkingLicense: Bool;
+    let canVerifyLicense: Bool;
+    let needsClientInfo: Bool;
+    let userName: String?;
+    let userEmail: String?;
+    let activationSchemeKey: String?;
+    let licenseKey: String;
+    let licenseError: String?;
+    let trialText: String;
+    let trialItem: RegistrationDiscoverItem;
+    let trialNotification: UINotification?;
+    let initialDisplay: Display;
+    let appearanceObserver: 0x02d79059;
+    let buyButton: RegistrationButtonViewController;
+    let continueTrialButton: NSButton?;
+}
+
+enum Display {
+    // <0x52, enum, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x84b6c 
+}
+
+class ConfiguratorDevicesViewController : WizardWindowController {
+    // <0x10050, class, isUnique, version 0, kindSpecificFlags 0x1>
+    // Access Function at 0x853c8 
+    let indexPath: 0x027f8e59;
+}
+
+class HomeBackupsIconViewItemFooter : So6NSViewC {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x8563c 
+}
+
+class GenericScreenViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x86c38 
+    let item: GenericScreenItem;
+    let isPaired: Bool;
+    let compactView: NSView?;
+    let compactImageViewContainer: NSView?;
+    let discoverView: NSView?;
+    let discoverImageViewContainer: NSView?;
+    let imageViewContainer: NSView?;
+    let deviceMenu: NSMenu?;
+    let toolbarContainer: NSView?;
+    let displayMode: DisplayMode;
+    let lottieController: LottieViewController;
+    let compactLottieController: LottieViewController;
+    let discoverLottieController: LottieViewController;
+    let toolbar: MainWindowToolbarController;
+}
+
+enum DisplayMode {
+    // <0x52, enum, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x86ccc 
+    case 0xfd7bbfa9fd03(QuickTransferDropZoneView)
+    case 0x4adefeff38c4feff07(ý{¿©ý)
+    case 0x34defeffcc0fffff07(ý{¿©ý)
+    case 0x34defeff5ecffeff07(ý{¿©ý)
+    case 0xfc6fbaa9fa6701a9f85f02a9f65703a9f44f04a9fd7b05a9fd430191ffc3()
+    case 0xd0(ø_¼©öWSo120x01a9f44f02C©ý{©ýÃ)
+    case So8NSObjectC(ÖÞþÿÀÃþÿ)
+    case x(´ßÿä)§ý8TSo40x02C)
+    case 0xfd7bbfa9fd03(Configuration)
+    case 0x56defeff34c3feff07(ý{¿©ý)
+    case 0xfd7bbfa9fd03(BlueprintSectionViewControllerBase)
+    case 0x089bdfff4472a7fd8c5302(À_ÖöW½©ôOSo120x01a9fd7b02C©ý)
+    case 0x46defeff3cdefeff07(ý{¿©ý)
+    case 0xff8301d1f44f04a9fd7b05a9fd430191f303(XGâSo60x0201C)
+}
+
+class QuickTransferDropZoneView : So6NSViewC {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x87100 
+}
+
+class OperationImageInfo : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x87320 
+    let image: NSImage;
+    let identifier: String;
+}
+
+class PhysicalDeviceArrayController : NSArrayController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x874d4 
+}
+
+class DatasetToolbarButton : So8NSButtonC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x888b8 
+    let showLabelObserver: 0x02d79059;
+    let menuOpen: ((NSMenu) -> ())?;
+    let children: [DatasetToolbarButton];
+    let validates: Bool;
+}
+
+class GenericCheckableItem : So8NSObjectC {
+    // <0x800000d0, class, isGeneric, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x8ac94 
+    let title: String;
+    let subtitle: String;
+    let icon: So7NSImageCSg;
+    let accessoryImage: So7NSImageCSg;
+    let sortingValue: NSNumber?;
+    let isChecked: Bool;
+    let canCheck: Bool;
+    let fullTextIndex: String?;
+    let dataObject: x;
+}
+
+class Configuration : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x8b2d4 
+}
+
+class AppearanceObserver : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x8b5e4 
+    let observation: 0x02d79059;
+}
+
+enum ConfigurationType {
+    // <0x52, enum, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x8dd58 
+}
+
+class BlueprintSectionViewControllerBase : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x8dfc8 
+    let blueprint: So9BlueprintC;
+    let awake: Bool;
+    let helpURL: String;
+}
+
+class PhotoDetailViewThumbnailsCollectionView : TransparentCollectionView {
+    // <0x80010050, class, isUnique, version 0, kindSpecificFlags 0x8001>
+    // Access Function at 0x8ff40 
+    let isScrolling: Bool;
+    let currentSelectedIndex: Int;
+    let displayedItemsChanged: Bool;
+    let previewIndexPath: 0x023b8e59;
+    let currentMousePosition: 0x0235a159;
+    let currentMouseMoveCorrespondingIndexPath: 0x023b8e59;
+    let mouseUpLocalEvent: Any?;
+}
+
+class ConfiguratorAppsViewController : WizardWindowController {
+    // <0x10050, class, isUnique, version 0, kindSpecificFlags 0x1>
+    // Access Function at 0x904dc 
+    let indexPath: 0x027f8e59;
+}
+
+class HomeDiscoverSectionRowViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x9095c 
+    let item1: HomeDiscoverItem;
+    let item2: HomeDiscoverItem;
+    let highlightView1: 0x02a58259;
+    let highlightView2: 0x02a58259;
+}
+
+class HomeListBaseViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x91710 
+    let controller: NSArrayController;
+    let deviceInfoButtonLabel: String;
+    let tableView: NSTableView?;
+    let tableHeaderContainerView: NSView?;
+    let infoPopover: NSPopover?;
+    let infoPopoverController: DeviceAdvancedInfoViewController?;
+    let tableHeaderView: 0x02938159;
+    let changingSelection: Bool;
+    let lastSelectedRowIndex: Int;
+    let sortDescriptors: Array<NSSortDescriptor>?;
+    let TableViewHeaderCheckboxCell: 0x02518259;
+    let options: DisplayOptions;
+    let onSelect:  empty-list DeviceItem;
+}
+
+class InteractionAlertPasswordController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x95210 
+    let data: UserInteractionDialogBoxData;
+    let checkboxTitle: String;
+    let checkboxValue: Int;
+    let passwordField: NSTextField?;
+}
+
+class MediaVideoTrackListViewController : MediaBaseListViewController {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x960f4 
+    let alreadyIniTunesColumnHeader: MediaTracksTableColumn;
+    let purchasedOrAppleMusicColumn: MediaTracksTableColumn;
+}
+
+class TableViewDragDropHelper : So8NSObjectC {
+    // <0x800000d0, class, isGeneric, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x96318 
+    let _tableView: NSTableView;
+    let _fileDropHandler: ((Array<String>) -> ())?;
+    let _dropOutHandler: SSSgSo12DragOutPhaseCyx_G_SayxGSStcSg;
+    let _droppableUTIs: SaySo3UTICG;
+    let _arrayController: NSArrayController?;
+}
+
+enum DragOutPhase {
+    // <0xd2, enum, isGeneric, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x972c4 
+}
+
+class PhotoDetailViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x9da58 
+    let carouselDefaultHeight: 0x0235a159;
+    let photoPreviousButton: PhotoNavigationButton;
+    let photoNextButton: PhotoNavigationButton;
+    let infoOultineView: NSOutlineView?;
+    let assetsItemsController: NSArrayController?;
+    let detailView: NSView?;
+    let infoView: PhotoBackgroundView;
+    let splitView: NSSplitView?;
+    let carouselSplitView: NSSplitView?;
+    let fullscreenCarouselSplitView: NSSplitView?;
+    let topTrackingView: TrackingView;
+    let bottomTrackingView: TrackingView;
+    let exitFullScreenButton: NSButton?;
+    let detailCollectionViewContainer: NSView?;
+    let detailStaticViewContainer: NSView?;
+    let photoDetailViewCollectionViewController: NSViewController?;
+    let photoDetailViewThumbnailsCollectionViewController: NSViewController?;
+    let infoViewData: [PhotoInfoDataItem]?;
+    let assetsItems: [Photo]?;
+    let showingBurstAssets: Bool;
+    let owner: weak PhotoViewController?;
+    let isAwake: Bool;
+    let isInitializingOutlineView: Bool;
+    let expandInfoViewItems: Dictionary<String, Bool>;
+    let itemsControllerContentObserver: 0x02d79059;
+    let splitViewDividerPosition: 0x02178059;
+    let splitViewBottomConstraintConstant: 0x02178059;
+    let fullScreenBottomTrackingArea: NSTrackingArea?;
+    let timer: So7NSTimerCSg;
+    let shouldCollapseCarousel: Bool;
+    let currentSelectedIndex: Int;
+    let previewSelectedIndex: Int;
+    let currentItem: Photo?;
+    let staticContentViewController: PhotoDetailViewItemContentController;
+    let inFullScreen: Bool;
+}
+
+class DeviceNavigationHistory : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0xa1a54 
+    let canGoBack: Bool;
+    let canGoForward: Bool;
+    let actions: SaySS10identifier_So20DeviceViewControllerCG;
+    let index: Int;
+    let mainWindowController: MainWindowController;
+    let item: DeviceItem;
+    let detailViewObserver: 0x02d79059;
+    let ignoreNextPush: Bool;
+    let oneShot: Bool;
+}
+
+enum PushStyle {
+    // <0x52, enum, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0xa1b78 
+}
+
+class RegistrationWebPopupWindowController : NSWindowController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0xa1f48 
+    let webView: So9WKWebViewC;
+}
+
+class MessageBubbleView : So6NSViewC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0xa3afc 
+    let leftTail: Bool;
+    let rightTail: Bool;
+}
+
+class VideoLibraryViewController : MediaLibraryViewController {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0xa6020 
+}
+
+class DetectSpywareWizardInfoViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0xa634c 
+    let wizard: weak WizardWindowController?;
+    let behavior: WizardWindowDelegateBehavior;
+}
+
+class MessagesMediaHandler : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0xa8c80 
+    let manager: MessagingDatasetManager<Swift.AnyObject>?;
+    let controller: weak MessagesViewController<Swift.AnyObject, Swift.AnyObject>?;
+    let threadMaxCount: Int;
+    let threadPool: Array<NSThread>;
+    let pendingQueue: [MessageBase];
+    let processingQueue: [MessageBase];
+    let loadedMedias: [MessageBase];
+    let lock: NSLock;
+}
+
+class BackupNavigationViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0xabdd0 
+    let device: DeviceItem;
+    let showDownArrow: Bool;
+    let showRightSeparator: Bool;
+    let provider: BackupHistoryProvider;
+    let liveLabel: String?;
+    let currentItemTitle: String?;
+    let currentItem: BackupHistoryItem;
+    let alwaysShowRightSeparator: Bool;
+    let controllers: [BackupNavigationMenuItemViewController];
+    let itemsObserver: 0x02d79059;
+    let loadingObserver: 0x02d79059;
+    let currentItemObserver: 0x02d79059;
+    let selectedArchiveObserver: 0x02d79059;
+    let backupObserver: 0x02d79059;
+    let liveMenuItemController: BackupNavigationMenuItemViewController;
+    let manageMenuItemController: BackupNavigationManageMenuItemViewController;
+    let backgroundView1: BreadcrumbItemBackgroundView;
+    let backgroundView2: BreadcrumbItemBackgroundView;
+    let backgroundView3: BreadcrumbItemBackgroundView;
+    let itemsMenu: NSMenu?;
+}
+
+class HomeBackupsIconViewItemHeader : So6NSViewC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0xac854 
+    let title: 0x02a78559;
+}
+
+class HomeDevicesIconViewItem : NSCollectionViewItem {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0xaced4 
+    let fileDraggingView: FileDraggingView;
+    let highlightView: 0x02a58259;
+    let checkbox: NSControl?;
+    let deviceImage: HomeIconDeviceImageView;
+    let infoPopover: NSPopover?;
+    let moreButton: NSControl?;
+    let onMouseDown: ((HomeDevicesIconViewItem, NSEvent) -> ())?;
+    let onMouseUp: ((HomeDevicesIconViewItem, NSEvent) -> ())?;
+    let onSelectionChanged: ((HomeDevicesIconViewItem) -> ())?;
+    let objectObserver: 0x02d79059;
+    let selectionObserver: 0x02d79059;
+    let infoPopoverController: DeviceAdvancedInfoViewController?;
+    let isMouseOver: Bool;
+}
+
+class PhotoCollectionView : VKCollectionView {
+    // <0x80010050, class, isUnique, version 0, kindSpecificFlags 0x8001>
+    // Access Function at 0xb0a28 
+    let collectionViewController: PhotoCollectionViewController;
+    let photoManager: weak PhotoManager?;
+    let lastClickedIndexPath: 0x023b8e59;
+    let showBadges: Bool;
+    let sliderValue: Int;
+}
+
+class StackViewContentImageView : NSImageView {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0xb1224 
+    let tooltipLabel: String?;
+    let doNotClipSubviews: Bool;
+    let cachedStackView: weak NSStackView?;
+}
+
+class MediaTrackListViewController : MediaBaseListViewController {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0xb6164 
+    let genres: [MediaSongGroupItem];
+    let artists: [MediaSongGroupItem];
+    let albums: [MediaSongGroupItem];
+    let genresController: NSArrayController?;
+    let artistsController: NSArrayController?;
+    let albumsController: NSArrayController?;
+    let genresTableView: NSTableView?;
+    let artistsTableView: NSTableView?;
+    let albumsTableView: NSTableView?;
+    let filtersView: NSView?;
+    let filtersStackView: NSStackView?;
+    let splitView: NSSplitView?;
+    let purchasedOrAppleMusicColumn: MediaTracksTableColumn;
+    let genresSelectionObserver: 0x02d79059;
+    let artistsSelectionObserver: 0x02d79059;
+    let albumsSelectionObserver: 0x02d79059;
+    let mediaBrowserShowColumnBrowserObserver: 0x02d79059;
+    let mediaBrowserShowGenreObserver: 0x02d79059;
+    let mediaBrowserShowArtistObserver: 0x02d79059;
+    let mediaBrowserShowAlbumObserver: 0x02d79059;
+    let isUpdatingSplitView: Bool;
+    let columnsBrowserTimer: So7NSTimerCSg;
+    let waitBeforeUpdatingColumnsBrowser: Bool;
+}
+
+class ConfigureWizardWindowController : WizardWindowController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0xb6920 
+}
+
+class ReinstallWizardProgressViewController : WizardWindowProgressViewController {
+    // <0x40000050, class, isUnique, version 0, kindSpecificFlags 0x4000>
+    // Access Function at 0xb72c0 
+    let screenData: UserInteractionScreenData?;
+}
+
+class iOSDeviceArrayController : NSArrayController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0xb7484 
+}
+
+class MainWindowController : NSWindowController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0xb8978 
+    let contentView: NSView?;
+    let operationViewContainer: NSView?;
+    let operationViewPlaceholder: NSView?;
+    let operationPopoverView: OperationPopoverView;
+    let hintContainer: NSView?;
+    let exiting: Bool;
+    let homeViewController: HomeViewController;
+    let operationViewController: OperationListViewController;
+    let detailViewController: NSViewController?;
+    let preferencesWindowController: PreferencesWindowController;
+    let showOperationsView: Bool;
+    let showForceQuitButton: Bool;
+    let deviceCurrentlyProcessing: DeviceItem;
+    let backupLocationScreenDataWindowController: BackupLocationScreenDataWindowController;
+    let detailViewObservation: 0x02d79059;
+    let operationObserver: Any?;
+    let deviceRemovedObserver: Any?;
+    let preventOpeningOperationsPopover: Int;
+    let deviceManagerNotificationsStarted: Bool;
+    let hintController: HintViewController;
+    let oldDetailViewControllerReference: NSViewController?;
+}
+
+class RegistrationDiscoverItemPair : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0xc33dc 
+    let left: RegistrationDiscoverItem;
+    let right: RegistrationDiscoverItem;
+}
+
+class StackViewContentView : So6NSViewC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0xc3b70 
+    let doNotClipSubviews: Bool;
+    let cachedStackView: weak NSStackView?;
+}
+
+class MediaTracksTableColumn : NSTableColumn {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0xc40b0 
+    let imageNamed: String;
+    let size: Double;
+    let tooltipLabel: String;
+}
+
+class DiskUsageWidgetViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0xc5c24 
+    let item: DeviceItem;
+    let dataBarView: 0x02cb7c59;
+    let stackView: NSStackView?;
+    let observer: 0x02d79059;
+    let appearanceObserver: 0x02d79059;
+    let controllers: [DiskUsageWidgetDataItemViewController];
+}
+
+class DiskUsage : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0xc666c 
+    let capacity: 0x02158659;
+    let used: 0x02158659;
+    let free: 0x02158659;
+    let purgeable: 0x02158659;
+    let audio: 0x02158659;
+    let audioPurgeable: 0x02158659;
+    let video: 0x02158659;
+    let videoPurgeable: 0x02158659;
+    let podcast: 0x02158659;
+    let podcastPurgeable: 0x02158659;
+    let photos: 0x02158659;
+    let photosPurgeable: 0x02158659;
+    let apps: 0x02158659;
+    let appsPurgeable: 0x02158659;
+    let books: 0x02158659;
+    let booksPurgeable: 0x02158659;
+    let documents: 0x02158659;
+    let documentsPurgeable: 0x02158659;
+    let system: 0x02158659;
+    let logs: 0x02158659;
+    let other: 0x02158659;
+    let otherPurgeable: 0x02158659;
+}
+
+class PlusMinusSegmentedControl : VKSegmentedControl {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0xc7cf4 
+    let delegate: weak iMazing.PlusMinusControlDelegate?;
+    let actionsMenu: NSMenu?;
+}
+
+class MediaPlayerThinSlider : So8NSSliderC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0xc8384 
+    let showKnob: Bool;
+}
+
+class ChooseItemsWindowController : NSWindowController {
+    // <0x800000d0, class, isGeneric, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0xc9e40 
+    let helpURL: String?;
+    let chooseHandler: ySay8ItemTypeSo100x02947c59CG;
+    let contentView: NSView?;
+    let bottomSpaceConstraint: NSLayoutConstraint?;
+    let embeddedController: xSg;
+    let isAwake: Bool;
+    let hasSelection: Bool;
+    let actionButtonEnabled: Bool;
+    let childControllerModal: Bool;
+    let title: String?;
+    let cancelButtonTitle: String;
+    let chooseButtonTitle: String;
+    let _cachedChooseTitle: String;
+    let showSearchField: Bool;
+    let hideCancelButton: Bool;
+    let _isPicker: Bool;
+    let searchItemPropertyName: String;
+    let searchText: String?;
+}
+
+class PhotoDetailViewCollectionView : TransparentCollectionView {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0xcad48 
+    let allowLayout: Bool;
+}
+
+class DetectSpywareWizardViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0xcc040 
+    let wizard: weak WizardWindowController?;
+    let behavior: WizardWindowDelegateBehavior;
+    let useLocalSTIX: Bool;
+    let stixFolderPath: String;
+    let logFolder: String;
+    let isExcelFormat: Bool;
+    let _shouldAddOptionsStep: Bool;
+}
+
+class GenericScreenItemViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0xcc1e0 
+    let item: GenericScreenItem;
+}
+
+class DeviceSettingsBackupLocationViewController : NSViewController {
+    // <0x80010050, class, isUnique, version 0, kindSpecificFlags 0x8001>
+    // Access Function at 0xcfb9c 
+    let item: DeviceItem;
+    let indexPath: 0x027f8e59;
+    let saving: Bool;
+    let backupLocationViewController: BackupLocationViewController;
+    let showPreferencesButton: Bool;
+    let enableSaveAndDiscard: Bool;
+    let selectionChangedObserver: 0x02d79059;
+    let infoViewController: 0x026d8a59;
+    let currentBackupLocation: BackupLocationItem;
+    let statusChangedCallback: () -> ();
+    let kind: Kind;
+    let infoViewContainer: NSView?;
+    let container: NSView?;
+}
+
+class MainWindowToolbarController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0xd7670 
+    let leftButtons: [NSView];
+    let rightButtons: [NSView];
+    let searchText: String;
+    let searchField: NSTextField?;
+    let leftButtonsContainer: NSStackView?;
+    let rightButtonsContainer: NSStackView?;
+    let height: NSLayoutConstraint?;
+    let leftMargin: NSLayoutConstraint?;
+    let operationsViewContainer: NSView?;
+    let operationsFlashView: MainWindowToolbarFlashView;
+    let container: NSView;
+    let operationsController: MainWindowToolbarOperationsView;
+    let operationStartObserver: Any?;
+    let onSearch: ((String) -> ())?;
+    let helpAction: (() -> ())?;
+    let showOperations: Bool;
+    let showLicense: Bool;
+    let showSearch: Bool;
+    let searchPlaceholder: String?;
+    let leftOffset: Double?;
+}
+
+class DeviceToolsViewController : NSViewController {
+    // <0x80010050, class, isUnique, version 0, kindSpecificFlags 0x8001>
+    // Access Function at 0xd8330 
+    let item: DeviceItem;
+    let indexPath: 0x027f8e59;
+    let toolbarContainer: NSView?;
+    let collectionView: NSCollectionView?;
+    let actionsView: NSView?;
+    let wizard: WizardWindowController?;
+    let groups: [NSArrayController];
+    let sectionTitles: Array<String>;
+    let toolbar: DeviceToolbarController;
+    let actionsObserver: 0x02d79059;
+    let archiveObserver: 0x02d79059;
+}
+
+class GenericScreenItem : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0xddef0 
+    let onExpand: ((GenericScreenItem) -> ())?;
+    let onCancel: ((GenericScreenItem) -> ())?;
+    let onDone: ((GenericScreenItem) -> ())?;
+    let timer: So7NSTimerCSg;
+    let lastImageName: String;
+    let data: UserInteractionScreenData;
+    let title: String;
+    let message: String;
+    let image: So7NSImageCSg;
+    let imageName: String?;
+    let device: Device;
+    let deviceName: String;
+    let deviceDescription: String;
+    let deviceIcon: So7NSImageCSg;
+    let canExpand: Bool;
+    let hasBeenCancelled: Bool;
+    let isDone: Bool;
+    let isTemporary: Bool;
+    let cancelLabel: String;
+    let userInfo: Any?;
+    let onImageChange: (() -> ())?;
+}
+
+class ConfiguratorOrganizationsContentViewController : LibraryWizardViewController {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0xde4d0 
+}
+
+class RegistrationWebContentViewController : RegistrationContentViewController {
+    // <0x80010050, class, isUnique, version 0, kindSpecificFlags 0x8001>
+    // Access Function at 0xdeabc 
+    let webViewContainer: WKWebView?;
+    let webView: WKWebView?;
+    let popupWindow: RegistrationWebPopupWindowController;
+    let loading: Bool;
+    let error: 0x02478159;
+    let url: 0x02439d59;
+    let openInBrowserAction: ySo100x028c7659C;
+}
+
+class ConnectScreenUSBViewController : ConnectScreenViewController {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0xe0c10 
+    let showiPod: Bool;
+}
+
+class CollectionViewFixedItemSizeVerticalFlowLayout : CollectionViewVerticalFlowLayoutBase {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0xe1a4c 
+    let internalBiggestHeightInRow: 0x0235a159;
+}
+
+class BackupNavigationMenuItemViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0xe1e8c 
+    let backup: BackupHistoryItem;
+    let info1: String;
+    let info2: String?;
+    let info3: String?;
+    let colorIcon: So7NSImageCSg;
+    let grayIcon: So7NSImageCSg;
+    let icon: So7NSImageCSg;
+    let isActive: Bool;
+    let mouseOver: Bool;
+    let onSelect:  empty-list BackupHistoryItem;
+    let iconObserver: 0x02d79059;
+    let highlightView: BackupNavigationMenuItemView;
+}
+
+class MediaHelper {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0xe4a14 
+}
+
+class BlueprintSectionAppsViewController : BlueprintSectionViewControllerBase {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0xe86f4 
+    let manager: iOSAppDownloadManager?;
+    let chooseAppsWC: ChooseAppsFromLibraryWindowController;
+    let singleAppItem: iOSAppDisplayItem?;
+    let singleAppModeEnabled: Bool;
+    let isSigningIn: Bool;
+    let isSigningOut: Bool;
+    let appsArrayController: NSArrayController?;
+    let appsMenu: NSMenu?;
+    let appsTableView: NSTableView?;
+    let contentView: NSView?;
+    let _dragDropHelper: TableViewDragDropHelper;
+    let _didSignOut: Bool;
+    let _loadingVC: LoadingViewController;
+}
+
+class ListItem : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0xe9790 
+    let title: String;
+    let subtitle: String?;
+    let status: 0x02a77759;
+    let showStatusIcon: Bool;
+    let isGroup: Bool;
+    let isHighlighted: Bool;
+    let children: NSArrayController;
+    let action: () -> ();
+    let icon: So7NSImageCSg;
+    let selectedIcon: So7NSImageCSg;
+    let accessoryIcon: So7NSImageCSg;
+    let accessoryText: String?;
+    let representedObject: AnyObject?;
+}
+
+class DeviceSettingsViewController : NSViewController {
+    // <0x80010050, class, isUnique, version 0, kindSpecificFlags 0x8001>
+    // Access Function at 0xeb514 
+    let item: DeviceItem;
+    let indexPath: 0x027f8e59;
+    let sidebarViewController: 0x02c97659;
+    let contentViewController: NSViewController?;
+    let hasSaveDiscardButtons: Bool;
+    let saveDiscardButtonsVisibilityOnFirstTime: Bool;
+    let enableSaveAndDiscard: Bool;
+    let toolbarContainer: NSView?;
+    let sidebarView: NSView?;
+    let contentView: NSView?;
+    let buttonsStackView: NSStackView?;
+    let contentContainer: NSView?;
+    let buttonsContainer: NSView?;
+    let saveButton: NSButton?;
+    let discardButton: NSButton?;
+    let toolbar: DeviceToolbarController;
+    let contentViewObservation: 0x02d79059;
+    let placeholderView: NSView;
+    let sidebarItems: [DeviceSettingItem];
+    let kind: Kind;
+}
+
+enum Kind {
+    // <0x52, enum, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0xedb9c 
+}
+
+class BackupLocationAnimationViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0xedf90 
+    let animationView: NSView?;
+    let imageView1: NSImageView?;
+    let imageView2: NSImageView?;
+    let infoLabel: String;
+    let animation: CABasicAnimation?;
+    let positionAdjusted: Bool;
+}
+
+class RegistrationContentViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0xeefa4 
+    let parentController: RegistrationViewController;
+    let canGoBack: Bool;
+}
+
+class DeviceOptionsViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0xf3d40 
+    let contentView: NSView?;
+    let languageAC: NSArrayController?;
+    let countriesAC: NSArrayController?;
+    let supervisedSettingsView: NSView?;
+    let lockScreenDropView: DropSuperview;
+    let homeScreenDropView: DropSuperview;
+    let lockScreenImageView: AspectFillImage;
+    let homeScreenImageView: AspectFillImage;
+    let deviceNameTextField: NSTextField?;
+    let placeholderImage: So7NSImageCSg;
+    let allowedImageTypes: Array<String>;
+    let isLoading: Bool;
+    let enableSaveAndDiscard: Bool;
+    let cachedVoiceOver: Bool;
+    let cachedZoom: Bool;
+    let cachedInvert: Bool;
+    let cachedSpeak: Bool;
+    let cachedMono: Bool;
+    let cachedCaptions: Bool;
+    let _device: So9iOSDeviceC;
+    let _awake: Bool;
+    let _loadingVC: LoadingViewController;
+    let name: String;
+    let language: ISOLanguage;
+    let country: ISOCountry;
+    let voiceOver: Bool;
+    let zoom: Bool;
+    let invert: Bool;
+    let speak: Bool;
+    let mono: Bool;
+    let captions: Bool;
+    let lockScreenPath: String;
+    let homeScreenPath: String;
+    let isSupervised: Bool;
+    let canClearPasscode: Bool;
+    let hideSupervisedSettings: Bool;
+    let noSupervisionIdentityLabel: String;
+    let deviceInSingleAppMode: Bool;
+    let singleAppItem: iOSAppDisplayItem?;
+    let enableSingleAppMode: Bool;
+    let disableTouch: Bool;
+    let disableDeviceRotation: Bool;
+    let disableVolumeButtons: Bool;
+    let disableRingerSwitch: Bool;
+    let disableSleepWakeButton: Bool;
+    let disableAutoLock: Bool;
+    let isDisablingSingleAppMode: Bool;
+    let chooseAppWC: ChooseAppsFromLibraryWindowController;
+    let showSupervisionSettings: Bool;
+}
+
+class ConfiguratorMDMServersContentViewController : LibraryWizardViewController {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0xf44d8 
+}
+
+class MusicLibraryViewController : MediaLibraryViewController {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0xf8d38 
+}
+
+class RegistrationStoreViewController : RegistrationWebContentViewController {
+    // <0xc0010050, class, isUnique, version 0, kindSpecificFlags 0xc001>
+    // Access Function at 0xfa5c4 
+    let browserURL: 0x02439d59;
+    let onDismiss: (() -> ())?;
+    let onRequestDone: (() -> ())?;
+    let onRequestCancel: (() -> ())?;
+    let onSuccessfulPurchase: ySSSg_So100x02ed7259C;
+}
+
+class PreferencesStorageViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0xfbe44 
+}
+
+class BusinessTrialWizardViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0xfc740 
+    let wizard: weak WizardWindowController?;
+    let behavior: WizardWindowDelegateBehavior;
+    let _awake: Bool;
+    let _trialVC: BusinessTrialViewController;
+    let _isLast: Bool;
+}
+
+class PhotoDetailInfoCollectionView : NSOutlineView {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0xfc930 
+}
+
+class PreferencesLibraryViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0xfdc80 
+    let appManagementStackView: NSStackView?;
+    let appManagementSubView: NSView?;
+    let libraryName: String?;
+    let libraryIcon: So7NSImageCSg;
+    let isDefaultLibraryPath: Bool;
+    let libraryPath: String?;
+}
+
+class iOSStandardDeviceArrayController : NSArrayController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0xfdef0 
+}
+
+class PromoWindow : 0x02a77459 {
+    // <0x22010050, class, isUnique, version 0, kindSpecificFlags 0x2201>
+    // Access Function at 0xfe448 
+}
+
+class DeviceSettingsAutomaticBackupViewController : NSViewController {
+    // <0x80010050, class, isUnique, version 0, kindSpecificFlags 0x8001>
+    // Access Function at 0x1001d4 
+    let minimumFrequency: Int;
+    let maximumFrequency: Int;
+    let infoViewContainer: NSView?;
+    let preferencesViewContainer: NSView?;
+    let segmentedControl: VKSegmentedControl?;
+    let frequencyTextField: 0x02a78559;
+    let item: DeviceItem;
+    let indexPath: 0x027f8e59;
+    let frequencies: [SchedulingOptionsFrequencyItem];
+    let hours: [SchedulingOptionsHourItem];
+    let batteryItems: [BatteryItem];
+    let enableSaveAndDiscard: Bool;
+    let enableAutomaticBackup: Bool;
+    let autoBackupCustomTime: Bool;
+    let selectedHour1: SchedulingOptionsHourItem;
+    let selectedHour2: SchedulingOptionsHourItem;
+    let selectedBattery: BatteryItem;
+    let infoViewController: 0x026d8a59;
+    let previousTextfieldValue: String;
+    let currentFrequencyInSeconds: Int;
+}
+
+class DispatcherProgressWizardViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x103230 
+    let wizard: weak WizardWindowController?;
+    let behavior: WizardWindowDelegateBehavior;
+    let _isAwake: Bool;
+    let _dispatcherVC: OperationDispatcherViewController;
+    let _didCleanup: Bool;
+}
+
+class PhotoWaitingProgressViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1038f4 
+    let progressIndicator: NSProgressIndicator?;
+    let isAwake: Bool;
+}
+
+class BatteryHealthView : So6NSViewC {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x103cfc 
+    let style: BatteryHealthStyle;
+}
+
+enum BatteryHealthStyle {
+    // <0x52, enum, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x103d1c 
+}
+
+class LibraryWizardWindowController : WizardWindowController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x103f08 
+}
+
+class BackupData : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x104540 
+    let backupVolumeName: String;
+    let backupPath: String?;
+    let isEncrypted: Bool;
+    let numSnapshots: NSNumber?;
+    let totalSize: NSNumber?;
+    let udid: String?;
+    let serial: String?;
+    let osName: String?;
+    let isiMazingBackupLocation: Bool;
+    let isiTunesBackupLocation: Bool;
+    let isPartialBackup: Bool;
+    let isBlueprint: Bool;
+}
+
+class ConfigureEditBlueprintViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x106914 
+    let canSaveHandler: ((Bool) -> ())?;
+    let didSaveHandler: (() -> ())?;
+    let blueprint: So9BlueprintC;
+    let isEditing: Bool;
+    let isLoading: Bool;
+    let sectionsArrayController: NSArrayController?;
+    let sectionDetailView: NSView?;
+    let currentViewController: BlueprintSectionViewControllerBase;
+    let observations: SaySo100x029c8959CG;
+    let lastSelectionIndex: Int;
+    let _isAwake: Bool;
+}
+
+class RegistrationSmallButtonViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x106f58 
+    let action: () -> ();
+    let color: 0x02bf7359;
+    let icon: So7NSImageCSg;
+    let label: NSTextField?;
+    let image: NSImageView?;
+    let buttonView: RegistrationButtonView;
+    let imageSpacingConstraint: NSLayoutConstraint?;
+    let forceDark: Bool;
+}
+
+class NonPhysicalIOSStandardDeviceArrayController : NSArrayController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x10750c 
+}
+
+class PhotoSectionHeaderFilePromiseProvider : NSFilePromiseProvider {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x107aa8 
+}
+
+class MessagesGroupHeaderTableRowView : NSTableRowView {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x107ce8 
+}
+
+class PodcastsViewController : MediaViewController {
+    // <0x40000050, class, isUnique, version 0, kindSpecificFlags 0x4000>
+    // Access Function at 0x1081d0 
+}
+
+class HintViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1089ac 
+    let data: UserInteractionHintData;
+    let hintView: NSView?;
+    let hintViewPlaceholder: NSView?;
+    let label: 0x02c58a59;
+    let onClose: ((HintViewController) -> ())?;
+    let timer: So7NSTimerCSg;
+    let appearanceObserver: Any?;
+}
+
+class RegistrationButtonView : So6NSViewC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x109b90 
+    let trackingArea: NSTrackingArea?;
+    let mouseOver: Bool;
+    let color: 0x022d7359;
+}
+
+class MapViewContainer : So6NSViewC {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x10a4d8 
+}
+
+class LottieHelper : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x10b5dc 
+}
+
+class LottieInfo : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x10b404 
+    let file: String;
+    let type: LottieInfoType;
+}
+
+enum LottieInfoType {
+    // <0x52, enum, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x10b644 
+}
+
+class NonPhysicalIOSDeviceArrayController : NSArrayController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x10c35c 
+}
+
+class MusicAlbumViewController : MediaAlbumViewController {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x10cb0c 
+}
+
+class PromoService {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x10cf2c 
+    let promoAvailable:  empty-list PromoData;
+    let checking: Bool;
+    let activated: Bool;
+}
+
+class ConfiguratorAppsContentViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x10e3e0 
+    let wizard: weak WizardWindowController?;
+    let behavior: WizardWindowDelegateBehavior;
+    let controller: AppsLibraryViewController?;
+    let loadingObserver: 0x02d79059;
+    let selectionObserver: 0x02d79059;
+    let didApply: Bool;
+}
+
+class BackupHistoryProvider : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x10fc00 
+    let device: So9iOSDeviceC;
+    let items: [BackupHistoryItem];
+    let isLoading: Bool;
+    let backupVolumeNotFound: Bool;
+    let loadingLabel: String?;
+    let activeVersion: BackupHistoryItem;
+    let manager: BackupVersioningManager?;
+}
+
+class OptionsWizardViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x11212c 
+    let wizard: weak WizardWindowController?;
+    let behavior: WizardWindowDelegateBehavior;
+    let controller: DeviceSettingsViewController;
+    let actionTitle: String?;
+    let kind: Kind;
+    let contentContainer: NSView?;
+    let buttonsContainer: NSView?;
+}
+
+class XIBValidator : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x11583c 
+}
+
+class NIBOwner : So8NSObjectC {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x11581c 
+}
+
+class RuntimeError {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x115888 
+    let message: String;
+}
+
+class UserInteractionManager : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x117c8c 
+    let screenData: [Swift.String : [Swift.String : UserInteractionScreenData]];
+    let hintData: [Swift.String : [Swift.String : UserInteractionHintData]];
+    let delegate: weak iMazing.UserInteractionManagerDelegate?;
+}
+
+class MusicPlaylistViewController : MediaPlaylistViewController {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x118d64 
+}
+
+class ManageArchivesViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x11c06c 
+    let wizard: weak WizardWindowController?;
+    let behavior: WizardWindowDelegateBehavior;
+    let device: DeviceItem;
+    let provider: BackupHistoryProvider;
+    let isLoading: Bool;
+    let showOptions: Bool;
+    let totalBackupSize: String;
+    let items: [BackupHistoryItem];
+    let lockArchiveTooltip: String;
+    let unlockArchiveTooltip: String;
+    let moreTooltip: String;
+    let itemsObserver: 0x02d79059;
+    let selectedArchiveObserver: 0x02d79059;
+    let loadingObserver: 0x02d79059;
+    let deleteOperation: LegacyOperation?;
+    let tableView: NSTableView?;
+    let arrayController: NSArrayController?;
+    let moreMenu: NSMenu?;
+}
+
+class PhotoDetailViewCollectionViewItem : NSCollectionViewItem {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x11c6f4 
+    let cachedMediaContentView: NSView?;
+}
+
+class PhotoDetailViewCollectionScrollView : NSScrollView {
+    // <0x80010050, class, isUnique, version 0, kindSpecificFlags 0x8001>
+    // Access Function at 0x11e4b0 
+    let photoDetailViewCollectionView: PhotoDetailViewCollectionView;
+    let playerWasPlaying: Bool;
+    let currentIndexPath: 0x023b8e59;
+    let timer: So7NSTimerCSg;
+    let wantToGoBack: Bool;
+    let lastDirection: Direction;
+}
+
+enum Direction {
+    // <0x52, enum, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x11e6d4 
+}
+
+class BackupWizardProgressViewController : WizardWindowProgressViewController {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x11ea1c 
+    let backupReason: Int;
+}
+
+class PhysicalIOSStandardDeviceAndClassiciPodArrayController : NSArrayController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x11f20c 
+}
+
+class ShortcutWidgetMoreItem : NSCollectionViewItem {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x11f6dc 
+}
+
+class BlueprintSectionActionsViewController : BlueprintSectionViewControllerBase {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x1228a0 
+    let backupLabel: String;
+    let hasLaunchApp: Bool;
+    let launchApp: iOSAppDisplayItem?;
+    let failsIfBatteryHealthChecked: Bool;
+    let batteryHealthPopupSelectedIndex: Int;
+    let eraseWarningText: String;
+    let showEraseWarning: Bool;
+    let isMDMErase: Bool;
+    let showEraseOptions: Bool;
+    let shouldUninstallApps: Bool;
+    let uninstallAppsDetailString: String;
+    let backupPopupButton: NSPopUpButton?;
+    let backupBeforeEncryptRadioButton: NSButton?;
+    let backupBeforeDontEncryptRadioButton: NSButton?;
+    let backupsWC: ChooseItemsWindowController;
+    let chooseAppWC: ChooseAppFromITunesWindowController;
+    let chooseAppsToUninstallWC: ChooseAppsFromLibraryWindowController;
+}
+
+class RegistrationDiscoverViewController : RegistrationContentViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x12310c 
+    let items: NSArrayController?;
+}
+
+class ScrollingDisabledMapView : So9MKMapViewC {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x123284 
+}
+
+class ConfigureBlueprintsViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x12459c 
+    let selectionHandler: (([Blueprint]) -> ())?;
+    let modalActionName: String;
+    let modalStatusChangeHandler: ((Bool) -> ())?;
+    let validateModalActionHandler: ((Bool) -> ())?;
+    let onUseConfiguratorFeature: (() -> Bool)?;
+    let isModal: Bool;
+    let chooseControllerIsLoadingObserver: 0x02d79059;
+    let contentView: NSView?;
+    let chooseController: ConfigureChooseBlueprintViewController;
+    let editController: ConfigureEditBlueprintViewController;
+    let _isAwake: Bool;
+    let isLoading: Bool;
+}
+
+class LaunchAgent : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x127320 
+    let bundleID: String;
+    let executable: String;
+    let observations: SaySo100x029c8959CG;
+    let plist: String;
+    let label: String;
+    let keepAlive: KeepAlive;
+    let runAtLoad: Bool;
+    let throttleInterval: Int;
+    let programArguments: String;
+    let processType: String;
+}
+
+enum KeepAlive {
+    // <0x52, enum, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x127674 
+}
+
+class MediaPlaylistViewController : MediaBaseListViewController {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x12b32c 
+    let playlist: MediaPlaylist?;
+    let subtitle: String?;
+    let image: So7NSImageCSg;
+    let showPlaylistButtons: Bool;
+    let playlistIsEdited: Bool;
+    let purchasedOrAppleMusicColumn: MediaTracksTableColumn;
+    let artworkObserver: Any?;
+    let albumsColumnsSettings: MediaTableColumnsSettings;
+    let untouchedTracks: [MediaTrack];
+}
+
+class HomeIconBaseViewController : NSViewController {
+    // <0x80010050, class, isUnique, version 0, kindSpecificFlags 0x8001>
+    // Access Function at 0x12b91c 
+    let controller: NSArrayController;
+    let collectionView: NSCollectionView?;
+    let lastSelectedItem: 0x023b8e59;
+    let selectionObserver: 0x02d79059;
+    let itemBeingSelected: SelectableDeviceItem;
+    let options: DisplayOptions;
+    let onSelect:  empty-list DeviceItem;
+}
+
+class MessagesExportWindowController : NSWindowController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x12dfa0 
+    let isMultipleSession: Bool;
+    let showExportSelected: Bool;
+    let exportFormatIsAttachments: Bool;
+    let exportFormatIsTXT: Bool;
+    let exportFormatIsXLSOrCSV: Bool;
+    let exportFormatIsXLSOrCSVOrTXT: Bool;
+    let exportFormatIsRSMF: Bool;
+    let messageClickedRow: Int;
+    let sessionClickedRow: Int;
+    let exportFormat: UInt;
+    let includeMessageID: Bool;
+    let includeHeaderRowButton: NSButton?;
+    let includeChatSessionButton: NSButton?;
+    let includeSenderButton: NSButton?;
+    let includeDateTimeButton: NSButton?;
+    let includeStatusButton: NSButton?;
+    let includeAttachmentInfoButton: NSButton?;
+    let includeNotificationsButton: NSButton?;
+    let includeSeparatorButton: NSButton?;
+    let includeReplyToButton: NSButton?;
+    let createFolderForEachSession: NSButton?;
+    let exportSelectedButton: NSButton?;
+    let exportAllButton: NSButton?;
+    let exportOneFileButton: NSButton?;
+    let exportWindowStackView: NSStackView?;
+}
+
+class MediaSymbols {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x12e498 
+}
+
+class HomeDiscoverTourOperationsViewController : HomeDiscoverTourBaseViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x12e6a0 
+    let imageView1: NSImageView?;
+    let imageView2: NSImageView?;
+    let timer: So7NSTimerCSg;
+    let imageIndex: Int;
+}
+
+class ConfigureBlueprintsWizardViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x130074 
+    let wizard: weak WizardWindowController?;
+    let behavior: WizardWindowDelegateBehavior;
+    let blueprintsController: ConfigureBlueprintsViewController;
+    let _isAwake: Bool;
+    let _observations: SaySo100x029c8959CG;
+    let _didApply: Bool;
+}
+
+class PreferencesMediaViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1302c0 
+}
+
+class CollectionViewFixedItemsPerRowsVerticalFlowLayout : CollectionViewVerticalFlowLayoutBase {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x130618 
+    let internalBiggestHeightInRow: 0x0235a159;
+}
+
+class RegistrationWindowController : NSWindowController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x135960 
+    let registrationViewController: RegistrationViewController;
+    let activeLevel: Level;
+    let removeLicenseFile: Bool;
+    let promoService: PromoService;
+    let promoWindowController: PromoWindowController;
+}
+
+class RoundImageCornerCell : NSImageCell {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1362a8 
+    let radius: 0x0235a159;
+}
+
+class MediaDisplayOperation {
+    // <0x80010050, class, isUnique, version 0, kindSpecificFlags 0x8001>
+    // Access Function at 0x137518 
+    let viewController: MediaViewController;
+    let operation: CoreOperation?;
+    let onProgressUUID: 0x02b59e59;
+    let onCancelUUID: 0x02b59e59;
+    let onFinishUUID: 0x02b59e59;
+}
+
+class MediaFadeTextField : NSTextField {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x137aa0 
+    let fadeInDuration: Double;
+    let fadeOutDuration: Double;
+}
+
+class AudioBooksViewController : MediaViewController {
+    // <0x40000050, class, isUnique, version 0, kindSpecificFlags 0x4000>
+    // Access Function at 0x137fe0 
+}
+
+class DeviceActionsWidgetViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x138a74 
+    let item: DeviceItem;
+    let searchText: String?;
+    let tableView: NSTableView?;
+    let arrayController: NSArrayController?;
+    let selectionObserver: 0x02d79059;
+}
+
+class WhatsAppMessageTableCellView : NSTableCellView {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x139afc 
+    let cachedPlayerView: AVPlayerView?;
+    let cachedMapView: ScrollingDisabledMapView;
+    let cachedMediaImageView: NSImageView?;
+    let cachedMediaTypeImageView: NSImageView?;
+    let cachedProfileImageView: VKLegacyRoundImageView?;
+    let cachedSenderTextField: NSTextField?;
+    let cachedMediaInfoTextField: NSTextField?;
+    let cachedContactNameTextField: NSTextField?;
+    let cachedStatusImageView: NSImageView?;
+    let cachedDateTextField: NSTextField?;
+    let cachedReplyToTextField: NSTextField?;
+}
+
+class OperationItemViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x13a3bc 
+    let progressView: 0x02a58259;
+    let finishedView: NSView?;
+    let runningLabel: 0x02c58a59;
+    let finishedLabel: 0x02c58a59;
+    let progressDoubleClickView: DoubleClickView;
+    let finishedDoubleClickView: DoubleClickView;
+    let item: iMazing.OperationItem;
+    let endObserver: 0x02d79059;
+    let statusColorObservation: 0x02d79059;
+    let displayStyle: ItemDisplayStyle;
+    let showOpenButton: Bool;
+}
+
+enum ItemDisplayStyle {
+    // <0x52, enum, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x13bb9c 
+}
+
+class PhysicalIOSDeviceArrayController : NSArrayController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x13bc78 
+}
+
+class PhotoExportWindowProgressOperation : So8NSObjectC {
+    // <0x80010050, class, isUnique, version 0, kindSpecificFlags 0x8001>
+    // Access Function at 0x13d2c8 
+    let count: UInt;
+    let progress: UInt;
+    let label: String;
+    let showProgress: Bool;
+    let operation: CoreOperation?;
+    let timer: So7NSTimerCSg;
+    let labelNoCount: String;
+    let labelWithCount: String;
+    let onProgressUUID: 0x02b59e59;
+    let onFinishUUID: 0x02b59e59;
+}
+
+class InteractionAlertChangePasswordController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x13dbb4 
+    let data: UserInteractionDialogBoxData;
+    let checkboxTitle: String;
+    let checkboxValue: Int;
+    let passwordField1: NSTextField?;
+    let passwordField2: NSTextField?;
+    let passwordField3: NSTextField?;
+    let checkbox: NSButton?;
+}
+
+class ConfiguratorMDMServersViewController : WizardWindowController {
+    // <0x10050, class, isUnique, version 0, kindSpecificFlags 0x1>
+    // Access Function at 0x13e4b0 
+    let indexPath: 0x027f8e59;
+}
+
+class BlueprintSectionProfilesViewController : BlueprintSectionViewControllerBase {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x13f798 
+    let profilesListEmbedView: NSView?;
+    let profilesVC: ProfileListViewController;
+    let chooseProfilesSheet: ChooseItemsWindowController;
+}
+
+class ManageAppsWizardViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x140ae4 
+    let wizard: weak WizardWindowController?;
+    let behavior: WizardWindowDelegateBehavior;
+    let libraryVC: AppsLibraryViewController?;
+    let _isAwake: Bool;
+}
+
+class ProfileListViewController : 0x028f7159 {
+    // <0x40010050, class, isUnique, version 0, kindSpecificFlags 0x4001>
+    // Access Function at 0x140f88 
+}
+
+class PhysicalIOSStandardDeviceArrayController : NSArrayController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x14127c 
+}
+
+class NullableToAVPlayerControlStyle : NSValueTransformer {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x141888 
+}
+
+class DeviceItemProvider : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x14513c 
+    let devices: NSArrayController;
+    let iOSDevices: NSArrayController;
+    let iOSStandardDevices: NSArrayController;
+    let iOSStandardDevicesAndClassiciPods: NSArrayController;
+    let physicalDevices: NSArrayController;
+    let physicalIOSDevices: NSArrayController;
+    let physicalIOSStandardDevices: NSArrayController;
+    let physicalIOSStandardDevicesAndClassiciPods: NSArrayController;
+    let nonPhysicalDevices: NSArrayController;
+    let nonPhysicalIOSDevices: NSArrayController;
+    let nonPhysicalIOSStandardDevices: NSArrayController;
+    let nonPhysicalIOSStandardDevicesAndClassiciPods: NSArrayController;
+    let onDeviceRemoved: Event;
+    let simulateNoDevicesOrBackups: Bool;
+    let content: NSMutableArray;
+}
+
+class BatteryStatus : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1459d8 
+    let available: Bool;
+    let charging: Bool;
+    let percent: Double;
+    let info: [TextInfoValue];
+    let health: Int;
+    let maxChargePercent: Double;
+    let icon: So7NSImageCSg;
+}
+
+class HomeDiscoverTourDeviceSettingsViewController : HomeDiscoverTourBaseViewController {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x1465dc 
+}
+
+class HomeDevicesIconViewController : HomeIconBaseViewController {
+    // <0xc0010050, class, isUnique, version 0, kindSpecificFlags 0xc001>
+    // Access Function at 0x1468d8 
+    let lastSelectedRowIndex: Int;
+}
+
+class MediaBaseListViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1512e4 
+    let manager: MediaManager;
+    let allTracks: [MediaTrack];
+    let back: (() -> ())?;
+    let isPlayingView: Bool;
+    let player: MediaPlayerViewController;
+    let tracksController: NSArrayController;
+    let mediaListViewContainer: NSView?;
+    let hasFilters: Bool;
+    let isFiltered: Bool;
+    let allowColumnSorting: Bool;
+    let allowRowReordering: Bool;
+    let showImportToiTunes: Bool;
+    let isUpdatingTracks: Bool;
+    let sourceController: MediaBaseListViewController?;
+    let mediaListViewController: MediaListViewController;
+    let hasQuickLookFeature: Bool;
+    let allowedUTI: UTI?;
+    let presentController: ((MediaBaseListViewController) -> ())?;
+    let tracksSelectionObserver: 0x02d79059;
+    let columnsSettingsObserver: 0x02d79059;
+    let playerObserver: 0x02d79059;
+    let columnsSettings: MediaTableColumnsSettings;
+    let tracks: [MediaTrack];
+    let sortDescriptors: Array<NSSortDescriptor>;
+    let labels: Dictionary<String, String>;
+}
+
+class HomeDiscoverViewController : NSViewController {
+    // <0x80010050, class, isUnique, version 0, kindSpecificFlags 0x8001>
+    // Access Function at 0x153494 
+    let indexPath: 0x027f8e59;
+    let toolbarContainer: NSView?;
+    let stackView: NSStackView?;
+    let sections: [HomeDiscoverSectionViewController];
+    let toolbar: MainWindowToolbarController;
+    let appsController: HomeDiscoverAppsViewController;
+    let tourController: HomeDiscoverTourViewController;
+}
+
+class GenericScreenAlert : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x154b98 
+    let data: UserInteractionScreenData;
+    let alert: NSAlert;
+    let commonModeTimer: So7NSTimerCSg;
+    let modalPanelTimer: So7NSTimerCSg;
+    let removed: Bool;
+}
+
+class MediaPlayerThinSliderCell : NSSliderCell {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x156240 
+    let knobWidth: 0x0235a159;
+    let knobIndent: 0x0235a159;
+    let barRadius: 0x0235a159;
+    let backgroundColor: String;
+    let trackKnobColor: String;
+    let trackProgressColor: String;
+}
+
+class GenericListViewControllerBase : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x15707c 
+    let arrayController: NSArrayController?;
+    let tableView: NSTableView?;
+}
+
+class GenericCheckableItemsViewController : 0x022f6459 {
+    // <0xc00000d0, class, isGeneric, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x15779c 
+}
+
+class DeviceArrayController : NSArrayController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x157944 
+}
+
+class PhotoAssetsTableCellView : NSTableCellView {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x158b48 
+    let owner: weak PhotoDetailViewController?;
+    let cachedContainerViewView: NSView?;
+    let heightConstraint: NSLayoutConstraint?;
+    let currentWidth: 0x0235a159;
+    let isAwake: Bool;
+    let photoAssetsCollectionViewController: AnyObject?;
+}
+
+class HomeViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x15cb5c 
+    let sidebarView: NSView?;
+    let contentView: NSView?;
+    let sidebarViewController: 0x02c97659;
+    let contentViewController: NSViewController?;
+    let sidebarOverlayObservation: 0x02d79059;
+    let contentViewObservation: 0x02d79059;
+    let placeholderView: NSView;
+    let sidebarOverlayController: NSViewController?;
+    let registeredObserver: 0x02d79059;
+    let hideConfiguratorObserver: 0x02d79059;
+    let sidebarContainer: NSView?;
+    let oldSidebarOverlayControllerReference: NSViewController?;
+    let oldContentViewControllerReference: NSViewController?;
+}
+
+enum Sections {
+    // <0x52, enum, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x15cd80 
+}
+
+class PhotoAssetsCollectionViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x15e7c8 
+    let assetsCollectionView: PhotoAssetsCollectionView;
+    let assetInfoDataTableView: NSTableView?;
+    let multipleSelectionLabel: String;
+    let owner: PhotoAssetsTableCellView;
+    let isAwake: Bool;
+    let showingBurstAssets: Bool;
+    let operationFinishedObserver: 0x02d79059;
+    let selectedAssetInfoData: [PhotoInfoDataItem]?;
+    let currentItem: Photo?;
+}
+
+class TransparentTableView : NSTableView {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x160908 
+}
+
+class DiskUsageWidgetDataItemViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x160c0c 
+    let color: So7NSColorCyc;
+    let badgeView: 0x024f6959;
+    let appearanceObserver: 0x02d79059;
+}
+
+class BusinessTrialViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x161378 
+    let wizard: BusinessTrialWizardViewController;
+    let previewButton: NSButton?;
+}
+
+class DeviceSummaryViewController : NSViewController {
+    // <0x80010050, class, isUnique, version 0, kindSpecificFlags 0x8001>
+    // Access Function at 0x162a24 
+    let item: DeviceItem;
+    let indexPath: 0x027f8e59;
+    let toolbarContainer: NSView?;
+    let shortcutsContainer: NSView?;
+    let stackView: NSStackView?;
+    let leftStackView: NSStackView?;
+    let rightStackView: NSStackView?;
+    let toolbarViews: NSView?;
+    let refreshButton: 0x02336959;
+    let toolbar: MainWindowToolbarController;
+    let shortcutsController: ShortcutWidgetViewController;
+    let infoViewController: 0x020b6959;
+    let infoViewControllerExpanded: 0x020b6959;
+    let diskSpaceViewController: 0x02498859;
+    let diskSpaceViewControllerExpanded: 0x02616a59;
+    let batteryViewController: 0x02fb6859;
+    let batteryViewControllerExpanded: 0x02eb6859;
+    let actionsViewController: 0x02cb6859;
+    let batteryObserver: 0x02d79059;
+    let diskSpaceObserver: 0x02d79059;
+    let showDataset: ySo7DatasetC;
+    let showTools: () -> ();
+}
+
+class HomeDiscoverItem : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1662b4 
+    let title: String;
+    let text: String;
+    let icon: So7NSImageCSg;
+    let action:  empty-list DeviceItem;
+    let customAction: (() -> ())?;
+    let enabled: Bool;
+}
+
+class RegistrationMessageViewController : RegistrationContentViewController {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x166cd8 
+    let message: String;
+    let icon: So7NSImageCSg;
+    let button1: String;
+    let button2: String?;
+    let completion: ((Bool) -> ())?;
+}
+
+class MediaPlayerViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x16750c 
+    let manager: MediaManager;
+    let updating: Bool;
+    let isPlaying: Bool;
+    let isLoading: Bool;
+    let canPlay: Bool;
+    let operationFailed: Bool;
+    let currentTime: Int;
+    let totalTime: 0x02158659;
+    let progress: Double;
+    let tracks: [MediaTrack];
+    let current: MediaTrack?;
+    let suggestedTracks: [MediaTrack];
+    let suggestedTrack: MediaTrack?;
+    let updateTimer: So7NSTimerCSg;
+    let cachePathObserver: 0x02d79059;
+    let mediaPlayerVolumeObserver: 0x02d79059;
+    let player: AVAudioPlayer?;
+    let progressMouseDown: Bool;
+    let remoteCommandsEnabled: Bool;
+    let mediaPlayerSlider: MediaPlayerThinSlider;
+    let mediaPlayerProgressIndicator: NSProgressIndicator?;
+    let currentTimeLabel: MediaFadeTextField;
+    let totalTimeLabel: MediaFadeTextField;
+}
+
+class BackupLocationItem : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x16f6a8 
+    let path: String;
+    let name: String;
+    let volumePath: String?;
+    let totalBytesText: String?;
+    let availableBytesText: String?;
+    let unavailableDescription: String?;
+    let icon: So7NSImageCSg;
+    let totalBytes: 0x02158659;
+    let availableBytes: 0x02158659;
+    let isDefault: Bool;
+    let isAvailable: Bool;
+    let canRemove: Bool;
+    let defaultSortOrder: Int;
+    let url: NSURL;
+    let didShowSpaceWarning: Bool;
+    let iconPath: String?;
+}
+
+class FileDraggingView : VKFileDropView {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x170954 
+    let drawBorder: Bool;
+    let borderRadius: Int;
+}
+
+class PhotoDropDestinationView : So6NSViewC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1720bc 
+    let photoViewController: weak PhotoViewController?;
+    let shouldAcceptDrag: Bool;
+    let isReceivingDrag: Bool;
+    let onMouseDragged: ((NSEvent) -> ())?;
+    let onMouseUp: ((NSEvent) -> ())?;
+    let mouseDraggedReceived: Bool;
+}
+
+class LottieViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x17238c 
+    let imageName: String?;
+    let imageNameObserver: 0x02d79059;
+    let lastImageName: String?;
+}
+
+class PhotoMapView : So6NSViewC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x173f00 
+    let mapView: ScrollingDisabledMapView;
+}
+
+class DeviceViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x177950 
+    let sidebarView: NSView?;
+    let contentView: NSView?;
+    let sidebarDraggingView: FileDraggingView;
+    let contentDraggingView: FileDraggingView;
+    let animationViewContainer: NSView?;
+    let sidebarViewController: DeviceSidebarViewController;
+    let item: DeviceItem;
+    let wizard: WizardWindowController?;
+    let isDragging: Bool;
+    let contentViewController: NSViewController?;
+    let canDropOnContent: Bool;
+    let contentViewObservation: 0x02d79059;
+    let sidebarIsDraggingObservation: 0x02d79059;
+    let contentIsDraggingObservation: 0x02d79059;
+    let animationViewController: QuickTransferAnimationViewController;
+    let initialPage: DevicePage;
+    let initialDataset: Dataset;
+    let onLoad: ((NSViewController) -> ())?;
+    let oldContentViewControllerReference: NSViewController?;
+}
+
+enum DevicePage {
+    // <0x52, enum, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x177cbc 
+}
+
+class WhatsAppSessionTableCellView : NSTableCellView {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1783e0 
+    let cachedStatusStackView: NSStackView?;
+    let cachedMediaTypeImageView: NSImageView?;
+    let cachedMediaTypeSeparatorView: NSView?;
+    let cachedStatusImageView: NSImageView?;
+    let cachedStatusSeparatorView: NSView?;
+    let cachedIsArchivedView: NSView?;
+    let cachedIsArchivedSeparatorView: NSView?;
+    let cachedIsLockedView: NSView?;
+    let cachedIsLockedSeparatorView: NSView?;
+    let cachedUnreadCountView: NSView?;
+    let cachedUnreadCountSeparatorView: NSView?;
+}
+
+class PhotoBackgroundView : So6NSViewC {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x178774 
+    let backgroundColor: So7NSColorCSg;
+}
+
+class ShortcutWidgetItem : NSCollectionViewItem {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x180f94 
+    let shortcutMenu: NSMenu?;
+    let dataset: Dataset;
+    let isShortcut: Bool;
+}
+
+class WhatsAppMessageView : So6NSViewC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1818f8 
+    let backgroundColorName: String;
+    let leftTail: Bool;
+    let rightTail: Bool;
+}
+
+class TransparentCollectionView : NSCollectionView {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x182d04 
+}
+
+class MediaAlbumViewController : MediaPlaylistViewController {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x183044 
+}
+
+class NewDatasetManagerViewController : DatasetViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x185d10 
+    let mainWindowController: weak MainWindowController?;
+    let manager: DatasetManager?;
+    let loadViewController: DatasetLoadViewController;
+    let screenData: UserInteractionScreenData?;
+    let statusText: String?;
+    let helpURL: String?;
+    let searchPlaceholder: String?;
+    let searchString: String?;
+    let hasRefreshFeature: Bool;
+    let hasQuickLookFeature: Bool;
+    let hasGoBackOrForwardFeature: Bool;
+    let hasChangeViewFeature: Bool;
+    let hasChangePathFeature: Bool;
+    let hasSearchFeature: Bool;
+    let hasSliderFeature: Bool;
+    let loadContainer: NSView?;
+}
+
+class NonPhysicalDeviceArrayController : NSArrayController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x185e08 
+}
+
+class SupervisionWizardProgressViewController : WizardWindowProgressViewController {
+    // <0x40000050, class, isUnique, version 0, kindSpecificFlags 0x4000>
+    // Access Function at 0x186694 
+}
+
+class ManageAppsExtractProgressViewController : WizardWindowProgressViewController {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x1869f4 
+    let manager: iOSAppDownloadManager;
+    let apps: [iOSApp];
+    let destinationPath: String;
+    let fromLastBackup: Bool;
+}
+
+class BlueprintSectionSupervisionViewController : BlueprintSectionViewControllerBase {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x187fb4 
+    let orgsPopupButton: ChoosePopupButton;
+    let contentStackView: NSStackView?;
+    let blueprintOrganization: Organization?;
+    let superviseLabel: String;
+    let _orgsWC: ChooseItemsWindowController;
+    let _observations: SaySo100x029c8959CG;
+}
+
+class DeviceItem : So8NSObjectC {
+    // <0x80010050, class, isUnique, version 0, kindSpecificFlags 0x8001>
+    // Access Function at 0x18970c 
+    let device: Device;
+    let icon: So7NSImageCSg;
+    let title: String;
+    let isConnected: Bool;
+    let isPhysicalDevice: Bool;
+    let isiPhone: Bool;
+    let isiPad: Bool;
+    let isiPodTouch: Bool;
+    let isAppleWatch: Bool;
+    let isAppleTV: Bool;
+    let isiPodClassic: Bool;
+    let isRealityDevice: Bool;
+    let isHomePod: Bool;
+    let isWakingUp: Bool;
+    let hasBackup: Bool;
+    let hasArchives: Bool;
+    let diskUsage: DiskUsage;
+    let batteryStatus: BatteryStatus;
+    let batteryPercent: String;
+    let batteryPercentInt: Int;
+    let fullTextIndex: String;
+    let datasets: [Dataset];
+    let infos: [TextInfoValue];
+    let actions: [DeviceAction];
+    let quickActions: [DeviceAction];
+    let actionsMenu: NSMenu;
+    let dateFirstBackup: 0x02dd8b59;
+    let dateLatestBackup: 0x02dd8b59;
+    let accessoryImage: So7NSImageCSg;
+    let accessoryImageTooltip: String?;
+    let accessoryImageSortId: Int;
+    let selectedArchive: VersionedBackupInfo?;
+    let backupItemData: BackupData;
+    let sortId: Int;
+    let lastConnectionTime: 0x02996e59;
+    let isRestorableDevice: Bool;
+    let wakeUpIconObserver: 0x02d79059;
+    let diskUsageStressTimer: So7NSTimerCSg;
+}
+
+class DeviceControllerCache : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x18f99c 
+    let cache: [Swift.String : [Swift.String : NSViewController]];
+}
+
+class CalendarCheckboxCell : NSButtonCell {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x18fa64 
+}
+
+class ShowDeviceItem : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1900bc 
+    let device: DeviceItem;
+    let show: (ShowDeviceItem) -> ();
+    let cancel: (ShowDeviceItem) -> ();
+}
+
+class MessagesHelper : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x19035c 
+}
+
+class DeviceNavigationHistoryViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1911b0 
+    let navigationButton: DeviceNavigationHistoryBackgroundView;
+    let history: DeviceNavigationHistory;
+    let showClose: Bool;
+    let showBackNext: Bool;
+    let canGoBackObserver: 0x02d79059;
+    let canGoForwardObserver: 0x02d79059;
+    let style: DisplayStyle;
+    let shouldNavigate: (() -> Bool)?;
+}
+
+enum DisplayStyle {
+    // <0x52, enum, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x1918b0 
+    case 0xfd7bbfa9fd03(HomeDiscoverTourDeviceSnapshotsViewController)
+    case 0xcec0feff(ý{¿©ý)
+    case 0xc4c0feff9693feff07(ý{¿©ý)
+    case 0x02578359(ÄÀþÿ´¤þÿ)
+    case 0x36620201(4bSo60x0201C)
+    case 0x36620201(4bSo60x0201C)
+    case 0x36620201(4bSo60x0201C)
+    case 0xbac0feff2886feff07(ý{¿©ý)
+    case 0xc2c0feffacc0feff07(ý{¿©ý)
+    case 0x88b6feff44c2feff07(ý{¿©ý)
+    case 0xfa67bba9f85f01a9f65702a9f44f03a9fd7b04a9fd030191f30314aae8630190188540f9956a78f8a8fe7ed32804()
+    case 0x10(ø_¼©öWSo120x01a9f44f02C©ý{©ýÃ)
+    case 0xf85fbca9f65701a9f44f02a9fd7b03a9fdc3(P)
+    case 0xfd7bbfa9fd03(ConnectScreenViewController)
+    case 0x10(ôO¾©ý{©ýC)
+    case 0xfa67bba9f85f01a9f65702a9f44f03a9fd7b04a9fd030191ff8301d1f30314aaf703(P)
+    case 0xfd7bbfa9fd03(PreferencesBackupViewController)
+}
+
+class HomeDiscoverTourDeviceSnapshotsViewController : HomeDiscoverTourBaseViewController {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x191a28 
+}
+
+class iOSAppItemCache {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1aa9d4 
+}
+
+class OutlineBadgeView : So6NSViewC {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x1aaca4 
+}
+
+class AudioBooksLibraryViewController : MediaLibraryViewController {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x1ab660 
+}
+
+class Paths : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1ac1dc 
+}
+
+class PhotoTableView : VKTableView {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1ad3e4 
+    let owner: weak PhotoViewController?;
+    let displayedItemsChanged: Bool;
+}
+
+class RegistrationViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1ae66c 
+    let controllers: [RegistrationContentViewController];
+}
+
+class ConnectScreenViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1ae874 
+    let loading: Bool;
+    let subtitle: String?;
+    let onRefresh: (() -> ())?;
+    let onConnect: (() -> ())?;
+    let imageName: String?;
+    let transparent: Bool;
+    let device: Device?;
+    let imageContainer: NSView?;
+}
+
+class PreferencesBackupViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1b1744 
+    let restoreBackupLocationButton: NSButton?;
+    let container: NSView?;
+    let stackView: NSStackView?;
+    let optionsStackView: NSStackView?;
+    let backupLocationViewController: BackupLocationViewController;
+    let enableBackupLocationButtons: Bool;
+    let defaultBackupLocationObserver: 0x02d79059;
+}
+
+class PhotoDetailViewThumbnailsCollectionViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1b270c 
+    let photoDetailViewThumbnailsCollectionView: PhotoDetailViewThumbnailsCollectionView;
+    let detailViewController: weak PhotoDetailViewController?;
+    let isAwake: Bool;
+}
+
+class MediaDurationTransformer : NSValueTransformer {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x1b3b9c 
+}
+
+class HomeBackupsListViewController : HomeListBaseViewController {
+    // <0x40000050, class, isUnique, version 0, kindSpecificFlags 0x4000>
+    // Access Function at 0x1b3d74 
+    let encryptionTooltipLabel: String;
+}
+
+class BackupNavigationMenuItemView : So6NSViewC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1b3f74 
+    let trackingArea: NSTrackingArea?;
+    let onMouseEnter: (() -> ())?;
+    let onMouseExit: (() -> ())?;
+    let mouseOver: Bool;
+    let bordered: Bool;
+}
+
+class PhotoTableCellView : NSTableCellView {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1b4b6c 
+    let cachedThumbnailImageView: NSImageView?;
+}
+
+class QuickLookHelper : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1b5240 
+    let operationInfos: [OperationInfo];
+    let pathInfos: [Swift.String : OperationInfo];
+    let previewItems: [QuickLookItem];
+    let loading: Bool;
+    let quickLookOperation: iMazing.OperationItem?;
+    let operationStartObserver: Any?;
+    let operationProgressObserver: Any?;
+    let operationEndObserver: Any?;
+}
+
+struct OperationInfo {
+    // <0x51, struct, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x1ba3c4 
+    let operation: iMazing.OperationItem;
+    let flags: Flags;
+    let manager: StorageManager?;
+    let items: [StorageItem]?;
+    let app: Application?;
+}
+
+struct Flags {
+    // <0x51, struct, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x1ba59c 
+    let rawValue: UInt;
+}
+
+class HomeDevicesBaseViewController : NSViewController {
+    // <0x80010050, class, isUnique, version 0, kindSpecificFlags 0x8001>
+    // Access Function at 0x1bd868 
+    let singleSelectedItemLabel: String?;
+    let multipleSelectedItemsLabel: String?;
+    let devices: DeviceItemWrapperArrayController;
+    let hasDevices: Bool;
+    let toolbar: MainWindowToolbarController;
+    let homeViewTypeIndexObserver: 0x02d79059;
+    let listViewController: NSViewController?;
+    let iconViewController: NSViewController?;
+    let containerView: NSView?;
+    let toolbarContainer: NSView?;
+    let toolbarRightButtons: NSView?;
+    let toolbarLeftButtons: NSView?;
+    let iconViewSortingMenu: NSMenu?;
+    let hasSelectedDevices: Bool;
+    let selectedDevicesText: String;
+    let indexPath: 0x027f8e59;
+    let iconViewsorting: Int;
+    let options: DisplayOptions;
+    let onSelect:  empty-list DeviceItem;
+    let contentObserver: 0x02d79059;
+}
+
+struct DisplayOptions {
+    // <0x51, struct, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x1be7f8 
+    let rawValue: Int;
+}
+
+class BlueprintSectionGeneralViewController : BlueprintSectionViewControllerBase {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x1c0b8c 
+    let enrollmentMode: Int;
+    let hideManualEnrollment: Bool;
+    let hideDEPEnrollment: Bool;
+    let isZeroTouchEnrollment: Bool;
+    let deviceTypeTag: Int;
+    let hasWiFiProfile: Bool;
+    let secondsToWait: Array<NSNumber>;
+    let serverIsProfile: Bool;
+    let serverIsURL: Bool;
+    let chooseServerPopup: ChoosePopupButton;
+    let chooseProfilePopup: ChoosePopupButton;
+    let serversWC: ChooseItemsWindowController;
+    let chooseProfilesSheet: ChooseItemsWindowController;
+}
+
+class MDMServersViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1c2724 
+    let modalActionName: String;
+    let validateModalActionHandler: ((Bool) -> ())?;
+    let modalStatusChangeHandler: ((Bool) -> ())?;
+    let serversTableView: NSTableView?;
+    let loadingVC: LoadingViewController;
+    let selectionHandler: (([MDMServer]) -> ())?;
+    let serversArrayController: NSArrayController?;
+    let certificatesArrayController: NSArrayController?;
+    let serversView: NSView?;
+    let newServerView: NSView?;
+    let profileSourceDropdown: NSPopUpButton?;
+    let nameField: NSTextField?;
+    let serversPlusMinusControl: PlusMinusSegmentedControl;
+    let isLoading: Bool;
+    let hasSelection: Bool;
+    let dropDownProfileLabel: String;
+    let isFromURL: Bool;
+    let newServer: So9MDMServerC;
+    let portString: String;
+    let _port: 0x02036a59;
+    let serverUidToSelect: String;
+    let _awake: Bool;
+    let observations: SaySo100x029c8959CG;
+    let chooseProfilesSheet: ChooseItemsWindowController;
+    let selectedProfile: So7ProfileCSg;
+}
+
+class DatasetNavigationMenuItemViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1c5744 
+    let isActive: Bool;
+    let isShortcut: Bool;
+    let dataset: Dataset;
+    let onSelect: ySo7DatasetC;
+    let highlightView: 0x02a58259;
+}
+
+class OperationObserver : So8NSObjectC {
+    // <0x80010050, class, isUnique, version 0, kindSpecificFlags 0x8001>
+    // Access Function at 0x1c65d4 
+    let onOperationStart: Event;
+    let onOperationProgress: Event;
+    let onOperationEnd: Event;
+    let allItems: [iMazing.OperationItem];
+    let items: [iMazing.OperationItem];
+    let numberOfRunningOperations: Int;
+    let coreOperationGlobalObserver: 0x02b59e59;
+    let refreshTimer: So7NSTimerCSg;
+    let needRefresh: Bool;
+    let extraItems: [iMazing.OperationItem];
+}
+
+class USBPortNumberFormatter : NSValueTransformer {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x1ca350 
+}
+
+class BackupNavigationManageMenuItemViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1ca718 
+    let highlightView: BackupNavigationMenuItemView;
+    let action: () -> ();
+    let label: String;
+    let text: String;
+    let icon: So7NSImageCSg;
+}
+
+class MediaColumnDefinition : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1cac68 
+    let title: String?;
+    let width: 0x0235a159;
+    let isHidden: Bool;
+    let position: Int;
+}
+
+class PhotoCollectionViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1d3f88 
+    let photoCollectionView: PhotoCollectionView;
+    let photoCollectionViewTopConstraint: NSLayoutConstraint?;
+    let owner: weak PhotoViewController?;
+    let sectionsKeyReverseOrder: Array<Int>;
+    let sections: [Swift.Int : [Photo]];
+    let arrangedObjectsObserver: 0x02d79059;
+    let dragOutSelectedItems: [Photo]?;
+    let showMomentsHeaders: Bool;
+}
+
+class RegistrationLinkedDevicesViewController : RegistrationContentViewController {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x1d897c 
+    let devicesController: NSArrayController?;
+    let tableView: NSTableView?;
+    let error: So7NSErrorCSg;
+    let loading: Bool;
+    let canViewPlan: Bool;
+    let email: String;
+    let note: String;
+    let notification: UINotification?;
+}
+
+class ExportAllProgressViewController : WizardWindowProgressViewController {
+    // <0x40000050, class, isUnique, version 0, kindSpecificFlags 0x4000>
+    // Access Function at 0x1de484 
+}
+
+class HomeDiscoverTourRegisterViewController : HomeDiscoverTourBaseViewController {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x1de700 
+}
+
+class DeviceInfoWidgetViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1e0964 
+    let normalArrayController: NSArrayController?;
+    let dynamicArrayController: NSArrayController?;
+    let tableView: NSTableView?;
+    let arrayController: NSArrayController?;
+    let item: DeviceItem;
+    let searchText: String?;
+    let style: Style;
+}
+
+enum Style {
+    // <0x52, enum, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x1e0a40 
+}
+
+class DeviceActionMenu : So6NSMenuC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1e0d28 
+    let searchItem: NSMenuItem?;
+    let searchField: NSTextField?;
+    let item: DeviceItem;
+    let datasetControllers: [DatasetNavigationMenuItemViewController];
+    let itemsGenerator: () -> [NSMenuItem];
+    let onMenuWillOpen: ((NSMenu) -> ())?;
+    let onMenuDidClose: ((NSMenu) -> ())?;
+}
+
+class GenericItemSelectionViewController : 0x022f6459 {
+    // <0xc00000d0, class, isGeneric, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x1e356c 
+    let selectionIndexes: NSIndexSet;
+    let observations: SaySo100x029c8959CG;
+}
+
+class MusicViewController : MediaViewController {
+    // <0x40000050, class, isUnique, version 0, kindSpecificFlags 0x4000>
+    // Access Function at 0x1e3b28 
+}
+
+class ShowDeviceItemViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1e46ac 
+    let item: ShowDeviceItem;
+    let connectionObserver: 0x02d79059;
+}
+
+class PhotoExportWindowController : NSWindowController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1ed94c 
+    let view: NSView?;
+    let mediaTypeVideosStackView: NSStackView?;
+    let mediaTypeImageLabel: NSTextField?;
+    let mediaTypeVideoLabel: NSTextField?;
+    let mediaTypeOptionsLabel: NSTextField?;
+    let mediaTypePhotoStackView: NSView?;
+    let mediaTypeLivePhotoStackView: NSView?;
+    let mediaTypePortraitStackView: NSView?;
+    let mediaTypePanoramaStackView: NSView?;
+    let mediaTypeBurstStackView: NSView?;
+    let mediaTypeScreenshotStackView: NSView?;
+    let mediaTypeRAWStackView: NSView?;
+    let mediaTypeVideoStackView: NSView?;
+    let mediaTypeTimeLapseStackView: NSView?;
+    let mediaTypeSlomoStackView: NSView?;
+    let mediaTypeProResStackView: NSView?;
+    let imageStackView: NSStackView?;
+    let videoStackView: NSStackView?;
+    let mediaTypeBurstStackViewHeightConstraint: NSLayoutConstraint?;
+    let mediaTypePhotoCheckBox: NSButton?;
+    let mediaTypeLivePhotoCheckBox: NSButton?;
+    let mediaTypeLivePhotoIncludeVideosCheckBox: NSButton?;
+    let mediaTypePortraitCheckBox: NSButton?;
+    let mediaTypePortraitIncludeOriginalCheckBox: NSButton?;
+    let mediaTypePanoramaCheckBox: NSButton?;
+    let mediaTypeBurstCheckBox: NSButton?;
+    let mediaTypeBurstIncludeAllFramesCheckBox: NSButton?;
+    let mediaTypeScreenshotCheckBox: NSButton?;
+    let mediaTypeRAWCheckBox: NSButton?;
+    let mediaTypeVideoCheckBox: NSButton?;
+    let mediaTypeTimeLapseCheckBox: NSButton?;
+    let mediaTypeSlomoCheckBox: NSButton?;
+    let mediaTypeProResCheckBox: NSButton?;
+    let createMediaTypeFoldersCheckBox: NSButton?;
+    let exportOriginalsCheckBox: NSButton?;
+    let exportUltraWideCheckBox: NSButton?;
+    let exportJPGFromRAWCheckBox: NSButton?;
+    let useOriginalFilenamesCheckBox: NSButton?;
+    let helpButton: NSButton?;
+    let nextButton: NSButton?;
+    let defaultsButton: NSButton?;
+    let conversionWarningButton: NSButton?;
+    let convertHEICtoJPGButton: NSButton?;
+    let convertHEICtoJPGSlider: NSSlider?;
+    let convertHEICtoJPGQualityLabel: NSTextField?;
+    let convertHEVCtoMP4Button: NSButton?;
+    let convertHEVCtoMP4Slider: NSSlider?;
+    let convertHEVCtoMP4QualityLabel: NSTextField?;
+    let createFoldersForMoments: Bool;
+    let createFoldersMomentsLocationDate: Bool;
+    let title: String;
+    let totalItemsLabel: String;
+    let mediaTypePhotoCount: Int;
+    let allowNextButton: Bool;
+    let showConversionWarning: Bool;
+    let livePhotoOperation: PhotoExportWindowProgressOperation;
+    let portraitOperation: PhotoExportWindowProgressOperation;
+    let burstOperation: PhotoExportWindowProgressOperation;
+    let originalsOperation: PhotoExportWindowProgressOperation;
+    let ultraWideOperation: PhotoExportWindowProgressOperation;
+    let JPGFromRAWOperation: PhotoExportWindowProgressOperation;
+    let livePhotoOperationObserver: 0x02d79059;
+    let portraitOperationObserver: 0x02d79059;
+    let burstOperationObserver: 0x02d79059;
+    let originalsOperationObserver: 0x02d79059;
+    let ultraWideOperationObserver: 0x02d79059;
+    let JPGFromRAWOperationObserver: 0x02d79059;
+    let burstKeptItemsCount: Int;
+    let mediaTypeBurstCount: Int;
+    let mediaTypeLivePhotoCount: Int;
+    let mediaTypePortraitCount: Int;
+    let mediaTypePanoramaCount: Int;
+    let mediaTypeScreenshotCount: Int;
+    let mediaTypeVideoCount: Int;
+    let mediaTypeTimeLapseCount: Int;
+    let mediaTypeSlomoCount: Int;
+    let mediaTypeRAWCount: Int;
+    let mediaTypeProResCount: Int;
+    let otherPhotosCount: Int;
+    let showingBurstOnly: Bool;
+    let selectedItems: [Photo]?;
+    let RAWItems: [Photo]?;
+    let isAwake: Bool;
+    let manager: weak PhotoManager?;
+}
+
+class MediaExportWindowController : NSWindowController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1f4068 
+    let view: NSView?;
+    let mediaExportWindowStackView: NSStackView?;
+    let mySelectionCheckbox: NSButton?;
+    let libraryCheckbox: NSButton?;
+    let musicCheckbox: NSButton?;
+    let musicVideoCheckbox: NSButton?;
+    let moviesCheckbox: NSButton?;
+    let homeVideosCheckbox: NSButton?;
+    let TVShowsCheckbox: NSButton?;
+    let podcastsCheckbox: NSButton?;
+    let audioBooksCheckbox: NSButton?;
+    let playlistsCheckbox: NSButton?;
+    let ratingsCheckbox: NSButton?;
+    let playsCheckbox: NSButton?;
+    let skipsCheckbox: NSButton?;
+    let lastPlayedCheckbox: NSButton?;
+    let artistCheckbox: NSButton?;
+    let albumCheckbox: NSButton?;
+    let nextButton: NSButton?;
+    let helpButton: NSButton?;
+    let isLibrarySelected: Bool;
+    let enableMySelection: Bool;
+    let selectedItemsLabel: String;
+    let alreadyInMusicLabel: String;
+    let totalItemsLabel: String;
+    let ArtistLabel: String;
+    let AlbumLabel: String;
+    let isExportTypeITunes: Bool;
+    let isCopyTypeMusic: Bool;
+    let isCopyTypeTV: Bool;
+    let isCopyTypePodcasts: Bool;
+    let isCopyTypeAudioBooks: Bool;
+    let destinationInfoText: String;
+    let iTunesMediaFolder: String;
+    let mediaTypeItems: MediaTypeItems;
+    let itemsAlreadyInITunesText: String;
+    let playlistsCheckboxSavedState: StateValue;
+    let isAwake: Bool;
+    let enablePlaylists: Bool;
+    let options: MediaCopyOptions;
+}
+
+struct MediaTypeItems {
+    // <0x51, struct, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x1f45d4 
+    let music: [MediaTrack];
+    let musicVideos: [MediaTrack];
+    let movies: [MediaTrack];
+    let homeVideos: [MediaTrack];
+    let tvShows: [MediaTrack];
+    let podcasts: [MediaTrack];
+    let audioBooks: [MediaTrack];
+    let totalCount: Int;
+    let alreadyIniTunesMusic: [MediaTrack];
+    let alreadyIniTunesMusicVideos: [MediaTrack];
+    let alreadyIniTunesMovies: [MediaTrack];
+    let alreadyIniTunesHomeVideos: [MediaTrack];
+    let alreadyIniTunestvShows: [MediaTrack];
+    let alreadyIniTunesPodcasts: [MediaTrack];
+    let alreadyIniTunesAudioBooks: [MediaTrack];
+    let alreadyIniTunesTotalCount: Int;
+    let selected: [MediaTrack];
+    let alreadyIniTunesSelected: [MediaTrack];
+}
+
+class ChooseAppFromITunesWindowController : NSWindowController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1f5e5c 
+    let _awake: Bool;
+    let chooseAppHandler: (iOSApp?) -> ();
+    let isLoading: Bool;
+    let title: String;
+    let includeSystemApps: Bool;
+    let appsArrayController: NSArrayController?;
+    let searchField: NSTextField?;
+    let lastSearchString: String;
+    let searchText: String?;
+}
+
+class PhotoDetailViewItemContentView : So6NSViewC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1f65c4 
+    let onDoubleClick: (() -> ())?;
+    let mouseDownInView: Bool;
+}
+
+class PhotoDetailViewItemContentController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1f8e7c 
+    let imageView: NSImageView?;
+    let playerView: PhotoDetailViewAVPlayerView;
+    let extractLargeMediaButton: NSButton?;
+    let waitingLargeMediaProgressIndicator: NSProgressIndicator?;
+    let multipleSelectionLabel: String;
+    let playerStatusObserver: 0x02d79059;
+    let cacheMediaPathObserver: 0x02d79059;
+    let currentCacheMediaPath: String?;
+    let isAwake: Bool;
+    let onDoubleClick: (() -> ())?;
+}
+
+class DropSuperview : So6NSViewC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1f9a6c 
+    let _onDropHandler: ((Array<String>) -> ())?;
+    let _allowedTypes: SaySo3UTICGSg;
+}
+
+class MediaDisabledTextField : NSTextField {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1f9af8 
+    let cachedInitialColor: So7NSColorCSg;
+}
+
+class BackupLocationScreenDataWindowController : NSWindowController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1fa080 
+    let container: NSView?;
+    let enableSave: Bool;
+    let enableCancel: Bool;
+    let deviceSettingsBackupLocationViewController: DeviceSettingsBackupLocationViewController;
+}
+
+class DeviceSidebarViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1fb1b0 
+    let item: DeviceItem;
+    let deviceViewController: weak DeviceViewController?;
+    let listViewContainer: NSView?;
+    let deviceImage: NSImageView?;
+    let infoPopover: NSPopover?;
+    let contentView: NSView?;
+    let titleLabel: NSView?;
+    let renameMenu: NSMenu?;
+    let listViewController: 0x02c97659;
+    let menuObserver: 0x02d79059;
+    let archiveObserver: 0x02d79059;
+    let infoPopoverController: DeviceAdvancedInfoViewController?;
+    let showMoreButton: Bool;
+}
+
+class Paper : So8NSObjectC {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x1fd004 
+    let name: String;
+    let displayName: String;
+    let height: Int;
+    let width: Int;
+}
+
+class Printer : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x1fd250 
+    let id: String;
+    let name: String;
+    let model: String;
+    let papers: SaySo5PaperCG;
+}
+
+class PDFPaperSettings : So8NSObjectC {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x1fd53c 
+    let width: Int;
+    let height: Int;
+    let topMargin: Int;
+    let bottomMargin: Int;
+    let leftMargin: Int;
+    let rightMargin: Int;
+    let scale: Int;
+    let addChatName: Bool;
+    let addPageNumbers: Bool;
+    let addMetadata: Bool;
+    let printerName: String;
+    let paperName: String;
+}
+
+class MessagesPrintWindowController : NSWindowController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x204630 
+    let isMultipleSession: Bool;
+    let isPrintOperation: Bool;
+    let showPrintStackView: Bool;
+    let showPrinter: Bool;
+    let selectedPrinterModel: String;
+    let orientationSelectedTag: Int;
+    let organizationUUID: String;
+    let exportSelectedItems: Bool;
+    let scale: Int;
+    let messageClickedRow: Int;
+    let sessionClickedRow: Int;
+    let topMarginTextField: NSTextField?;
+    let bottomMarginTextField: NSTextField?;
+    let leftMarginTextField: NSTextField?;
+    let rightMarginTextField: NSTextField?;
+    let scaleTextField: NSTextField?;
+    let paperSizeLabel: NSTextField?;
+    let exportOneFileButton: NSButton?;
+    let exportSeparatedFilesButton: NSButton?;
+    let exportAllButton: NSButton?;
+    let exportSelectedButton: NSButton?;
+    let addChatSession: NSButton?;
+    let addPageNumber: NSButton?;
+    let addMetadata: NSButton?;
+    let defaultsButton: NSButton?;
+    let printersPopUpButton: NSPopUpButton?;
+    let papersController: NSArrayController?;
+    let orgsPopupButton: ChoosePopupButton;
+    let okButton: String;
+    let printOrExportOnlySelectedLabel: String;
+    let printOrExportAllLabel: String;
+    let currentPapers: SaySo5PaperCG;
+    let signingOrganization: Organization?;
+    let orgWc: ChooseItemsWindowController;
+    let pmServer: 0x02456659;
+    let defaultPrinter: So7PrinterCSg;
+    let genericPrinter: So7PrinterCSg;
+    let selectedPrinterMenuItem: NSMenuItem?;
+    let orientation: PaperOrientation;
+    let updateTimer: So7NSTimerCSg;
+    let printers: [Printer];
+    let isCurrentSystemMetric: Bool;
+    let isEditingMargins: Bool;
+    let textFieldBeforeEditing: String;
+    let currentPaperName: String;
+    let currentPrinterName: String;
+}
+
+class PhotoAssetsCollectionView : TransparentCollectionView {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x205a44 
+    let displayThumbnailInformations: Bool;
+    let isInitializing: Bool;
+}
+
+class WakeUpIcon : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x205f88 
+    let current: So7NSImageCSg;
+    let timer: So7NSTimerCSg;
+    let index: Int;
+}
+
+class StickyNotificationWindowBackgroundView : So6NSViewC {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x20660c 
+}
+
+class Dataset : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x20a350 
+    let name: String;
+    let icon: So7NSImageCSg;
+    let scheme: String;
+    let sorting: Int;
+}
+
+class MainWindowToolbarOperationsView : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x20b1b4 
+    let hasNotifications: Bool;
+    let hasOperations: Bool;
+    let progressIsIndeterminate: Bool;
+    let progressValue: Double;
+    let notificationsObserver: 0x02d79059;
+    let operationStartObserver: Any?;
+    let operationEndObserver: Any?;
+    let operationProgressObserver: Any?;
+    let flashing: Bool;
+    let button1: 0x02175d59;
+    let button2: 0x02175d59;
+}
+
+class DeviceToolItemHeader : So6NSViewC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x20ba1c 
+    let label: 0x02c58a59;
+    let title: String?;
+}
+
+class MediaLibraryViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x211678 
+    let manager: MediaManager;
+    let controller: MediaBaseListViewController?;
+    let player: MediaPlayerViewController;
+    let isiOS: Bool;
+    let canPlay: Bool;
+    let hasFilters: Bool;
+    let multipleSidebarSelectionLabel: String;
+    let exportLabel: String?;
+    let hideMediasAlreadyIniTunesLabel: String?;
+    let enablePlaylistsMenu: Bool;
+    let statusText: String?;
+    let searchText: String?;
+    let showSidebar: Bool;
+    let hasQuickLookFeature: Bool;
+    let libraryTracks: [MediaTrack];
+    let treeController: NSTreeController?;
+    let outlineView: NSOutlineView?;
+    let sidebarScrollView: NSScrollView?;
+    let contentContainer: NSView?;
+    let playerContainer: NSView?;
+    let sidebarView: NSView?;
+    let addPlaylistButton: NSButton?;
+    let deletePlaylistButton: NSButton?;
+    let optionsMenu: NSMenu?;
+    let sidebarAppleMusicItem: NSTreeNode?;
+    let selectionObserver: 0x02d79059;
+    let showOnlyTransferableMediaObserver: 0x02d79059;
+    let hideMediasAlreadyIniTunesObserver: 0x02d79059;
+    let hideDRMProtectedMediaObserver: 0x02d79059;
+    let sidebarItemToSelect: MediaSidebarItem;
+    let onAddPlaylist: (() -> ())?;
+    let onDeletePlaylist: (() -> ())?;
+    let onSidebarSelectionDidChange: ySo40x02C;
+}
+
+class PhotoNavigationButton : So8NSButtonC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x215060 
+    let fireInterval: Double;
+    let fadeDuration: Double;
+    let visibleAlphaValue: 0x0235a159;
+    let trackingAreaWidth: 0x0235a159;
+    let backgroundColorName: String;
+    let isAwake: Bool;
+    let ignoreClick: Bool;
+    let fireCount: Int;
+    let repeatClickTimer: So7NSTimerCSg;
+    let clearCountTimer: So7NSTimerCSg;
+}
+
+class InteractionAlert : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x215c08 
+    let controller: iMazing.InteractionAlertAccessoryViewController;
+    let alert: NSAlert;
+    let data: UserInteractionDialogBoxData;
+    let autoDismissTimer: So7NSTimerCSg;
+    let autoDismissLock: NSRecursiveLock;
+    let wasAutoDismissed: Bool;
+}
+
+class DragImageViewItem : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x216c3c 
+    let path: String;
+}
+
+class PhotoScrollView : NSScrollView {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x216d74 
+    let scrollPosition: Position;
+    let mandatoryPosition: 0x0235a159;
+}
+
+enum Position {
+    // <0x52, enum, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x216e50 
+}
+
+class RegistrationDarkBackgroundView : So6NSViewC {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x216fb0 
+}
+
+class PhotoCollectionViewItem : NSCollectionViewItem {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x217a70 
+    let isShowingBurstSidebar: Bool;
+    let showBorder: Bool;
+}
+
+class InteractionAlertLoginController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x21821c 
+    let data: UserInteractionDialogBoxData;
+    let usernameLabel: String;
+    let checkboxTitle: String;
+    let checkboxValue: Int;
+    let usernameField: NSTextField?;
+    let passwordField: NSTextField?;
+    let checkbox: NSButton?;
+    let privacyLabel: NSTextField?;
+}
+
+class ShortcutWidgetViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2191d4 
+    let item: DeviceItem;
+    let frameObserver: 0x02d79059;
+    let superViewObserver: 0x02d79059;
+    let datasetObserver: 0x02d79059;
+    let selectionObserver: 0x02d79059;
+    let showDataset: ySo7DatasetC;
+    let moreControllers: [DatasetNavigationMenuItemViewController];
+    let datasets: NSArrayController?;
+    let collectionView: NSCollectionView?;
+    let searchText: String?;
+}
+
+class PreferencesItem : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x21b610 
+    let title: String;
+    let subtitle: String?;
+    let icon: So7NSImageCSg;
+    let selectedIcon: So7NSImageCSg;
+    let accessoryIcon: So7NSImageCSg;
+    let accessoryText: String?;
+    let controller: NSViewController;
+    let status: 0x02a77759;
+    let showStatusIcon: Bool;
+}
+
+class SelectableDeviceItem : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x21bd58 
+    let isSelected: Bool;
+    let allowSelection: Bool;
+    let allowContextualMenu: Bool;
+    let selectionTooltip: String;
+    let deviceItem: DeviceItem;
+}
+
+class HiddenScroller : NSScroller {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x21bf60 
+}
+
+class ManageArchivesBytesToString : NSValueTransformer {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x21c2e8 
+}
+
+class DatasetShortcut : Dataset {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x21c69c 
+    let shortcut: Shortcut;
+}
+
+class ConfiguratorDevicesContentViewController : LibraryWizardViewController {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x21c804 
+}
+
+class NoVibrancyProgressIndicator : NSProgressIndicator {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x21c90c 
+}
+
+class OperationPopoverView : So6NSViewC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x21cba0 
+    let controller: OperationItemViewController;
+    let eventMonitor: Any?;
+}
+
+class PhotoAssetsCollectionViewItem : NSCollectionViewItem {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x21e5a8 
+    let cachedSelectionBorderView: NSView?;
+}
+
+class BatteryInfoWidgetViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2202ac 
+    let item: DeviceItem;
+    let chargeText: String?;
+    let healthIcon: So7NSImageCSg;
+    let healthText: String?;
+    let searchText: String?;
+    let charging: Bool;
+    let lowBatteryNotificationTag: Int;
+    let observer: 0x02d79059;
+    let batteryView: 0x02e75a59;
+    let arrayController: NSArrayController?;
+    let batteryHealthView: BatteryHealthView;
+    let monitoring: Bool;
+}
+
+class BackupHistoryItem : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x220d64 
+    let info: VersionedBackupInfo;
+    let manager: BackupVersioningManager;
+    let icon: So7NSImageCSg;
+    let title: String;
+    let subtitle: String;
+    let isEncrypted: Bool;
+    let isCurrentBackup: Bool;
+    let isActiveVersion: Bool;
+    let size: 0x02158659;
+    let label: String;
+    let doNotDelete: Bool;
+}
+
+class DoubleClickView : So6NSViewC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2225e8 
+    let onDoubleClick: (() -> ())?;
+}
+
+class AudioBooksTrackListViewController : MediaTrackListViewController {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x2231d4 
+}
+
+class BreadcrumbItemBackgroundView : So6NSViewC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x22330c 
+    let trackingArea: NSTrackingArea?;
+    let mouseOver: Bool;
+    let onMouseOverChanged: ((Bool) -> ())?;
+}
+
+class BatteryWidgetViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2248d4 
+    let item: DeviceItem;
+    let hasDetails: Bool;
+    let charging: Bool;
+    let label: String;
+    let healthText: String?;
+    let batteryView: 0x02e75a59;
+    let healthLabel: 0x02c58a59;
+    let observer: 0x02d79059;
+}
+
+class RegistrationAssociateSingleDeviceViewController : RegistrationContentViewController {
+    // <0xc0010050, class, isUnique, version 0, kindSpecificFlags 0xc001>
+    // Access Function at 0x226c94 
+    let trialNotification: UINotification?;
+    let deviceItem: DeviceItem;
+    let note: String?;
+    let actionButtonTitle: String?;
+    let storeURL: 0x02439d59;
+    let storeBrowserURL: 0x02439d59;
+    let message: String;
+    let totalSlots: 0x02158659;
+    let availableSlots: 0x02158659;
+    let usedSlots: 0x02158659;
+    let canLink: Bool;
+    let buttonsController: RegistrationButtonViewController;
+    let buttonsContainer: NSView?;
+}
+
+class WizardTitleViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x227468 
+    let title1: String?;
+    let title2: String?;
+    let showTitle1: Bool;
+    let showTitle2: Bool;
+    let showSeparator: Bool;
+}
+
+class HomeBackupsIconViewController : HomeIconBaseViewController {
+    // <0xc0010050, class, isUnique, version 0, kindSpecificFlags 0xc001>
+    // Access Function at 0x22785c 
+    let arrangedObjectsObserver: 0x02d79059;
+    let sortedGroups: Array<(path: String, volume: String)>;
+    let itemsBygroups: Swift.Dictionary empty-list Swift.String[SelectableDeviceItem];
+}
+
+class LoadingViewController : NSViewController {
+    // <0x80010050, class, isUnique, version 0, kindSpecificFlags 0x8001>
+    // Access Function at 0x22f854 
+    let explicitLoadingDelayBehaviour: ExplicitLoadingDelayBehaviour;
+    let onReloadClicked: (() -> ())?;
+    let reloadButtonLabel: String;
+    let didLoadOnce: Bool;
+    let isLoadingExplicit: Bool;
+    let isLoading: Bool;
+    let isShowingError: Bool;
+    let loadingText: String;
+    let loadingImageName: String?;
+    let loadingImage: So7NSImageCSg;
+    let shouldBeShown: Bool;
+    let showReloadButton: Bool;
+    let isIndeterminate: Bool;
+    let progress: Double;
+    let isAwake: Bool;
+    let viewToHide: NSView?;
+    let onOperationDidEnd: ((CoreOperation) -> ())?;
+    let operation: CoreOperation?;
+    let displayProgressDelayMS: Int;
+    let minDurationMS: Int;
+    let timeExplicitLoadStart: 0x02f96059;
+    let timeExplicitLoadStop: 0x02f96059;
+    let onFinishUID: 0x02b59e59;
+    let onCancelUID: 0x02b59e59;
+    let onProgressUID: 0x02b59e59;
+}
+
+enum ExplicitLoadingDelayBehaviour {
+    // <0x52, enum, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x231c24 
+}
+
+class HomeScrollView : NSScrollView {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x231f04 
+}
+
+class QuickTransferProgressViewController : WizardWindowProgressViewController {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x232124 
+    let transferHelper: UniversalTransferHelper;
+    let targetAppBundleID: String;
+}
+
+class DeviceToolItem : NSCollectionViewItem {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x233d9c 
+    let icon: So7NSImageCSg;
+    let tooltip: String?;
+    let subtitle: String?;
+    let action: DeviceAction?;
+}
+
+class MultipleKeysSortDescriptor : NSSortDescriptor {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x234180 
+    let keys: Array<String>;
+    let isAscending: Bool;
+}
+
+class MessageMessageTableCellView : NSTableCellView {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x235ca8 
+    let cachedBubbleView: NSView?;
+    let cachedPlayerView: AVPlayerView?;
+    let cachedMapView: ScrollingDisabledMapView;
+    let cachedMediaImageView: NSImageView?;
+    let cachedSenderTextField: NSTextField?;
+    let cachedSubjectTextField: NSTextField?;
+    let cachedDateTextField: NSTextField?;
+}
+
+class MediaSongGroupItem : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2361d4 
+    let title: String;
+    let representedObject: NSObject?;
+    let hasRepresentedObject: Bool;
+    let isCompilation: Bool;
+}
+
+class VideoAlbumViewController : MediaAlbumViewController {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x236754 
+}
+
+class DeviceOrBackupViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x236bc8 
+    let dataset: iOSDataset;
+    let device: So9iOSDeviceC;
+    let icon: So7NSImageCSg;
+    let loadFromDeviceView: 0x02295959;
+    let loadFromBackupView: 0x02295959;
+    let subtitle: String;
+    let loadFromDeviceTitle: String;
+    let loadFromDeviceSubtitle: String;
+    let loadFromBackupTitle: String;
+    let loadFromBackupSubtitle: String;
+    let delegate: weak iMazing.DeviceOrBackupViewDelegate?;
+}
+
+class DiskUsageDetailsWidgetViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x23993c 
+    let item: DeviceItem;
+    let controller: 0x02075959;
+    let observer: 0x02d79059;
+    let appearanceObserver: 0x02d79059;
+    let titleExtra: String?;
+    let subtitle: String?;
+    let infoController: 0x026d8a59;
+    let hasPurgeableData: Bool;
+    let showPurgeableData: Bool;
+    let containerView: NSView?;
+    let infoStackView: NSStackView?;
+}
+
+class ManageAppsRestoreProgressViewController : WizardWindowProgressViewController {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x23a1f8 
+    let sourcePaths: Array<String>;
+    let manager: iOSAppDownloadManager;
+}
+
+class MojavePrivacyWindowController : NSWindowController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x23bc08 
+    let imageView: DragImageView;
+    let openSettingsButton: NSButton?;
+    let text: Any?;
+}
+
+class SelectConnectedDeviceWizardViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x23e45c 
+    let contentView: NSView?;
+    let connectViewContainer: NSView?;
+    let pairingViewContainer: NSView?;
+    let wizard: weak WizardWindowController?;
+    let behavior: WizardWindowDelegateBehavior;
+    let allowWiFi: Bool;
+    let connectController: ConnectScreenUSBViewController;
+    let notification: UINotification?;
+    let discover: HomeDiscoverItem;
+    let image: So7NSImageCSg;
+    let subtitle: String?;
+    let text: String?;
+    let devices: NSArrayController;
+    let showLeftPane: Bool;
+    let pairingController: GenericScreenViewController;
+    let devicesViewController: HomeDevicesViewController;
+}
+
+class DeviceSettingsArchivingViewController : NSViewController {
+    // <0x80010050, class, isUnique, version 0, kindSpecificFlags 0x8001>
+    // Access Function at 0x23ea10 
+    let item: DeviceItem;
+    let indexPath: 0x027f8e59;
+    let backupArchivalEnabledLabel: String;
+    let backupArchivalDisabledLabel: String;
+    let keepArchivedBackupsLabel: String;
+    let enableSaveAndDiscard: Bool;
+    let enableArchival: Bool;
+    let enableClean: Bool;
+    let enableNotify: Bool;
+    let selectedKeepBackup: Int;
+    let infoViewController: 0x026d8a59;
+    let infoViewContainer: NSView?;
+}
+
+class MusicTrackListViewController : MediaTrackListViewController {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x2403ec 
+}
+
+class DockProgress {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2412dc 
+    let indeterminate: Bool;
+    let progress: Double?;
+    let contentView: NSView?;
+    let progressView: DockProgressView?;
+}
+
+class DockProgressView : So6NSViewC {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x241138 
+    let progress: Double;
+    let indeterminate: Bool;
+}
+
+class HomeDiscoverTourConnectViewController : HomeDiscoverTourBaseViewController {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x241464 
+}
+
+class DeviceSettingsBackupEncryptionViewController : NSViewController {
+    // <0x80010050, class, isUnique, version 0, kindSpecificFlags 0x8001>
+    // Access Function at 0x241c68 
+    let infoViewContainer: NSView?;
+    let encryptionStatusButton: 0x028d8659;
+    let item: DeviceItem;
+    let indexPath: 0x027f8e59;
+    let isUpdatingEncryption: Bool;
+    let backupEncryptionIsEnabled: Bool;
+    let infoViewController: 0x026d8a59;
+    let statusChangedCallback: () -> ();
+}
+
+class ITunesControlWindowController : NSWindowController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x242ed8 
+    let openSettingsButton: NSButton?;
+}
+
+class HomeDiscoverSectionViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x243ca4 
+    let items: [HomeDiscoverItem];
+    let controllers: [HomeDiscoverSectionRowViewController];
+    let stackView: NSStackView?;
+}
+
+class DatasetToolbarViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x244818 
+    let buttonsStackView: NSStackView?;
+    let datasetViewController: weak DatasetViewController?;
+    let buttons: [DatasetToolbarButton];
+    let showLabelsObserver: 0x02d79059;
+}
+
+class HomeTableView : 0x02755759 {
+    // <0xa2010050, class, isUnique, version 0, kindSpecificFlags 0xa201>
+    // Access Function at 0x244b5c 
+    let highlightAllItems: Bool;
+}
+
+class PhotoFadeImageView : NSImageView {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2451d8 
+    let fadeInDuration: Double;
+    let fadeOutDuration: Double;
+}
+
+class HomeDiscoverTourBaseViewController : NSViewController {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x2453d0 
+    let message: String?;
+    let trackingID: String?;
+}
+
+class TransparentTableRowView : NSTableRowView {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x245804 
+}
+
+class PreferencesDevicesViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x245b94 
+    let removePariringStackView: NSStackView?;
+    let removePairingButton: 0x02ef8a59;
+}
+
+class QuickTransferAppItemController : NSCollectionViewItem {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x245dd0 
+    let valueObserver: 0x02d79059;
+    let image: NSImageView?;
+    let label1: NSTextField?;
+    let label2: NSTextField?;
+}
+
+class SuperviseWizardInfoViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x246784 
+    let wizard: weak WizardWindowController?;
+    let behavior: WizardWindowDelegateBehavior;
+    let _isAwake: Bool;
+}
+
+class PhotoDetailViewThumbnailsCollectionViewItem : NSCollectionViewItem {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x247230 
+    let cachedSmallThumbnailImageView: AspectFillImage;
+    let mouseDownTimestamp: Double?;
+    let thumbnailImagePath: String?;
+}
+
+class AudioBooksAlbumViewController : MediaAlbumViewController {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x2474a4 
+}
+
+class VPPLicensesWindowController : NSWindowController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x24974c 
+    let manager: iOSAppDownloadManager;
+    let didChangeAssignements: Bool;
+    let contentView: NSView?;
+    let arrayController: NSArrayController?;
+    let appIcon: So7NSImageCSg;
+    let appItem: iOSAppDisplayItem;
+    let licenseInfo: String;
+    let serialsText: String;
+    let assignedLicensesLabel: String;
+    let textViewValue: NSAttributedString?;
+    let _awake: Bool;
+    let _loadingVC: LoadingViewController;
+    let _observations: SaySo100x029c8959CG;
+}
+
+class LicenseDevice : So8NSObjectC {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x24976c 
+    let serial: String;
+    let model: String;
+    let name: String;
+}
+
+class DragImageView : NSImageView {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x24a394 
+    let paths: Array<String>;
+}
+
+class BlueprintSection : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x24a5d8 
+    let icon: NSImage;
+    let title: String;
+    let info: String;
+    let badgeValue: Int;
+    let badgeString: String;
+    let showCount: Bool;
+    let showWarning: Bool;
+    let sectionController: BlueprintSectionViewControllerBase;
+    let blueprint: So9BlueprintC;
+    let vcGen: BlueprintSectionViewControllerBase;
+}
+
+class PreferencesPhotosViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x24c52c 
+    let showPhoto: Bool;
+    let photoExportQualityLabel: String?;
+    let videoExportQualityLabel: String?;
+    let segmentedControl: NSSegmentedControl?;
+    let photoExportRadioAuto: NSButton?;
+    let photoExportRadioMostCompatible: NSButton?;
+    let photoExportRadioOriginal: NSButton?;
+    let photoExportQualitySlider: NSSlider?;
+    let videoExportRadioAuto: NSButton?;
+    let videoExportRadioMostCompatible: NSButton?;
+    let videoExportRadioOriginal: NSButton?;
+    let videoExportQualitySlider: NSSlider?;
+}
+
+class MediaSidebarItem : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x24c754 
+    let title: String;
+    let icon: So7NSImageCSg;
+    let isSection: Bool;
+    let allowEdit: Bool;
+    let isEditable: Bool;
+    let allowCreatePlaylistsOnExport: Bool;
+    let canCollapse: Bool;
+    let canPlay: Bool;
+    let children: [MediaSidebarItem];
+    let controller: MediaBaseListViewController?;
+}
+
+class PreferencesWindowController : NSWindowController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x24d420 
+    let items: [PreferencesItem];
+    let selectedItem: PreferencesItem;
+    let sidebarContainer: NSView?;
+    let contentView: NSView?;
+    let sidebar: 0x02c97659;
+    let currentController: NSViewController?;
+    let controllerMinHeight: Double;
+    let animating: Bool;
+    let titleToSelect: String?;
+    let placeholderView: NSView;
+}
+
+class PodcastsLibraryViewController : MediaLibraryViewController {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x24fe90 
+}
+
+class ConnectScreenBackgroundView : 0x02a55659 {
+    // <0x22010050, class, isUnique, version 0, kindSpecificFlags 0x2201>
+    // Access Function at 0x24ff84 
+    let transparent: Bool;
+}
+
+class VideoViewController : MediaViewController {
+    // <0x40000050, class, isUnique, version 0, kindSpecificFlags 0x4000>
+    // Access Function at 0x2508c0 
+}
+
+class DetectSpywareLicenseWizardViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x251b48 
+    let wizard: weak WizardWindowController?;
+    let behavior: WizardWindowDelegateBehavior;
+    let licenseAccepted: Bool;
+    let disclaimerAccepted: Bool;
+    let disclaimerText: String;
+}
+
+class PhotoDetailViewThumbnailsCollectionScrollView : NSScrollView {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x25219c 
+    let photoDetailViewThumbnailsCollectionView: PhotoDetailViewThumbnailsCollectionView;
+    let timer: So7NSTimerCSg;
+    let eventPhaseEnded: Bool;
+}
+
+class OrganizationsViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x253e08 
+    let validateModalActionHandler: ((Bool) -> ())?;
+    let modalActionName: String;
+    let modalStatusChangeHandler: ((Bool) -> ())?;
+    let selectionHandler: (([Organization]) -> ())?;
+    let loadingVC: LoadingViewController;
+    let orgsArrayController: NSArrayController?;
+    let actionsMenu: NSMenu?;
+    let identityPopupGenerateNew: NSPopUpButton?;
+    let identityPopupHasCert: NSPopUpButton?;
+    let newOrgView: NSView?;
+    let orgsView: NSView?;
+    let orgsTableView: NSTableView?;
+    let nameField: NSTextField?;
+    let hasSelection: Bool;
+    let newOrg: Organization;
+    let countries: [ISOCountry];
+    let selectedCountry: ISOCountry;
+    let newOrgCertPath: String;
+    let newOrgCertFilename: String;
+    let _awake: Bool;
+    let observations: SaySo100x029c8959CG;
+    let _dragDropHelper: TableViewDragDropHelper;
+}
+
+class OperationOverlayButton : So8NSButtonC {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x25ab18 
+}
+
+class MediaViewController : NewDatasetManagerViewController {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x263550 
+    let libraryController: MediaLibraryViewController;
+    let contentContainer: NSView?;
+    let sidebarSeletedItem: MediaSidebarItem;
+    let toolbarDeleteButton: DatasetToolbarButton;
+    let exportWindowController: MediaExportWindowController;
+    let mediaCopyiTunesProgressHandler: MediaCopyiTunesProgressHandler;
+    let iTunesControlWindowController: ITunesControlWindowController;
+    let searchObserver: 0x02d79059;
+    let statusTextObserver: 0x02d79059;
+}
+
+class CalendarEventLineView : So6NSViewC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2648d0 
+    let colorObserver: 0x02d79059;
+}
+
+class PreferencesOtherDataViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x264d2c 
+    let delimiterStackView: NSStackView?;
+    let delimiterButton: VKPopUpButton?;
+}
+
+class HomeDevicesListViewController : HomeListBaseViewController {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x2652e0 
+}
+
+class HomeIconDeviceImageView : NSImageView {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x26568c 
+    let selectableDeviceItem: SelectableDeviceItem;
+}
+
+class DeviceNavigationMenuItemViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x265b18 
+    let device: DeviceItem;
+    let isActive: Bool;
+    let onSelect:  empty-list DeviceItem;
+    let highlightView: 0x02a58259;
+}
+
+class NoBackupScreenViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x265eec 
+    let loading: Bool;
+    let transparent: Bool;
+}
+
+class HomeBackupsIconViewItem : NSCollectionViewItem {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2667e8 
+    let highlightView: 0x02a58259;
+    let checkbox: NSControl?;
+    let deviceImage: HomeIconDeviceImageView;
+    let infoPopover: NSPopover?;
+    let moreButton: NSControl?;
+    let onMouseDown: ((HomeBackupsIconViewItem, NSEvent) -> ())?;
+    let onMouseUp: ((HomeBackupsIconViewItem, NSEvent) -> ())?;
+    let onSelectionChanged: ((HomeBackupsIconViewItem) -> ())?;
+    let objectObserver: 0x02d79059;
+    let selectionObserver: 0x02d79059;
+    let infoPopoverController: DeviceAdvancedInfoViewController?;
+    let isMouseOver: Bool;
+}
+
+class SuperviseWizardConfirmViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x26928c 
+    let wizard: weak WizardWindowController?;
+    let behavior: WizardWindowDelegateBehavior;
+    let _isAwake: Bool;
+    let infoText: String;
+    let verificationText: String;
+    let icon: So7NSImageCSg;
+    let verifString: String;
+    let bypassString: String;
+    let _observations: SaySo100x029c8959CG;
+}
+
+class VideoMovieTrackListViewController : MediaVideoTrackListViewController {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x269c68 
+}
+
+class HomeDiscoverTourDotView : So6NSViewC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x26a1cc 
+    let widthConstraint: NSLayoutConstraint?;
+    let heightConstraint: NSLayoutConstraint?;
+    let appearanceObserver: 0x02d79059;
+    let isActive: Bool;
+}
+
+class ProfileLibraryViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x26e5b4 
+    let _filter: Filter;
+    let selectionHandler: (([Profile]) -> ())?;
+    let profilesVC: ProfileListViewController;
+    let objCProfilesVC: NSViewController?;
+    let profilesView: NSView?;
+    let plusMenu: NSMenu?;
+    let otherActionsMenu: NSMenu?;
+    let createActionsMenu: NSMenu?;
+    let isAwake: Bool;
+    let hasSelection: Bool;
+    let _allowedExtensions: Array<String>;
+    let _dragDropHelper: TableViewDragDropHelper;
+    let _needsReload: Bool;
+    let showSearchField: Bool;
+    let searchText: String?;
+}
+
+enum Filter {
+    // <0x52, enum, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x26e5d4 
+}
+
+class PhotoOpacityView : So6NSViewC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2712f0 
+    let alpha: 0x0235a159;
+    let topLeftRadius: 0x0235a159;
+    let isAwake: Bool;
+}
+
+class OperationIcon : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x271fd8 
+    let didRequestDeviceImage: Bool;
+    let deviceIcon: So7NSImageCSg;
+    let lastImage: OperationImageInfo;
+    let iconObserver: 0x02d79059;
+}
+
+class ISOCountry : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x273b50 
+    let name: String;
+    let isoCode: String;
+}
+
+class DeviceNavigationHistoryBackgroundView : So6NSViewC {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x274a24 
+    let leftButtonEnabled: Bool;
+    let rightButtonEnabled: Bool;
+}
+
+class MediaTrackTableCellView : NSTableCellView {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x274f04 
+    let mouseOver: Bool;
+    let observer: 0x02d79059;
+}
+
+enum ListBulletStyle {
+    // <0x52, enum, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x275874 
+    case 0xfd7bbfa9fd03(MediaTrackSubtitleTransformer)
+    case 0x549efefff081feff07(ý{¿©ý)
+    case So22WizardWindowControllerC(Tþÿ¸aþÿ)
+    case 0xd0(ÿSo120x01d1f65701C©ôOSo100x02a9fd7bC©ýÃ)
+    case 0xffc301d1f65704a9f44f05a9fd7b06a9fd830191f303(%ßÿXSo120x01c5fd08e6C)
+    case 0x12($ÿÄý)
+    case 0xf44fbea9fd7b01a9fd43(¨íþÿ´$ßÿPÅý°å)
+    case 0xfd7bbfa9fd03(PromoWindowController)
+    case 0x10(ÿÃ)
+    case 0xfc6fbaa9fa6701a9f85f02a9f65703a9f44f04a9fd7b05a9fd430191ff43()
+    case P(üoº©úgSo120x01a9f85f02C©öW©ôO©ý{©ýCSo120x0191f70314Cª)
+    case So8NSObjectC(n^þÿÐRþÿ)
+    case 0xfa67bba9f85f01a9f65702a9f44f03a9fd7b04a9fd030191f30314aa485b01d0()
+}
+
+class MediaTrackSubtitleTransformer : NSValueTransformer {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x275d5c 
+}
+
+class ScrollingDisabledScrollView : NSScrollView {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x275f0c 
+}
+
+class SelectConnectedDeviceWizardWindowController : WizardWindowController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2768ec 
+}
+
+class Weak {
+    // <0x800000d0, class, isGeneric, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x276b84 
+    let value: xSgXw;
+}
+
+class PromoWindowController : NSWindowController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x276df0 
+    let data: PromoData;
+    let hideDontShowAgain: Bool;
+    let webViewContainer: WKWebView?;
+    let webView: WKWebView?;
+    let shown: Bool;
+}
+
+class ApplicationDelegate : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x27dcf4 
+    let applicationRegistered: Bool;
+    let licenseIsSubscriptionBased: Bool;
+    let licenseIsSlotBased: Bool;
+    let subscriptionStatusDeleted: Bool;
+    let viewDevicesLinkedToLicense: Bool;
+    let canShowConfiguratorMenu: Bool;
+    let canShowProfileEditorMenu: Bool;
+    let startMiniAtLogin: Bool;
+    let mainWindowController: MainWindowController;
+    let mojavePrivacyWindowController: MojavePrivacyWindowController;
+    let awake: Bool;
+    let restartMini: Bool;
+    let preventMiniAutoLaunch: Bool;
+    let appStarted: Bool;
+    let didFinishLaunching: Bool;
+    let checkRunningOperations: Bool;
+    let installStatus: 0x02795259;
+    let miniLaunchAgent: LaunchAgent;
+    let organizationsWindowController: NSWindowController?;
+    let profilesWindowController: NSWindowController?;
+    let miniStartObserver: 0x02d79059;
+    let autoUpdateObserver: 0x02d79059;
+    let appearanceOverrideObserver: 0x02d79059;
+    let iconOverrideObserver: 0x02d79059;
+    let appearanceObserver: 0x02d79059;
+    let lottieObserver: 0x02d79059;
+    let preferencesMenuItem: NSMenuItem?;
+    let simulateNoDevicesOrBackups: Bool;
+}
+
+class OperationHelper : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x27f8ec 
+}
+
+class iOSStandardDeviceAndClassiciPodArrayController : NSArrayController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x27f96c 
+}
+
+class RegistrationLinkedDeviceItem : So8NSObjectC {
+    // <0x80010050, class, isUnique, version 0, kindSpecificFlags 0x8001>
+    // Access Function at 0x282568 
+    let title: String;
+    let subtitle: String;
+    let iMazingDeviceID: String;
+    let model: String;
+    let osVersion: String;
+    let deviceClass: String;
+    let icon: So7NSImageCSg;
+    let udid: String?;
+    let name: String?;
+    let serialNumber: String?;
+    let lastConnectionTime: 0x02dd8b59;
+    let lastBackupTime: 0x02dd8b59;
+    let info: (Dictionary<String, Any>)?;
+    let deviceItem: DeviceItem;
+}
+
+class ConfiguratorProfilesViewController : WizardWindowController {
+    // <0x10050, class, isUnique, version 0, kindSpecificFlags 0x1>
+    // Access Function at 0x28292c 
+    let indexPath: 0x027f8e59;
+}
+
+class RegistrationDiscoverBadgeView : So6NSViewC {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x282e08 
+    let color: So7NSColorCSg;
+}
+
+class RegistrationDiscoverGreenBadgeView : RegistrationDiscoverBadgeView {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x282f84 
+}
+
+class RegistrationDiscoverBlueBadgeView : RegistrationDiscoverBadgeView {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x283054 
+}
+
+class RegistrationDiscoverGrayBadgeView : RegistrationDiscoverBadgeView {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x283290 
+}
+
+class MediaSidebarEditableTextField : NSTextField {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x283c60 
+    let textBeforeEditing: String?;
+}
+
+class DatasetLoadViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x28451c 
+    let message: String?;
+    let stopButtonTitle: String?;
+    let icon: So7NSImageCSg;
+    let progress: Double;
+    let progressMax: Double;
+    let indeterminate: Bool;
+    let canStop: Bool;
+    let animating: Bool;
+    let error: Bool;
+    let wizardImage: String;
+    let onStop: (() -> ())?;
+    let onRefresh: (() -> ())?;
+    let wizardImageContainer: NSView?;
+    let hiddenViews: [NSView]?;
+    let lottieController: LottieViewController;
+}
+
+class MusicMovieTrackListViewController : MediaVideoTrackListViewController {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x285c34 
+}
+
+class RegistrationBrowserRestartViewController : RegistrationContentViewController {
+    // <0x80010050, class, isUnique, version 0, kindSpecificFlags 0x8001>
+    // Access Function at 0x286038 
+    let url: 0x02f98f59;
+}
+
+class PodcastsTrackListViewController : MediaTrackListViewController {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x286d20 
+}
+
+class MainWindowToolbarFlashView : So6NSViewC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x287ad8 
+    let flashing: Bool;
+}
+
+class DeviceItemWrapperArrayController : NSArrayController {
+    // <0x800000d0, class, isGeneric, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2880bc 
+    let observation: 0x02d79059;
+    let source: NSArrayController;
+}
+
+enum Kind {
+    // <0xd2, enum, isGeneric, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x288dbc 
+}
+
+class DispatchableDeviceItem : So8NSObjectC {
+    // <0x80010050, class, isUnique, version 0, kindSpecificFlags 0x8001>
+    // Access Function at 0x289ab4 
+    let operation: CoreOperation?;
+    let device: So9iOSDeviceC;
+    let status: Status;
+    let deviceReachability: Int;
+    let _interactionStatus: String?;
+    let _deviceNumber: Int;
+    let _cachedIcons: [Swift.String : (size: Swift.Int, image: NSImage)];
+    let _dismissTime: 0x02cd5859;
+    let _dialogBoxData: UserInteractionDialogBoxData?;
+    let _screenData: UserInteractionScreenData?;
+    let statusOrder: Int;
+    let isChecked: Bool;
+    let showCheckbox: Bool;
+    let enableCheckbox: Bool;
+    let collapseCheckbox: Bool;
+    let deviceIcon: So7NSImageCSg;
+    let accessoryImage: So7NSImageCSg;
+    let statusColor: NSColor;
+    let pausePlayViewImage: So7NSImageCSg;
+    let showPausePlayViewButton: Bool;
+    let stopRefreshImage: So7NSImageCSg;
+    let showStopRefreshButton: Bool;
+    let supervised: Bool;
+    let deviceName: String;
+    let statusMessage: String;
+    let progress: Double;
+    let showProgress: Bool;
+    let indeterminate: Bool;
+    let osVersion: String;
+    let statusTooltip: String;
+    let connectionSortOrder: Int;
+    let usbPortNumber: NSNumber?;
+    let serial: String?;
+    let model: String;
+    let udid: String;
+    let orgName: String;
+    let fullTextIndex: String;
+    let successfulDisconnectTime: 0x02dd8b59;
+}
+
+enum Status {
+    // <0x52, enum, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x28d5d0 
+}
+
+class DetectSpywareWizardWindowController : WizardWindowController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x28dbf4 
+}
+
+class PhotoFixedWidthStackView : NSStackView {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x28dfd4 
+    let widthConstraint: NSLayoutConstraint?;
+}
+
+class PreferencesNetworkViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x28f020 
+    let selectedProxyType: Int;
+    let hasProxySettings: Bool;
+    let proxyRequiresPassword: Bool;
+    let domain: String;
+    let port: NSNumber?;
+    let username: String;
+    let password: String;
+    let textColor: NSColor;
+    let authTextColor: NSColor;
+}
+
+class AspectFillImage : NSImageView {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x28f450 
+    let scaleAspectFill: Bool;
+}
+
+class HomeDiscoverTourDeviceOverviewViewController : HomeDiscoverTourBaseViewController {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x28f5d8 
+}
+
+class RegistrationThankYouViewController : RegistrationContentViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x29012c 
+    let message: String;
+    let buttonTitle: String;
+    let closeButtonContainer: NSView?;
+    let closeButton: RegistrationSmallButtonViewController;
+}
+
+class ConfiguratorBlueprintsContentViewController : LibraryWizardViewController {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x2903bc 
+}
+
+class MainWindowToolbarSearchFieldCell : 0x028b5159 {
+    // <0x62010050, class, isUnique, version 0, kindSpecificFlags 0x6201>
+    // Access Function at 0x290560 
+}
+
+class PhotoFadeView : So6NSViewC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x290b4c 
+    let fadeInDuration: Double;
+    let fadeOutDuration: Double;
+}
+
+class ApplicationCommands : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2911bc 
+    let validationTimer: So7NSTimerCSg;
+    let extraToolbarControls: [NSControl];
+}
+
+class StickyNotificationWindowController : NSWindowController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x29395c 
+    let data: UserInteractionDialogBoxData;
+    let title: String;
+    let message: String;
+    let button1: String;
+    let button2: String?;
+    let icon: So7NSImageCSg;
+    let fallback: () -> ();
+    let autoDismissTimer: So7NSTimerCSg;
+    let autoDismissLock: NSRecursiveLock;
+    let visualEffectView: NSVisualEffectView?;
+}
+
+class PhotoBorderedView : So6NSViewC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x296678 
+    let borderWidth: 0x0235a159;
+    let borderRadius: 0x0235a159;
+    let backgroundColorName: String;
+}
+
+class iTunes : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x297044 
+}
+
+class HomeDiscoverAppViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x297574 
+    let text: String;
+    let icon: So7NSImageCSg;
+    let action: () -> ();
+    let animationView: NSView?;
+    let highlightView: 0x02a58259;
+}
+
+class PhotoDetailViewAVPlayerView : ScrollingDisabledAVPlayerView {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x29822c 
+}
+
+class DatasetAddShortcut : Dataset {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x298400 
+}
+
+class DeviceDataItem : NSCollectionViewItem {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x298894 
+    let shortcutMenu: NSMenu?;
+    let isShortcut: Bool;
+    let dataset: Dataset;
+}
+
+class WizardAdapterViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2a082c 
+    let containerView: NSView?;
+    let toolbarContainer: NSView?;
+    let connectView: NSView?;
+    let leftButton: NSButton?;
+    let rightButton: NSButton?;
+    let bottomLeftCustomViewContainer: NSView?;
+    let inited: Bool;
+    let completionBlocks: Array<() -> ()>;
+    let titleObserver: 0x02d79059;
+    let leftButtonObserver: 0x02d79059;
+    let rightButtonObserver: 0x02d79059;
+    let titleController: WizardTitleViewController;
+    let wizard: weak WizardWindowController?;
+    let connectViewController: ConnectScreenUSBViewController;
+    let requiresConnection: Bool;
+    let connecting: Bool;
+    let performingLeftCustomAction: Bool;
+    let performingRightCustomAction: Bool;
+    let showBottomButtons: Bool;
+    let defaultTitle: String?;
+    let item: DeviceItem;
+    let controllers: [WizardWindowDelegate];
+    let toolbar: MainWindowToolbarController;
+    let currentController: WizardWindowDelegate?;
+    let bottomLeftCustomView: NSView?;
+    let extraCommandTarget: AnyObject?;
+    let onClose: ((CloseReason) -> ())?;
+}
+
+enum CloseReason {
+    // <0x52, enum, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x2a0b64 
+}
+
+class MediaTableColumnsSettings : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2a2e58 
+    let definitions: NSDictionary;
+    let settingName: String;
+    let defaults: [Swift.String : MediaColumnDefinition];
+    let firstTimeSet: Bool;
+    let tryToFitSize: Bool;
+}
+
+class MediaTracksTableView : VKTableView {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2a3470 
+    let previousVisibleTracks: [MediaTrack];
+    let allowColumnSorting: Bool;
+}
+
+class QuickLookItem : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2a3d18 
+    let path: String?;
+}
+
+class MediaTimeTransformer : NSValueTransformer {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x2a4488 
+}
+
+class MediaBackgroundView : So6NSViewC {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x2a4834 
+    let backgroundColorName: String?;
+    let borderColorName: String?;
+    let borderWidth: 0x0235a159;
+    let radius: 0x0235a159;
+}
+
+class UINotifications : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2a60c8 
+    let observers: [ObservationInfo];
+}
+
+class ObservationInfo {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2a6eec 
+    let name: String;
+    let owner: AnyObject?;
+    let callback:  empty-list UINotification first-element-marker DeviceItem;
+}
+
+class PhotoMapTableCellView : NSTableCellView {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2a7acc 
+    let onOpenInBrowser: (() -> ())?;
+    let isAwake: Bool;
+    let cachedContainerView: NSView?;
+    let cachedMapView: MKMapView?;
+}
+
+class CertificateHelper : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2a7fcc 
+}
+
+class ISOLanguage : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2a82f8 
+    let localisedName: String;
+    let isoCode: String;
+}
+
+class DeviceSettingItem : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2a9f70 
+    let title: String;
+    let subtitle: String?;
+    let icon: So7NSImageCSg;
+    let selectedIcon: So7NSImageCSg;
+    let accessoryIcon: So7NSImageCSg;
+    let accessoryText: String?;
+    let controller: NSViewController;
+    let status: 0x02a77759;
+    let showStatusIcon: Bool;
+}
+
+class HomeTableRowView : 0x02134f59 {
+    // <0xe2010050, class, isUnique, version 0, kindSpecificFlags 0xe201>
+    // Access Function at 0x2ae6e4 
+    let onMouseDown: ((HomeTableRowView, NSEvent) -> ())?;
+    let onMouseUp: ((HomeTableRowView, NSEvent) -> ())?;
+    let onSelectionChanged: ((Int) -> ())?;
+    let checkbox: NSButton?;
+    let deviceItemSelectionObserver: 0x02d79059;
+    let isUpdatingSelected: Bool;
+    let mouseDownInView: Bool;
+    let isMouseOver: Bool;
+    let deviceItem: SelectableDeviceItem;
+    let forceHighlighted: Bool;
+}
+
+class RegistrationLicenseCodeBackgroundView : So6NSViewC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2aefcc 
+    let style: Style;
+}
+
+enum Style {
+    // <0x52, enum, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x2af0f0 
+}
+
+class BackupLocationViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2b2bf0 
+    let selectedItem: BackupLocationItem;
+    let defaultBackupLocationItem: BackupLocationItem;
+    let isLoaded: Bool;
+    let isAddingItem: Bool;
+    let backupLocationItems: [BackupLocationItem];
+    let arrayController: NSArrayController?;
+    let tableView: NSTableView?;
+    let defaultTableColumn: NSTableColumn?;
+    let setAsDefaultBackupLocationMenuItem: NSMenuItem?;
+    let removeBackupLocationMenuItem: NSMenuItem?;
+}
+
+class DataAccessViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2b4d28 
+    let dataset: iOSDataset;
+    let device: So9iOSDeviceC;
+    let icon: So7NSImageCSg;
+    let selectedTag: Int;
+    let nextButtonTitle: String;
+    let subtitleText: String;
+    let encryptionScreenShouldEncryptText: String;
+    let encryptionChoiceViewTitle: String;
+    let isChangingEncryptionStatus: Bool;
+    let delegate: weak iMazing.DataAccessViewDelegate?;
+    let fullBackupSelected: Bool;
+    let encryptionEnabled: Bool;
+    let choiceView1: 0x02295959;
+    let choiceView2: 0x02295959;
+    let radio1: NSButton?;
+    let radio2: NSButton?;
+    let dataAccessView: NSView?;
+    let encryptionView: NSView?;
+    let encryptionChoiceView: 0x02295959;
+    let encryptionSwitch: 0x028d8659;
+}
+
+class CoreOperationItem : So8NSObjectC {
+    // <0x80010050, class, isUnique, version 0, kindSpecificFlags 0x8001>
+    // Access Function at 0x2b78d0 
+    let operation: CoreOperation?;
+    let operationUuid: 0x0269a159;
+    let operationIcon: OperationIcon;
+    let title: String;
+    let message: String;
+    let icon: So7NSImageCSg;
+    let progress: Double;
+    let destinationPath: String?;
+    let destinationFileType: String?;
+    let destinationFilenames: Array<String>?;
+    let animate: Bool;
+    let indeterminate: Bool;
+    let paused: Bool;
+    let running: Bool;
+    let stopped: Bool;
+    let hidden: Bool;
+    let hasFiles: Bool;
+    let notifyOnStart: Bool;
+    let totalItems: UInt;
+    let sortingDate: 0x02fb4c59;
+    let statusIcon: So7NSImageCSg;
+    let statusColor: 0x020b6d59;
+    let wizardImageName: String?;
+}
+
+class OperationListViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2b9ab0 
+    let closeAction: () -> ();
+    let startObserver: Any?;
+    let endObserver: Any?;
+    let items: Array<Any>;
+    let screens: [GenericScreenItem];
+    let showDevices: [ShowDeviceItem];
+    let controllers: [NSViewController];
+    let empty: Bool;
+    let clearEnabled: Bool;
+    let hasNotifications: Bool;
+    let overlay: NSViewController?;
+    let tableView: NSTableView?;
+    let overlayContainer: NSView?;
+}
+
+enum GenericScreenStatus {
+    // <0x52, enum, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x2bee34 
+}
+
+class DevicesListItem : ListItem {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x2bf410 
+    let observer: 0x02d79059;
+}
+
+class ManageArchivesWizard : WizardWindowController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2bf9bc 
+}
+
+class HomeDiscoverTourDevicesAndBackupsViewController : HomeDiscoverTourBaseViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2bfcb4 
+    let imageView1: NSImageView?;
+    let imageView2: NSImageView?;
+    let timer: So7NSTimerCSg;
+    let imageIndex: Int;
+}
+
+class RegistrationTextButton : So8NSButtonC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2c04b4 
+    let titleObserver: 0x02d79059;
+    let trackingArea: NSTrackingArea?;
+    let mouseOver: Bool;
+}
+
+class RegistrationTextButtonCell : NSButtonCell {
+    // <0x50, class, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x2c1110 
+}
+
+class RegistrationButtonViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2c1bf0 
+    let action: () -> ();
+    let cancelAction: (() -> ())?;
+    let color: 0x02bf7359;
+    let icon: So7NSImageCSg;
+    let showCancelButton: Bool;
+    let label1: 0x02c58a59;
+    let label2: 0x02c58a59;
+    let image: NSImageView?;
+    let buttonView1: RegistrationButtonView;
+    let buttonView2: RegistrationButtonView;
+    let imageSpacingConstraint: NSLayoutConstraint?;
+    let imageSizeConstraint: NSLayoutConstraint?;
+    let textStyle: 0x022d4e59;
+    let forceDark: Bool;
+}
+
+class RegistrationWindowBottomView : So6NSViewC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2c2790 
+}
+
+class DeviceNavigationViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2c2ab0 
+    let item: DeviceItem;
+    let showDownArrow: Bool;
+    let showRightSeparator: Bool;
+    let controllers: [DeviceNavigationMenuItemViewController];
+    let devicesObserver: 0x02d79059;
+    let onSelect:  empty-list DeviceItem;
+    let backgroundView: BreadcrumbItemBackgroundView;
+    let itemsMenu: NSMenu?;
+    let alwaysShowRightSeparator: Bool;
+}
+
+class DataRefreshViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2c3ecc 
+    let dataset: iOSDataset;
+    let device: So9iOSDeviceC;
+    let icon: So7NSImageCSg;
+    let subtitle: String;
+    let quickLoadTitle: String;
+    let quickLoadSubtitle: String;
+    let refreshTitle: String;
+    let refreshSubtitle: String;
+    let loadFromBackupView: 0x02295959;
+    let refreshAndLoadView: 0x02295959;
+    let delegate: weak iMazing.DataAccessViewDelegate?;
+}
+
+class SchedulingOptionsHourItem : So8NSObjectC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2c50d8 
+    let hour: Int;
+}
+
+class CollectionViewVerticalFlowLayoutBase : NSCollectionViewFlowLayout {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2c71a0 
+    let cachedItemsLayoutAttributes: SDySo100x02308e59CG;
+    let cachedHeadersLayoutAttributes: SDySo100x02308e59CG;
+    let cachedFootersLayoutAttributes: SDySo100x02308e59CG;
+    let internalContentSize: CGSize;
+    let internalPreviousBoundsSize: CGSize;
+}
+
+class PhotoDetailViewCollectionViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2c7de4 
+    let photoDetailViewCollectionView: PhotoDetailViewCollectionView;
+    let photoViewController: weak PhotoViewController?;
+    let operationFinishedObserver: 0x02d79059;
+    let operationFinished: Bool;
+    let isAwake: Bool;
+    let currentIndex: Int?;
+    let selectedAssetsCount: Int;
+    let selectedContentViewController: PhotoDetailViewItemContentController;
+    let onDoubleClick: (() -> ())?;
+}
+
+class HomeBackupsViewController : HomeDevicesBaseViewController {
+    // <0xc0010050, class, isUnique, version 0, kindSpecificFlags 0xc001>
+    // Access Function at 0x2c9830 
+    let infoViewContainer: NSView?;
+    let addItemsMenu: NSMenu?;
+    let contentDraggingView: FileDraggingView;
+    let animationViewContainer: NSView?;
+    let noBackupScreenContainer: NSView?;
+    let switchViewControl: NSSegmentedControl?;
+    let infoViewController: 0x026d8a59;
+    let animationViewController: BackupLocationAnimationViewController;
+    let contentIsDraggingObservation: 0x02d79059;
+    let isLoading: Bool;
+    let noBackupScreenViewController: NoBackupScreenViewController;
+}
+
+class PhotoFixedWidthView : So6NSViewC {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2cbed8 
+    let widthConstraint: NSLayoutConstraint?;
+    let isInitialized: Bool;
+}
+
+class HomeDiscoverTourDeviceDataAndToolsViewController : HomeDiscoverTourBaseViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2cc308 
+    let imageView1: NSImageView?;
+    let imageView2: NSImageView?;
+    let timer: So7NSTimerCSg;
+    let imageIndex: Int;
+}
+
+class NonPhysicalIOSStandardDeviceAndClassiciPodArrayController : NSArrayController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2cca28 
+}
+
+class OperationDispatcherViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2d82f4 
+    let onUseConfiguratorFeature: (() -> Bool)?;
+    let arrayController: NSArrayController?;
+    let tableView: NSTableView?;
+    let optionsMenu: NSMenu?;
+    let tableMenu: NSMenu?;
+    let infoPopover: NSPopover?;
+    let modePopup: NSPopUpButton?;
+    let searchField: NSSearchField?;
+    let onlyUSB: Bool;
+    let _awake: Bool;
+    let _dispatcher: DeviceOperationDispatcher?;
+    let _dispatchHandler: (([Swift.String]) -> DeviceOperationDispatcher?)?;
+    let _prevInteractionDelegate: iMazing.UserInteractionManagerDelegate?;
+    let logPath: String?;
+    let maxOps: Int;
+    let showDialogs: Bool;
+    let hasCheckedItems: Bool;
+    let applyToNew: Bool;
+    let selectAll: Bool;
+    let selectedLabel: String;
+    let autoReapply: Bool;
+    let showSearchField: Bool;
+    let isDeviceLibrary: Bool;
+    let timer: So7NSTimerCSg;
+    let items: [DispatchableDeviceItem];
+    let _selectedDeviceAction: DeviceAction;
+}
+
+enum DeviceAction {
+    // <0x52, enum, isUnique, version 0, kindSpecificFlags 0x0>
+    // Access Function at 0x2d8460 
+}
+
+class LegacyOperationItem : So8NSObjectC {
+    // <0x80010050, class, isUnique, version 0, kindSpecificFlags 0x8001>
+    // Access Function at 0x2db6e0 
+    let operation: LegacyOperation?;
+    let operationUuid: String;
+    let operationIcon: OperationIcon;
+    let title: String;
+    let message: String;
+    let icon: So7NSImageCSg;
+    let progress: Double;
+    let destinationPath: String?;
+    let destinationFileType: String?;
+    let destinationFilenames: Array<String>?;
+    let animate: Bool;
+    let indeterminate: Bool;
+    let paused: Bool;
+    let running: Bool;
+    let stopped: Bool;
+    let hidden: Bool;
+    let hasFiles: Bool;
+    let totalItems: UInt;
+    let sortingDate: 0x02fb4c59;
+    let statusIcon: So7NSImageCSg;
+    let statusColor: 0x020b6d59;
+    let wizardImageName: String?;
+}
+
+class ConfigureChooseBlueprintViewController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2dd0a0 
+    let onUseConfiguratorFeature: (() -> Bool)?;
+    let selectionHandler: (([Blueprint]) -> ())?;
+    let editBlueprintHandler: ((Blueprint?) -> ())?;
+    let blueprintsArrayController: NSArrayController?;
+    let actionsMenu: NSMenu?;
+    let contentView: NSView?;
+    let sectionsArrayController: NSArrayController?;
+    let observations: SaySo100x029c8959CG;
+    let selectionIndexes: NSIndexSet;
+    let selectedBlueprint: Blueprint?;
+    let sectionsTableView: NSTableView?;
+    let blueprintsTableView: NSTableView?;
+    let _isAwake: Bool;
+    let loadingVC: LoadingViewController;
+    let ddHelper: TableViewDragDropHelper;
+    let blueprintToSelect: Blueprint?;
+    let _orgsWC: ChooseItemsWindowController;
+}
+
+class InteractionAlertPromptController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2e186c 
+    let data: UserInteractionDialogBoxData;
+    let promptText: String;
+    let checkboxTitle: String;
+    let checkboxValue: Int;
+}
+
+class InteractionAlertMessageController : NSViewController {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2e2428 
+    let data: UserInteractionDialogBoxData;
+    let checkboxTitle: String;
+    let checkboxValue: Int;
+    let textViewValue: String;
+    let checkboxView: NSView?;
+    let progressView: NSView?;
+    let progressConstraint: NSLayoutConstraint?;
+    let textViewContainer: NSView?;
+    let textView: NSTextView?;
+    let useTextView: Bool;
+}
+
+class DetectSpywareWizardProgressViewController : WizardWindowProgressViewController {
+    // <0x40000050, class, isUnique, version 0, kindSpecificFlags 0x4000>
+    // Access Function at 0x2e2ec4 
+}
+
+class DeviceToolbarController : MainWindowToolbarController {
+    // <0xc0000050, class, isUnique, version 0, kindSpecificFlags 0xc000>
+    // Access Function at 0x2e3c78 
+    let navigationHistoryController: DeviceNavigationHistoryViewController;
+    let backupViewObserver: 0x02d79059;
+    let device: DeviceItem;
+    let deviceNavigation: DeviceNavigationViewController;
+    let backupNavigation: BackupNavigationViewController;
+}
+
+class DeviceActionMenuItem : NSMenuItem {
+    // <0x80000050, class, isUnique, version 0, kindSpecificFlags 0x8000>
+    // Access Function at 0x2e4250 
+    let deviceAction: DeviceAction;
+    let deviceItem: DeviceItem;
+}
+

@@ -1,0 +1,310 @@
+1258,1268d1257
+< @protocol NSSecureCoding <NSCoding>
+< 
+< @required
+< 
+< /* class methods */
+< +[NSSecureCoding supportsSecureCoding];
+< 
+< @optional
+< 
+< @end
+< 
+2370a2360
+>     B _showSearchField;
+2381d2370
+<     @"NSView" _refreshButton;
+2404d2392
+<     @"_TtC7iMazing34ManageAppsVersionsWindowController" _versionsController;
+2443d2430
+< @property (T@"_TtC7iMazing34ManageAppsVersionsWindowController",&,V_versionsController) versionsController;
+2448c2435
+< @property (T@"NSView",&,V_refreshButton) refreshButton;
+---
+> @property (TB,V_showSearchField) showSearchField;
+2491,2492d2477
+< -[AppsLibraryViewController exportAppsAsCSVFromLibrary:];
+< -[AppsLibraryViewController exportAppsAsCSVFromDevice:];
+2504,2505d2488
+< -[AppsLibraryViewController showAvailableVersions:];
+< -[AppsLibraryViewController refresh:];
+2533,2534c2516,2517
+< -[AppsLibraryViewController refreshButton];
+< -[AppsLibraryViewController setRefreshButton:];
+---
+> -[AppsLibraryViewController showSearchField];
+> -[AppsLibraryViewController setShowSearchField:];
+2591,2592d2573
+< -[AppsLibraryViewController versionsController];
+< -[AppsLibraryViewController setVersionsController:];
+3009d2989
+<     @"NSString" _timezone;
+3039d3018
+< @property (T@"NSString",&,N,V_timezone) timezone;
+3107d3085
+< +[Blueprint supportedTimezones];
+3224,3225d3201
+< -[Blueprint timezone];
+< -[Blueprint setTimezone:];
+5940d5915
+< -[CoreLocalizationManager onKeyNotFound:];
+8155,8209d8129
+< @interface FakeCKStoreAccount : NSObject <NSSecureCoding> {
+<     /* instance variables */
+<     C _accountKind;
+<     B _isManagedStudent;
+<     @"NSNumber" _dsPersonID;
+<     @"NSString" _firstName;
+<     @"NSString" _appleId;
+<     @"NSString" _lastName;
+<     @"NSString" __clientIdentifier;
+<     q __serverType;
+<     @"NSString" __token;
+<     @"NSNumber" _credit;
+< }
+< 
+< @property (T@"NSNumber",&,V_dsPersonID) dsPersonID;
+< @property (T@"NSString",&,V_firstName) firstName;
+< @property (TC,V_accountKind) accountKind;
+< @property (T@"NSString",&,V_appleId) appleId;
+< @property (TB,V_isManagedStudent) isManagedStudent;
+< @property (T@"NSString",&,V_lastName) lastName;
+< @property (T@"NSString",&,V__clientIdentifier) _clientIdentifier;
+< @property (Tq,V__serverType) _serverType;
+< @property (T@"NSString",&,V__token) _token;
+< @property (T@"NSNumber",&,V_credit) credit;
+< 
+< /* class methods */
+< +[FakeCKStoreAccount supportsSecureCoding];
+< 
+< /* instance methods */
+< -[FakeCKStoreAccount class];
+< -[FakeCKStoreAccount encodeWithCoder:];
+< -[FakeCKStoreAccount initWithCoder:];
+< -[FakeCKStoreAccount dsPersonID];
+< -[FakeCKStoreAccount setDsPersonID:];
+< -[FakeCKStoreAccount firstName];
+< -[FakeCKStoreAccount setFirstName:];
+< -[FakeCKStoreAccount accountKind];
+< -[FakeCKStoreAccount setAccountKind:];
+< -[FakeCKStoreAccount appleId];
+< -[FakeCKStoreAccount setAppleId:];
+< -[FakeCKStoreAccount isManagedStudent];
+< -[FakeCKStoreAccount setIsManagedStudent:];
+< -[FakeCKStoreAccount lastName];
+< -[FakeCKStoreAccount setLastName:];
+< -[FakeCKStoreAccount _clientIdentifier];
+< -[FakeCKStoreAccount set_clientIdentifier:];
+< -[FakeCKStoreAccount _serverType];
+< -[FakeCKStoreAccount set_serverType:];
+< -[FakeCKStoreAccount _token];
+< -[FakeCKStoreAccount set_token:];
+< -[FakeCKStoreAccount credit];
+< -[FakeCKStoreAccount setCredit:];
+< 
+< @end
+< 
+17329,17338d17248
+< @interface _TtC7iMazing12XIBValidator : NSObject
+< 
+< /* class methods */
+< +[_TtC7iMazing12XIBValidator validateWithExtraBundles:];
+< 
+< /* instance methods */
+< -[_TtC7iMazing12XIBValidator init];
+< 
+< @end
+< 
+20022,20033d19931
+< @interface _TtC7iMazing21CalendarEventLineView : NSView {
+<     /* instance variables */
+<      colorObserver;
+< }
+< 
+< /* instance methods */
+< -[_TtC7iMazing21CalendarEventLineView drawRect:];
+< -[_TtC7iMazing21CalendarEventLineView initWithFrame:];
+< -[_TtC7iMazing21CalendarEventLineView initWithCoder:];
+< 
+< @end
+< 
+24111d24008
+<      extraCommandTarget;
+26059d25955
+< -[_TtC7iMazing30ManageAppsWizardViewController refreshContentData:];
+26453a26350,26351
+>      username;
+>      password;
+26463a26362,26363
+> @property (T@"NSString",N,C) username;
+> @property (T@"NSString",N,C) password;
+26475a26376,26379
+> -[_TtC7iMazing31InteractionAlertLoginController username];
+> -[_TtC7iMazing31InteractionAlertLoginController setUsername:];
+> -[_TtC7iMazing31InteractionAlertLoginController password];
+> -[_TtC7iMazing31InteractionAlertLoginController setPassword:];
+27963a27868
+>      promptText;
+27966d27870
+<      passwordField;
+27969a27874
+> @property (T@"NSString",N,C) promptText;
+27972d27876
+< @property (T@"NSTextField",N,&,VpasswordField) passwordField;
+27977a27882,27883
+> -[_TtC7iMazing34InteractionAlertPasswordController promptText];
+> -[_TtC7iMazing34InteractionAlertPasswordController setPromptText:];
+27982,27983d27887
+< -[_TtC7iMazing34InteractionAlertPasswordController passwordField];
+< -[_TtC7iMazing34InteractionAlertPasswordController setPasswordField:];
+27994,28041d27897
+< @interface _TtC7iMazing34ManageAppsVersionsWindowController : NSWindowController <NSTableViewDataSource, NSTableViewDelegate> {
+<     /* instance variables */
+<      app;
+<      loading;
+<      versions;
+<      error;
+<      infoText;
+<      manager;
+<      arrayController;
+<      tableView;
+< }
+< 
+< @property (T@"iOSAppDisplayItem",N,&,Vapp) app;
+< @property (TB,N,Vloading) loading;
+< @property (T@"NSArray",N,C) versions;
+< @property (T@"NSString",N,C) error;
+< @property (T@"NSString",N,C) infoText;
+< @property (T@"NSArrayController",N,&,VarrayController) arrayController;
+< @property (T@"NSTableView",N,&,VtableView) tableView;
+< @property (T@"NSString",N,R) windowNibName;
+< 
+< /* instance methods */
+< -[_TtC7iMazing34ManageAppsVersionsWindowController app];
+< -[_TtC7iMazing34ManageAppsVersionsWindowController setApp:];
+< -[_TtC7iMazing34ManageAppsVersionsWindowController loading];
+< -[_TtC7iMazing34ManageAppsVersionsWindowController setLoading:];
+< -[_TtC7iMazing34ManageAppsVersionsWindowController versions];
+< -[_TtC7iMazing34ManageAppsVersionsWindowController setVersions:];
+< -[_TtC7iMazing34ManageAppsVersionsWindowController error];
+< -[_TtC7iMazing34ManageAppsVersionsWindowController setError:];
+< -[_TtC7iMazing34ManageAppsVersionsWindowController infoText];
+< -[_TtC7iMazing34ManageAppsVersionsWindowController setInfoText:];
+< -[_TtC7iMazing34ManageAppsVersionsWindowController arrayController];
+< -[_TtC7iMazing34ManageAppsVersionsWindowController setArrayController:];
+< -[_TtC7iMazing34ManageAppsVersionsWindowController tableView];
+< -[_TtC7iMazing34ManageAppsVersionsWindowController setTableView:];
+< -[_TtC7iMazing34ManageAppsVersionsWindowController initWithApp:manager:];
+< -[_TtC7iMazing34ManageAppsVersionsWindowController initWithCoder:];
+< -[_TtC7iMazing34ManageAppsVersionsWindowController windowNibName];
+< -[_TtC7iMazing34ManageAppsVersionsWindowController windowDidLoad];
+< -[_TtC7iMazing34ManageAppsVersionsWindowController done:];
+< -[_TtC7iMazing34ManageAppsVersionsWindowController addToLibrary:];
+< -[_TtC7iMazing34ManageAppsVersionsWindowController stopDownload:];
+< -[_TtC7iMazing34ManageAppsVersionsWindowController downloadOperationNotification:];
+< -[_TtC7iMazing34ManageAppsVersionsWindowController initWithWindow:];
+< 
+< @end
+< 
+28302d28157
+<      shouldSetTimezone;
+28306d28160
+<      selectedTimezone;
+28310d28163
+<      timezonesController;
+28327d28179
+< @property (TB,N,VshouldSetTimezone) shouldSetTimezone;
+28331d28182
+< @property (T@"NSString",N,C) selectedTimezone;
+28335d28185
+< @property (T@"NSArrayController",N,&,VtimezonesController) timezonesController;
+28359,28360d28208
+< -[_TtC7iMazing35BlueprintSectionSetupViewController shouldSetTimezone];
+< -[_TtC7iMazing35BlueprintSectionSetupViewController setShouldSetTimezone:];
+28367,28368d28214
+< -[_TtC7iMazing35BlueprintSectionSetupViewController selectedTimezone];
+< -[_TtC7iMazing35BlueprintSectionSetupViewController setSelectedTimezone:];
+28375,28376d28220
+< -[_TtC7iMazing35BlueprintSectionSetupViewController timezonesController];
+< -[_TtC7iMazing35BlueprintSectionSetupViewController setTimezonesController:];
+28389d28232
+< -[_TtC7iMazing35BlueprintSectionSetupViewController setTimezoneClicked:];
+28392d28234
+< -[_TtC7iMazing35BlueprintSectionSetupViewController shouldSetTimezoneClick:];
+29221d29062
+< -[_TtC7iMazing37ConfiguratorAppsContentViewController refreshContentData:];
+29411a29253,29254
+>      password1;
+>      password2;
+29419a29263,29264
+> @property (T@"NSString",N,C) password1;
+> @property (T@"NSString",N,C) password2;
+29429a29275,29278
+> -[_TtC7iMazing37InteractionAlertNewPasswordController password1];
+> -[_TtC7iMazing37InteractionAlertNewPasswordController setPassword1:];
+> -[_TtC7iMazing37InteractionAlertNewPasswordController password2];
+> -[_TtC7iMazing37InteractionAlertNewPasswordController setPassword2:];
+30189a30039,30041
+>      password1;
+>      password2;
+>      password3;
+30198a30051,30053
+> @property (T@"NSString",N,C) password1;
+> @property (T@"NSString",N,C) password2;
+> @property (T@"NSString",N,C) password3;
+30209a30065,30070
+> -[_TtC7iMazing40InteractionAlertChangePasswordController password1];
+> -[_TtC7iMazing40InteractionAlertChangePasswordController setPassword1:];
+> -[_TtC7iMazing40InteractionAlertChangePasswordController password2];
+> -[_TtC7iMazing40InteractionAlertChangePasswordController setPassword2:];
+> -[_TtC7iMazing40InteractionAlertChangePasswordController password3];
+> -[_TtC7iMazing40InteractionAlertChangePasswordController setPassword3:];
+31381,31396d31241
+< @interface _TtCC7iMazing12XIBValidator12RuntimeError : _TtCs12_SwiftObject {
+<     /* instance variables */
+<      message;
+< }
+< 
+< @end
+< 
+< @interface _TtCC7iMazing12XIBValidator8NIBOwner : NSObject
+< 
+< /* instance methods */
+< -[_TtCC7iMazing12XIBValidator8NIBOwner valueForUndefinedKey:];
+< -[_TtCC7iMazing12XIBValidator8NIBOwner setValue:forUndefinedKey:];
+< -[_TtCC7iMazing12XIBValidator8NIBOwner init];
+< 
+< @end
+< 
+31484,31486d31328
+<     @"NSString" _bundleVersion;
+<     @"NSString" _minimumOSVersion;
+<     @"NSDate" _releaseDate;
+31511,31513d31352
+< @property (T@"NSString",&,V_bundleVersion) bundleVersion;
+< @property (T@"NSString",C,V_minimumOSVersion) minimumOSVersion;
+< @property (T@"NSDate",C,V_releaseDate) releaseDate;
+31567,31572d31405
+< -[iOSApp bundleVersion];
+< -[iOSApp setBundleVersion:];
+< -[iOSApp minimumOSVersion];
+< -[iOSApp setMinimumOSVersion:];
+< -[iOSApp releaseDate];
+< -[iOSApp setReleaseDate:];
+31634d31466
+<     @"NSString" _versionDetails;
+31653d31484
+< @property (T@"NSString",&,V_versionDetails) versionDetails;
+31703,31704d31533
+< -[iOSAppDisplayItem versionDetails];
+< -[iOSAppDisplayItem setVersionDetails:];
+31739d31567
+< -[iOSAppDownloadManager downloadAppToLibrary:keepPreviousVersions:downloadLatestVersion:];
+31757d31584
+< -[iOSAppDownloadManager exportAppsAsCSVFromLibrary:fromDevice:];
+31766d31592
+< -[iOSAppDownloadManager getAppVersions:error:];
+32130c31956
+< -[iOSDevice acceptsRestoreOfBackup:requiresUpdate:silent:];
+---
+> -[iOSDevice acceptsRestoreOfBackup:requiresUpdate:];
